@@ -1,0 +1,11 @@
+@media (min-width: 700px){
+  .hamburger{ display:none; }
+  .nav{ display:block !important; }
+  header{ gap:2rem; }
+  .nav ul{ flex-direction:row; gap:.4rem; }
+  main{ padding: 1.5rem; }
+  .course-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px){
+  .course-grid{ grid-template-columns: repeat(3, 1fr); }
+}
