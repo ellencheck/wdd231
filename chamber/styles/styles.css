@@ -75,11 +75,11 @@ nav ul li a:hover {
 }
 
 .card img {
-  width: 100%;      /* картинка на всю ширину карточки */
-  height: auto;     /* высота подстраивается автоматически */
-  display: block;   /* убирает лишние отступы */
-  border-radius: 8px; /* чуть скруглим края */
-  object-fit: cover; /* аккуратно обрезает картинку */
+  width: 100%;
+  height: 200px;     /* фиксируем высоту */
+  object-fit: cover; /* картинка обрезается, но красиво */
+  border-radius: 8px;
+  display: block;
 }
 
 /* ---------- MOBILE ---------- */
