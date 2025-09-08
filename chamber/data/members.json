@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sunrise Café",
+    "address": "123 Main St, Cityville",
+    "phone": "555-123-4567",
+    "website": "https://sunrisecafe.com",
+    "image": "sunrise-cafe.png",
+    "membership": 2
+  },
+  {
+    "name": "Tech Solutions",
+    "address": "45 Innovation Rd, Cityville",
+    "phone": "555-987-6543",
+    "website": "https://techsolutions.com",
+    "image": "tech-solutions.png",
+    "membership": 3
+  },
+  {
+    "name": "Green Grocers",
+    "address": "78 Market St, Cityville",
+    "phone": "555-222-3344",
+    "website": "https://greengrocers.com",
+    "image": "green-grocers.png",
+    "membership": 1
+  }
+]
