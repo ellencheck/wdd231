@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>City Chamber of Commerce Directory</title>
+  <meta name="description" content="Business directory page for the City Chamber of Commerce.">
+  <meta name="author" content="Your Full Name">
+
+  <!-- Facebook Open Graph meta -->
+  <meta property="og:title" content="City Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover local businesses in our Chamber of Commerce directory.">
+  <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Reset / Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>City Chamber of Commerce</h1>
+    <nav>
+      <button id="menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+    <div class="view-toggle">
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </div>
+    <div id="directory" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> City Chamber of Commerce</p>
+    <p>WDD 231 | <span id="lastModified"></span></p>
+    <p>Contact: info@citychamber.com</p>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
