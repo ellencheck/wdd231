@@ -30,3 +30,72 @@ nav ul {
   padding: 1rem;
   background: #fff;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1d6559;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* золотистый hover */
+}
+
+#menu {
+  display: none; /* по умолчанию скрыт */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- Мобильная версия --- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1d6559;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu {
+    display: block;
+  }
+}
