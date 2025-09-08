@@ -74,10 +74,12 @@ nav ul li a:hover {
   display: block;
 }
 
-.card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background: #fff;
+.card img {
+  width: 100%;      /* картинка на всю ширину карточки */
+  height: auto;     /* высота подстраивается автоматически */
+  display: block;   /* убирает лишние отступы */
+  border-radius: 8px; /* чуть скруглим края */
+  object-fit: cover; /* аккуратно обрезает картинку */
 }
 
 /* ---------- MOBILE ---------- */
