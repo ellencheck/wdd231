@@ -4,7 +4,7 @@
     "address": "Av. Valparaíso 1080, Villa Alemana, Chile",
     "phone": "+56 32 314 6000",
     "website": "https://www.villalemana.cl/",
-    "image": "municipality.png",
+    "image": "municipality.jpeg",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "Av. Valparaíso 1250, Villa Alemana, Chile",
     "phone": "+56 32 314 8000",
     "website": "https://clinicamaitenes.cl/",
-    "image": "clinica-maitenes.png",
+    "image": "clinica-maitenes.webp",
     "membership": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "Villa Alemana, Chile",
     "phone": "",
     "website": "https://www.salfasur.cl/",
-    "image": "salfa-sur.png",
+    "image": "salfa-sur.jpeg",
     "membership": 2
   },
   {
@@ -28,7 +28,7 @@
     "address": "Villa Alemana, Chile",
     "phone": "",
     "website": "https://www.lider.cl/",
-    "image": "lider.png",
+    "image": "lider.jpg",
     "membership": 1
   },
   {
@@ -36,7 +36,7 @@
     "address": "Calle Valparaíso 569, Villa Alemana, Chile",
     "phone": "(56-600) 4002000",
     "website": "https://www.santaisabel.cl/",
-    "image": "santa-isabel.png",
+    "image": "santa-isabel.jpeg",
     "membership": 1
   },
   {
@@ -44,7 +44,7 @@
     "address": "Paseo Latorre, Villa Alemana, Chile",
     "phone": "",
     "website": "",
-    "image": "teatro-pompeya.png",
+    "image": "teatro-pompeya.jpeg",
     "membership": 2
   },
   {
@@ -52,7 +52,7 @@
     "address": "Av. Valparaíso 471, Villa Alemana, Chile",
     "phone": "",
     "website": "",
-    "image": "library.png",
+    "image": "library.webp",
     "membership": 1
   },
   {
@@ -60,7 +60,7 @@
     "address": "Villa Alemana, Chile",
     "phone": "",
     "website": "",
-    "image": "festival.png",
+    "image": "festival.jpg",
     "membership": 1
   }
 ]
