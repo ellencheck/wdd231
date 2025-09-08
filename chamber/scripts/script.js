@@ -41,3 +41,10 @@ document.getElementById("lastModified").textContent = document.lastModified;
 
 // Load members on page load
 getMembers();
+const menuBtn = document.querySelector("#menu");
+const navUl = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+  navUl.classList.toggle("show");
+});
+
