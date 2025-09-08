@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>City Chamber of Commerce Directory</title>
-  <meta name="description" content="Business directory page for the City Chamber of Commerce.">
-  <meta name="author" content="Your Full Name">
+  <meta name="description" content="Explore the City Chamber of Commerce business directory. Find local companies, services, and organizations to connect with and support.">
+  <meta name="author" content="Alina Алина">
 
   <!-- Facebook Open Graph meta -->
   <meta property="og:title" content="City Chamber of Commerce Directory">
-  <meta property="og:description" content="Discover local businesses in our Chamber of Commerce directory.">
+  <meta property="og:description" content="Discover local businesses in our Chamber of Commerce directory. Connect with companies, services, and organizations in our community.">
   <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.jpg">
   <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
   <meta property="og:type" content="website">
 
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- Reset / Normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="styles/normalize.css">
   <!-- Your custom styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
-    <h1>City Chamber of Commerce</h1>
     <nav>
       <button id="menu">☰</button>
       <ul class="navigation">
@@ -38,6 +43,9 @@
   </header>
 
   <main>
+    <!-- h1 must match page title and be the first element inside main -->
+    <h1>City Chamber of Commerce Directory</h1>
+    
     <h2>Business Directory</h2>
     <div class="view-toggle">
       <button id="gridBtn">Grid View</button>
@@ -52,6 +60,8 @@
     <p>Contact: info@citychamber.com</p>
   </footer>
 
-  <script src="js/script.js" type="module"></script>
+  <!-- External JS must be in scripts folder -->
+  <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
+
