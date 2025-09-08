@@ -1,27 +1,42 @@
 [
   {
-    "name": "Municipality of Viña Alemana",
-    "address": "Av. Valparaíso 1080, Viña Alemana, Chile",
+    "name": "Municipality of Villa Alemana",
+    "address": "Av. Valparaíso 1080, Villa Alemana, Chile",
     "phone": "+56 32 314 6000",
-    "website": "https://www.vinaalemanachile.cl/",
+    "website": "https://www.villalemana.cl/",
     "image": "municipality.png",
     "membership": 3
   },
   {
-    "name": "Clínica Los Maitenes",
-    "address": "Av. Valparaíso 1250, Viña Alemana, Chile",
+    "name": "Clínica Maitenes",
+    "address": "Av. Valparaíso 1250, Villa Alemana, Chile",
     "phone": "+56 32 314 8000",
-    "website": "https://www.clinicalosmaitenes.cl/",
-    "image": "los-maitenes.png",
+    "website": "https://clinicamaitenes.cl/",
+    "image": "clinica-maitenes.png",
     "membership": 2
   },
   {
-    "name": "Supermercado Líder",
-    "address": "Av. Valparaíso 1500, Viña Alemana, Chile",
-    "phone": "+56 600 600 9191",
+    "name": "Salfa Sur Automotriz",
+    "address": "— Villa Alemana branch — Chile",  
+    "phone": "",
+    "website": "https://www.salfasur.cl/",
+    "image": "salfa-sur.png",
+    "membership": 3
+  },
+  {
+    "name": "Líder Supermarket",
+    "address": "Villa Alemana, Chile",
+    "phone": "",
     "website": "https://www.lider.cl/",
     "image": "lider.png",
     "membership": 1
+  },
+  {
+    "name": "CMVA (Municipal Social Development Corp.)",
+    "address": "Villa Alemana, Chile",
+    "phone": "",
+    "website": "https://www.cmva.cl/",
+    "image": "cmva.png",
+    "membership": 2
   }
 ]
-
