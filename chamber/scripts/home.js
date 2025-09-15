@@ -1,6 +1,6 @@
 // ------------------ Погода ------------------
-const apiKey = 1fb64c190e7a26213b3bcfe56a27dc41; // твой ключ
-const city = encodeURIComponent('Viña del Mar,CL'); // кодировка города
+const apiKey = '1fb64c190e7a26213b3bcfe56a27dc41'; // твой ключ
+const city = encodeURIComponent('Villa Alemana,CL'); // город + страна (CL = Chile)
 const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
 fetch(apiURL)
@@ -12,49 +12,22 @@ fetch(apiURL)
     const current = data.list[0];
     const weatherDiv = document.getElementById('weather');
 
-    // Берём три ближайших прогноза через 8 интервалов (каждые 3 часа → 8*3=24 часа)
-    const forecast = [
-      data.list[8],
-      data.list[16],
-      data.list[24]
-    ];
+    // Берём 3 прогноза через сутки
+    const forecast = [8, 16, 24].map(i => data.list[i]).filter(Boolean);
 
     weatherDiv.innerHTML = `
       <p><strong>Current Temperature:</strong> ${current.main.temp}°C</p>
       <p><strong>Condition:</strong> ${current.weather[0].description}</p>
       <h3>3-Day Forecast</h3>
       <ul>
-        ${forecast.map(f => `<li>${new Date(f.dt_txt).toLocaleDateString('en-US')}: ${f.main.temp}°C, ${f.weather[0].description}</li>`).join('')}
+        ${forecast.map(f => `
+          <li>${new Date(f.dt_txt).toLocaleDateString('en-US')}: 
+              ${f.main.temp}°C, ${f.weather[0].description}</li>
+        `).join('')}
       </ul>
     `;
   })
-  .catch(err => console.error(err));
-
-// ------------------ Spotlight компании ------------------
-fetch('members.json')
-  .then(res => res.json())
-  .then(data => {
-    const spotlights = data.members.filter(m => m.level === 'Gold' || m.level === 'Silver');
-    spotlights.sort(() => 0.5 - Math.random()); // перемешать
-    const selected = spotlights.slice(0, 3); // выбрать 3 случайные
-
-    const container = document.getElementById('spotlight-cards');
-    selected.forEach(member => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <h3>${member.name}</h3>
-        <img src="${member.logo}" alt="${member.name} Logo">
-        <p>${member.phone}</p>
-        <p>${member.address}</p>
-        <p><a href="${member.website}" target="_blank">Website</a></p>
-        <p>Member Level: ${member.level}</p>
-      `;
-      container.appendChild(card);
-    });
-  })
-  .catch(err => console.error('Ошибка spotlight:', err));
-
-// ------------------ Динамическая дата в футере ------------------
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+  .catch(err => {
+    document.getElementById('weather').textContent = "Ошибка загрузки погоды.";
+    console.error(err);
+  });
