@@ -1,32 +1,42 @@
-// ---------- Погода ----------
-const apiKey = 'YOUR_API_KEY'; // вставь свой ключ
-const city = 'Viña del Mar,CL';
+// ------------------ Погода ------------------
+const apiKey = 'YOUR_API_KEY'; // вставь свой ключ OpenWeatherMap
+const city = encodeURIComponent('Viña del Mar,CL'); // кодировка города
 const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
 fetch(apiURL)
-  .then(response => response.json())
+  .then(res => {
+    if (!res.ok) throw new Error(`Ошибка погоды: ${res.status}`);
+    return res.json();
+  })
   .then(data => {
     const current = data.list[0];
     const weatherDiv = document.getElementById('weather');
+
+    // Берём три ближайших прогноза через 8 интервалов (каждые 3 часа → 8*3=24 часа)
+    const forecast = [
+      data.list[8],
+      data.list[16],
+      data.list[24]
+    ];
+
     weatherDiv.innerHTML = `
-      <p>Temperature: ${current.main.temp}°F</p>
-      <p>Condition: ${current.weather[0].description}</p>
+      <p><strong>Current Temperature:</strong> ${current.main.temp}°C</p>
+      <p><strong>Condition:</strong> ${current.weather[0].description}</p>
       <h3>3-Day Forecast</h3>
       <ul>
-        <li>${data.list[8].dt_txt}: ${data.list[8].main.temp}°F</li>
-        <li>${data.list[16].dt_txt}: ${data.list[16].main.temp}°F</li>
-        <li>${data.list[24].dt_txt}: ${data.list[24].main.temp}°F</li>
+        ${forecast.map(f => `<li>${new Date(f.dt_txt).toLocaleDateString('en-US')}: ${f.main.temp}°C, ${f.weather[0].description}</li>`).join('')}
       </ul>
     `;
-  });
+  })
+  .catch(err => console.error(err));
 
-// ---------- Spotlight компании ----------
+// ------------------ Spotlight компании ------------------
 fetch('members.json')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     const spotlights = data.members.filter(m => m.level === 'Gold' || m.level === 'Silver');
-    spotlights.sort(() => 0.5 - Math.random());
-    const selected = spotlights.slice(0, 3);
+    spotlights.sort(() => 0.5 - Math.random()); // перемешать
+    const selected = spotlights.slice(0, 3); // выбрать 3 случайные
 
     const container = document.getElementById('spotlight-cards');
     selected.forEach(member => {
@@ -42,8 +52,9 @@ fetch('members.json')
       `;
       container.appendChild(card);
     });
-  });
+  })
+  .catch(err => console.error('Ошибка spotlight:', err));
 
-// ---------- Динамическая дата в футере ----------
+// ------------------ Динамическая дата в футере ------------------
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
