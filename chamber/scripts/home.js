@@ -1,5 +1,5 @@
 // ------------------ Погода ------------------
-const apiKey = 'YOUR_API_KEY'; // вставь свой ключ OpenWeatherMap
+const apiKey = '2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7'; // твой ключ
 const city = encodeURIComponent('Viña del Mar,CL'); // кодировка города
 const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
