@@ -1,7 +1,7 @@
 // ---------- Погода ----------
-const apiKey = 'YOUR_API_KEY'; // вставь свой ключ OpenWeatherMap
-const city = 'Seattle'; // замени на город твоей палаты
-const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
+const apiKey = 'YOUR_API_KEY'; // вставь свой ключ
+const city = 'Viña del Mar,CL';
+const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
 fetch(apiURL)
   .then(response => response.json())
