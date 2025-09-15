@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>City Chamber of Commerce - Home</title>
+  <meta name="description" content="Welcome to the City Chamber of Commerce. Discover local businesses, events, and member highlights.">
+  <meta name="author" content="Alina Алина">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- JS for weather and spotlights -->
+  <script type="module" defer src="scripts/home.js"></script>
+</head>
+<body>
+  <!-- Header + Navigation -->
+  <header>
+    <div class="logo">
+      <h2>City Chamber</h2>
+    </div>
+    <nav>
+      <button id="menu" aria-label="Toggle menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to the City Chamber of Commerce</h1>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Chamber Hero Image">
+      <div class="hero-text">
+        <h2>Supporting Local Businesses & Community</h2>
+        <a href="join.html" class="cta-button">Join Now</a>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Business Networking Breakfast - Sep 20</li>
+        <li>Annual Chamber Gala - Oct 5</li>
+        <li>Small Business Workshop - Nov 10</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Local Weather</h2>
+      <div id="weather">
+        <!-- JS вставит данные погоды сюда -->
+      </div>
+    </section>
+
+    <!-- Company Spotlights Section -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-cards" class="cards-container">
+        <!-- JS вставит случайные Gold/Silver компании сюда -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> City Chamber of Commerce</p>
+    <p>WDD 231 | <span id="lastModified"></span></p>
+    <p>Contact: info@citychamber.com</p>
+  </footer>
+</body>
+</html>
