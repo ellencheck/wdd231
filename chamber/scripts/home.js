@@ -57,14 +57,19 @@ fetch("data/members.json")
   })
   .catch(err => console.error("Ошибка spotlight:", err));
 
-// ------------------ Дата в футере ------------------
+// ------------------ Footer ------------------
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Формат даты: MM/DD/YYYY HH:MM:SS
 const lastModified = new Date(document.lastModified);
-document.getElementById("lastModified").textContent = lastModified.toLocaleString(
-  "en-US",
-  { dateStyle: "medium", timeStyle: "short" }
-);
+const formattedDate = `${String(lastModified.getMonth() + 1).padStart(2, "0")}/` +
+                      `${String(lastModified.getDate()).padStart(2, "0")}/` +
+                      `${lastModified.getFullYear()} ` +
+                      `${String(lastModified.getHours()).padStart(2, "0")}:` +
+                      `${String(lastModified.getMinutes()).padStart(2, "0")}:` +
+                      `${String(lastModified.getSeconds()).padStart(2, "0")}`;
+
+document.getElementById("lastModified").textContent = formattedDate;
 
 // ------------------ Меню ------------------
 const menuBtn = document.querySelector("#menu");
