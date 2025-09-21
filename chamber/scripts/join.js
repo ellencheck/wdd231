@@ -27,3 +27,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// ------------------ Footer ------------------
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Формат даты: MM/DD/YYYY HH:MM:SS
+const lastModified = new Date(document.lastModified);
+const formattedDate = `${String(lastModified.getMonth() + 1).padStart(2, "0")}/` +
+                      `${String(lastModified.getDate()).padStart(2, "0")}/` +
+                      `${lastModified.getFullYear()} ` +
+                      `${String(lastModified.getHours()).padStart(2, "0")}:` +
+                      `${String(lastModified.getMinutes()).padStart(2, "0")}:` +
+                      `${String(lastModified.getSeconds()).padStart(2, "0")}`;
+
+document.getElementById("lastModified").textContent = formattedDate;
+
+// ------------------ Меню ------------------
+const menuBtn = document.querySelector("#menu");
+const navUl = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+  navUl.classList.toggle("show");
+});
