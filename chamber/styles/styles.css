@@ -217,3 +217,46 @@ nav ul li a:hover {
   object-fit: cover;
   border-radius: 6px;
 }
+/* ---------- WAYFINDING (активная ссылка) ---------- */
+nav ul li a.active {
+  border-bottom: 2px solid #ffd700;
+  font-weight: bold;
+  color: #ffd700; /* подчёркивание + цвет для видимости */
+}
+
+/* ---------- CONTRAST FIX для CTA кнопки ---------- */
+.cta-button {
+  background-color: #ffd700;
+  color: #00332b; /* более тёмный зелёный для контраста AA */
+}
+
+.cta-button:hover {
+  background-color: #e6c200;
+  color: #001a14; /* ещё темнее при ховере */
+}
+
+/* ---------- SPOTLIGHT карточки улучшенные ---------- */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.spotlights .card {
+  flex: 1 1 250px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.spotlights .card:hover {
+  transform: translateY(-5px);
+}
