@@ -25,12 +25,12 @@
   <link rel="stylesheet" href="styles/styles.css">
 
   <!-- JS for weather and spotlights -->
-<script defer src="scripts/home.js"></script>
+  <script defer src="scripts/home.js"></script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="City Chamber of Commerce - Connecting Local Businesses & Events">
   <meta property="og:description" content="Discover local businesses, upcoming events, and member spotlights in our City Chamber of Commerce. Join us to support the community.">
-  <meta property="og:image" content="https://ellencheck.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
 </head>
@@ -40,8 +40,8 @@
     <div class="logo">
       <h2>City Chamber</h2>
     </div>
-    <nav>
-      <button id="menu" aria-label="Toggle menu">☰</button>
+    <nav aria-label="Main navigation">
+      <button id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <ul class="navigation">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -79,7 +79,7 @@
     <section class="weather">
       <h2>Local Weather</h2>
       <div id="weather">
-        <!-- JS вставит данные погоды сюда -->
+        <p>Loading weather data...</p>
       </div>
     </section>
 
@@ -87,16 +87,20 @@
     <section class="spotlights">
       <h2>Member Spotlights</h2>
       <div id="spotlight-cards" class="cards-container">
-        <!-- JS вставит случайные Gold/Silver компании сюда -->
+        <article class="spotlight">
+          <h3>Example Business</h3>
+          <p>This is a placeholder spotlight. Real member highlights will load here.</p>
+        </article>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-   <footer>
+  <footer>
     <p>&copy; <span id="year"></span> City Chamber of Commerce</p>
     <p>WDD 231 | <span id="lastModified"></span></p>
     <p>Contact: info@citychamber.com</p>
   </footer>
 </body>
 </html>
+
