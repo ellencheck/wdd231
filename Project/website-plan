@@ -13,7 +13,7 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif; /* Typography */
+      font-family: 'Roboto', sans-serif;
       background-color: var(--secondary-color);
       color: var(--primary-color);
       margin: 20px;
@@ -22,11 +22,6 @@
 
     h1, h2, h3 {
       color: var(--primary-color);
-    }
-
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
     }
 
     section {
@@ -42,6 +37,11 @@
       padding: 10px;
       overflow-x: auto;
     }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -51,5 +51,73 @@
   <section>
     <h2>Site Name</h2>
     <p><strong>Online Language School</strong></p>
-    <p>This name clearly represents the purpose of the website — an online platform to
+    <p>This name clearly represents the purpose of the website — an online platform to learn multiple foreign languages with qualified teachers.</p>
+  </section>
 
+  <section>
+    <h2>Site Purpose</h2>
+    <p>The site provides a comprehensive hub for learning foreign languages online. Users can explore available courses, view teacher profiles, and enroll in classes. The school offers courses in 10 languages including Russian, English, German, French, Italian, Spanish, Japanese, Chinese, Portuguese, and Arabic.</p>
+    <p>My personal goal is to fulfill my childhood dream of creating an online school where I could teach Russian and English. Although I cannot officially work as a teacher in Chile, this project allows my dream to exist in the form of a website.</p>
+  </section>
+
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>Which course is suitable for a beginner who wants to learn Italian?</li>
+      <li>How can I contact a teacher or enroll in a Russian language class?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Color Schema</h2>
+    <ul>
+      <li><strong>Primary Color (#2c3e50):</strong> Used for headings, navigation, and accents.</li>
+      <li><strong>Secondary Color (#ecf0f1):</strong> Used for backgrounds of pages and sections.</li>
+      <li><strong>Accent Color (#e74c3c):</strong> Used for buttons, links, and highlights.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
+    <ul>
+      <li><strong>Roboto, sans-serif:</strong> Used for body text.</li>
+      <li><strong>Montserrat, sans-serif:</strong> Used for headings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Wireframe</h2>
+    <p><strong>Home Page Layout:</strong></p>
+    <p>Mobile View:</p>
+    <pre>
+------------------------
+| Header / Logo        |
+| Navigation (hamburger)|
+| Hero Section         |
+| Featured Courses     |
+| Teacher Highlights   |
+| Footer               |
+------------------------
+    </pre>
+    <p>Desktop View:</p>
+    <pre>
+------------------------------------------------
+| Logo | Navigation Links | Login/Sign Up     |
+------------------------------------------------
+| Hero Section (full width)                     |
+------------------------------------------------
+| Featured Courses | Teacher Highlights       |
+| 2 Columns Layout                              |
+------------------------------------------------
+| Footer                                        |
+------------------------------------------------
+    </pre>
+  </section>
+
+  <section>
+    <h2>Testing Plan</h2>
+    <p>Once the site is built, I will validate HTML and CSS, check color contrast and accessibility using DevTools and Lighthouse, test SEO and performance, and ensure the site is responsive on mobile and desktop.</p>
+  </section>
+
+</body>
+</html>
