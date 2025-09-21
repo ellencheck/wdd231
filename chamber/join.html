@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the City Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/join.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h2>City Chamber</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Membership Application</h1>
+
+    <!-- Membership Form -->
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name:
+        <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+      </label>
+
+      <label>
+        Last Name:
+        <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+      </label>
+
+      <label>
+        Organizational Title:
+        <input type="text" name="organizationTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+      </label>
+
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+      </label>
+
+      <label>
+        Business/Organization Name:
+        <input type="text" name="organization" title="Organization" autocomplete="organization" required>
+      </label>
+
+      <label>
+        Membership Level:
+        <select name="membership" required>
+          <option value="">Select a level</option>
+          <option value="np">NP Membership (Free)</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business Description:
+        <textarea name="description" title="Organization Description"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <input type="submit" value="Submit Application">
+    </form>
+
+    <!-- Membership Cards -->
+    <section class="membership-cards">
+      <div class="card">
+        <h3>NP Membership</h3>
+        <a href="#" data-modal="npModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <a href="#" data-modal="bronzeModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <a href="#" data-modal="silverModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <a href="#" data-modal="goldModal">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="npModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>No fee, access to community events, networking opportunities.</p>
+      </div>
+    </div>
+
+    <div id="bronzeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Includes NP benefits + event discounts, listing in directory.</p>
+      </div>
+    </div>
+
+    <div id="silverModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Includes Bronze benefits + advertising options, spotlight positions.</p>
+      </div>
+    </div>
+
+    <div id="goldModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>Includes Silver benefits + premium promotion, VIP events, training sessions.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> City Chamber of Commerce</p>
+  </footer>
+</body>
+</html>
