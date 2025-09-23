@@ -1,15 +1,12 @@
+/* ---------- ОБЩИЕ НАСТРОЙКИ ---------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  background: #f5f5f5;
+  color: #333;
 }
 
-/* ---------- HEADER и FOOTER ---------- */
-header, footer {
-  background: #1d6559;
-  color: white;
-  padding: 1rem;
-}
-
+/* ---------- HEADER ---------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -17,10 +14,10 @@ header {
   background: #1d6559;
   color: #fff;
   padding: 0.75rem 1.5rem;
-  position: sticky;   /* всегда сверху */
+  position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* тень */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .logo h2 {
@@ -29,7 +26,7 @@ header {
   font-weight: 700;
 }
 
-/* ---------- NAV ---------- */
+/* ---------- NAVIGATION ---------- */
 nav {
   position: relative;
 }
@@ -49,13 +46,16 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffd700; /* золотистый hover */
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffd700;
+  font-weight: bold;
+  border-bottom: 2px solid #ffd700;
 }
 
-/* ---------- BURGER BUTTON ---------- */
+/* ---------- BURGER MENU ---------- */
 #menu {
-  display: none; /* по умолчанию скрыт */
+  display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
@@ -63,67 +63,21 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* ---------- DIRECTORY ---------- */
-#directory.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-#directory.list {
-  display: block;
-}
-
-/* --- общий стиль карточки --- */
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* --- для Grid --- */
-#directory.grid .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* --- для List --- */
-#directory.list .card {
-  display: flex;
-  flex-direction: row;     /* картинка слева, текст справа */
-  align-items: center;
-  gap: 1rem;
-}
-
-#directory.list .card img {
-  width: 120px;            
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    background: #1d6559;
     position: absolute;
     right: 0;
     top: 100%;
     width: 220px;
     padding: 1rem;
+    background: #1d6559;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(-10px);
     opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   nav ul.show {
@@ -136,6 +90,7 @@ nav ul li a:hover {
     display: block;
   }
 }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -163,138 +118,113 @@ nav ul li a:hover {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #ffd700;
-  color: #1d6559;
+  color: #00332b;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #e6c200;
+  color: #001a14;
 }
 
-/* ---------- EVENTS ---------- */
+/* ---------- EVENTS & WEATHER ---------- */
+.events, .weather {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
 .events {
-  padding: 1rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  margin-bottom: 2rem;
 }
 
-/* ---------- WEATHER ---------- */
 .weather {
-  padding: 1rem;
   background-color: #eef7f5;
-  border-radius: 8px;
-  margin-bottom: 2rem;
 }
 
 /* ---------- SPOTLIGHTS ---------- */
-.spotlights {
-  padding: 1rem 0;
-}
-
-.cards-container {
+.spotlights, .membership-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto;
 }
 
-.spotlights .card {
+.spotlights .card,
+.membership-cards .card {
   flex: 1 1 250px;
   background: #fff;
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
 }
-.spotlights .card img {
+
+.spotlights .card:hover,
+.membership-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.spotlights .card img,
+.membership-cards .card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
 }
-/* ---------- WAYFINDING (активная ссылка) ---------- */
-nav ul li a.active {
-  border-bottom: 2px solid #ffd700;
-  font-weight: bold;
-  color: #ffd700; /* подчёркивание + цвет для видимости */
-}
-
-/* ---------- CONTRAST FIX для CTA кнопки ---------- */
-.cta-button {
-  background-color: #ffd700;
-  color: #00332b; /* более тёмный зелёный для контраста AA */
-}
-
-.cta-button:hover {
-  background-color: #e6c200;
-  color: #001a14; /* ещё темнее при ховере */
-}
-
-/* ---------- SPOTLIGHT карточки улучшенные ---------- */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.spotlights .card {
-  flex: 1 1 250px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
-}
-
-.spotlights .card:hover {
-  transform: translateY(-5px);
-}
-/* Membership cards animation */
-.membership-cards {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #f9f9f9;
-  text-align: center;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-}
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Modals */
+/* ---------- DIRECTORY ---------- */
+#directory.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+#directory.list {
+  display: block;
+}
+
+#directory.list .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#directory.list .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ---------- MODALS ---------- */
 .modal {
   display: none;
   position: fixed;
   z-index: 10;
   padding-top: 80px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.6);
 }
+
 .modal-content {
   background: #fff;
   margin: auto;
@@ -302,36 +232,17 @@ nav ul li a.active {
   border-radius: 8px;
   max-width: 500px;
 }
+
 .close {
   float: right;
   font-size: 24px;
   cursor: pointer;
 }
-/* Универсальный стиль для всех карточек */
-.card,
-.spotlight {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+/* ---------- FOOTER ---------- */
+footer {
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-.card img,
-.spotlight img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* Контейнеры карточек */
-.cards-container,
-.spotlights,
-.membership-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  padding: 1rem;
+  background: #1d6559;
+  color: #fff;
 }
