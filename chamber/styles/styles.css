@@ -370,4 +370,35 @@ nav ul li a.active {
     grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд на больших экранах */
   }
 }
+.spotlights {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0 1rem; /* чуть padding, чтобы не прилегало к краям */
+  width: 100%; /* во весь экран */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: stretch; /* карточки растягиваются по ширине колонки */
+}
+
+/* Для больших экранов — можно фикс 4 или 6 колонок */
+@media (min-width: 1200px) {
+  .spotlights {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  .spotlights {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Изображения внутри карточек */
+.spotlight img {
+  width: 100%; /* растянуть на всю ширину карточки */
+  height: 150px; /* фиксированная высота */
+  object-fit: cover; /* картинка не сжимается, не обрезается странно */
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
 
