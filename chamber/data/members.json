@@ -14,7 +14,7 @@
       "phone": "+56 32 314 8000",
       "website": "https://clinicamaitenes.cl/",
       "logo": "images/clinica-maitenes.webp",
-      "level": "Silver"
+      "level": "Gold"
     },
     {
       "name": "Salfa Sur Automotriz",
@@ -22,7 +22,7 @@
       "phone": "",
       "website": "https://www.salfasur.cl/",
       "logo": "images/salfa-sur.jpeg",
-      "level": "Silver"
+      "level": "Gold"
     },
     {
       "name": "Líder Supermarket",
@@ -30,7 +30,7 @@
       "phone": "",
       "website": "https://www.lider.cl/",
       "logo": "images/lider.jpg",
-      "level": "Bronze"
+      "level": "Silver"
     },
     {
       "name": "Santa Isabel Supermarket",
@@ -38,7 +38,7 @@
       "phone": "(56-600) 4002000",
       "website": "https://www.santaisabel.cl/",
       "logo": "images/santa-isabel.jpeg",
-      "level": "Bronze"
+      "level": "Silver"
     },
     {
       "name": "Teatro Pompeya",
@@ -66,3 +66,4 @@
     }
   ]
 }
+
