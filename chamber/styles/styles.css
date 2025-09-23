@@ -14,13 +14,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1d6559;
-  color: #fff;
   padding: 0.75rem 1.5rem;
-  position: sticky;   /* всегда сверху */
+  position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* тень */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .logo h2 {
@@ -49,63 +47,21 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffd700; /* золотистый hover */
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+  font-weight: bold;
 }
 
 /* ---------- BURGER BUTTON ---------- */
 #menu {
-  display: none; /* по умолчанию скрыт */
+  display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-}
-
-/* ---------- DIRECTORY ---------- */
-#directory.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-#directory.list {
-  display: block;
-}
-
-/* --- общий стиль карточки --- */
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* --- для Grid --- */
-#directory.grid .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* --- для List --- */
-#directory.list .card {
-  display: flex;
-  flex-direction: row;     /* картинка слева, текст справа */
-  align-items: center;
-  gap: 1rem;
-}
-
-#directory.list .card img {
-  width: 120px;            
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
 }
 
 /* ---------- MOBILE ---------- */
@@ -136,6 +92,7 @@ nav ul li a:hover {
     display: block;
   }
 }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -163,15 +120,16 @@ nav ul li a:hover {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #ffd700;
-  color: #1d6559;
+  color: #00332b;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #e6c200;
+  color: #001a14;
 }
 
 /* ---------- EVENTS ---------- */
@@ -190,83 +148,45 @@ nav ul li a:hover {
   margin-bottom: 2rem;
 }
 
-/* ---------- SPOTLIGHTS ---------- */
-.spotlights {
-  padding: 1rem 0;
+/* ---------- HOME SPOTLIGHTS ---------- */
+.home-spotlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.spotlights .card {
-  flex: 1 1 250px;
+.home-spotlights .card {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.spotlights .card img {
+
+.home-spotlights .card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
-}
-/* ---------- WAYFINDING (активная ссылка) ---------- */
-nav ul li a.active {
-  border-bottom: 2px solid #ffd700;
-  font-weight: bold;
-  color: #ffd700; /* подчёркивание + цвет для видимости */
+  margin-bottom: 0.5rem;
 }
 
-/* ---------- CONTRAST FIX для CTA кнопки ---------- */
-.cta-button {
-  background-color: #ffd700;
-  color: #00332b; /* более тёмный зелёный для контраста AA */
-}
-
-.cta-button:hover {
-  background-color: #e6c200;
-  color: #001a14; /* ещё темнее при ховере */
-}
-
-/* ---------- SPOTLIGHT карточки улучшенные ---------- */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.spotlights .card {
-  flex: 1 1 250px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
-}
-
-.spotlights .card:hover {
+.home-spotlights .card:hover {
   transform: translateY(-5px);
 }
-/* Membership cards animation */
+
+/* ---------- MEMBERSHIP CARDS ---------- */
 .membership-cards {
   display: grid;
   gap: 1rem;
   margin-top: 2rem;
 }
-.card {
+
+.membership-cards .card {
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 8px;
@@ -275,26 +195,70 @@ nav ul li a.active {
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
+
+.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
+.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
+.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
+.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Modals */
+/* ---------- DIRECTORY ---------- */
+#directory.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#directory.list {
+  display: block;
+}
+
+#directory .card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#directory.grid .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#directory.list .card {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#directory.list .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ---------- MODALS ---------- */
 .modal {
   display: none;
   position: fixed;
   z-index: 10;
   padding-top: 80px;
   left: 0; top: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.6);
 }
+
 .modal-content {
   background: #fff;
   margin: auto;
@@ -302,19 +266,14 @@ nav ul li a.active {
   border-radius: 8px;
   max-width: 500px;
 }
+
 .close {
   float: right;
   font-size: 24px;
   cursor: pointer;
 }
-.spotlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 1rem;
-}
 
+/* ---------- SPOTLIGHT (общие карточки на home) ---------- */
 .spotlight {
   background: #fff;
   border-radius: 16px;
@@ -330,9 +289,11 @@ nav ul li a.active {
 }
 
 .spotlight img {
-  max-width: 100px;
-  margin: 0 auto 1rem;
-  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .spotlight h3 {
@@ -360,45 +321,12 @@ nav ul li a.active {
 .spotlight .btn:hover {
   background: #0d47a1;
 }
-/* --- Центрирование и фикс 4 колонки для больших экранов --- */
-.spotlights {
-  justify-content: center; /* центрируем ряд, если карточек меньше, чем колонок */
-}
 
+/* ---------- MEDIA LARGE SCREENS ---------- */
 @media (min-width: 1200px) {
-  .spotlights {
-    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд на больших экранах */
-  }
-}
-.spotlights {
-  display: grid;
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 0 1rem; /* чуть padding, чтобы не прилегало к краям */
-  width: 100%; /* во весь экран */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-items: stretch; /* карточки растягиваются по ширине колонки */
-}
-
-/* Для больших экранов — можно фикс 4 или 6 колонок */
-@media (min-width: 1200px) {
-  .spotlights {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .home-spotlights { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 1600px) {
-  .spotlights {
-    grid-template-columns: repeat(6, 1fr);
-  }
+  .home-spotlights { grid-template-columns: repeat(6, 1fr); }
 }
-
-/* Изображения внутри карточек */
-.spotlight img {
-  width: 100%; /* растянуть на всю ширину карточки */
-  height: 150px; /* фиксированная высота */
-  object-fit: cover; /* картинка не сжимается, не обрезается странно */
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
