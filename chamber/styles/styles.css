@@ -14,13 +14,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1d6559;
-  color: #fff;
   padding: 0.75rem 1.5rem;
-  position: sticky;   /* всегда сверху */
+  position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* тень */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .logo h2 {
@@ -50,12 +48,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffd700; /* золотистый hover */
+  color: #ffd700;
 }
 
 /* ---------- BURGER BUTTON ---------- */
 #menu {
-  display: none; /* по умолчанию скрыт */
+  display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
@@ -74,8 +72,7 @@ nav ul li a:hover {
   display: block;
 }
 
-/* --- общий стиль карточки --- */
-.card {
+#directory .card {
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #fff;
@@ -83,9 +80,11 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  opacity: 1;          /* всегда видимые */
+  animation: none;     /* без анимации */
 }
 
-/* --- для Grid --- */
+/* --- Grid / List images --- */
 #directory.grid .card img {
   width: 100%;
   height: 200px;
@@ -93,16 +92,14 @@ nav ul li a:hover {
   border-radius: 6px;
 }
 
-/* --- для List --- */
 #directory.list .card {
-  display: flex;
-  flex-direction: row;     /* картинка слева, текст справа */
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
 
 #directory.list .card img {
-  width: 120px;            
+  width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 6px;
@@ -136,6 +133,7 @@ nav ul li a:hover {
     display: block;
   }
 }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -195,54 +193,6 @@ nav ul li a:hover {
   padding: 1rem 0;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.spotlights .card {
-  flex: 1 1 250px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.spotlights .card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-/* ---------- WAYFINDING (активная ссылка) ---------- */
-nav ul li a.active {
-  border-bottom: 2px solid #ffd700;
-  font-weight: bold;
-  color: #ffd700; /* подчёркивание + цвет для видимости */
-}
-
-/* ---------- CONTRAST FIX для CTA кнопки ---------- */
-.cta-button {
-  background-color: #ffd700;
-  color: #00332b; /* более тёмный зелёный для контраста AA */
-}
-
-.cta-button:hover {
-  background-color: #e6c200;
-  color: #001a14; /* ещё темнее при ховере */
-}
-
-/* ---------- SPOTLIGHT карточки улучшенные ---------- */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
 .spotlights .card {
   flex: 1 1 250px;
   background: #fff;
@@ -255,18 +205,29 @@ nav ul li a.active {
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
+  opacity: 0;              /* анимация только для Spotlights */
+  animation: fadeInUp 1s forwards;
 }
 
 .spotlights .card:hover {
   transform: translateY(-5px);
 }
-/* Membership cards animation */
+
+.spotlights .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ---------- Membership cards ---------- */
 .membership-cards {
   display: grid;
   gap: 1rem;
   margin-top: 2rem;
 }
-.card {
+
+.membership-cards .card {
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 8px;
@@ -275,26 +236,38 @@ nav ul li a.active {
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
 
+.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
+.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
+.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
+.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
+
+/* ---------- Animations ---------- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Modals */
+/* ---------- WAYFINDING (активная ссылка) ---------- */
+nav ul li a.active {
+  border-bottom: 2px solid #ffd700;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* ---------- Modals ---------- */
 .modal {
   display: none;
   position: fixed;
   z-index: 10;
   padding-top: 80px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
   background: rgba(0,0,0,0.6);
 }
+
 .modal-content {
   background: #fff;
   margin: auto;
@@ -302,6 +275,7 @@ nav ul li a.active {
   border-radius: 8px;
   max-width: 500px;
 }
+
 .close {
   float: right;
   font-size: 24px;
