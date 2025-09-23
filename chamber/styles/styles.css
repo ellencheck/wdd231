@@ -5,7 +5,7 @@ body {
 
 /* ---------- HEADER и FOOTER ---------- */
 header, footer {
-  background: #304d48;
+  background: #18473f;
   color: white;
   padding: 1rem;
 }
@@ -162,7 +162,7 @@ nav ul li a:hover {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #ffd700;
-  color: #0e1716
+  color:#1b2927;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
