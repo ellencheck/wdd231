@@ -273,26 +273,28 @@ nav ul li a.active {
   font-size: 24px;
   cursor: pointer;
 }
-/* ---------- Spotlights Home Gold Members ---------- */
+/* ---------- Spotlights Home Gold Members Professional ---------- */
 .spotlights.home .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   justify-items: stretch;
-  align-items: start;
+  align-items: stretch; /* все карточки одной высоты */
   padding: 1rem 0;
 }
 
 .spotlights.home .card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 0.75rem;
   background: #fff;
   border-radius: 12px;
   padding: 1.25rem;
+  border: 2px solid #ffd700; /* золотая рамка */
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  border: 2px solid #ffd700; /* золотая рамка для Gold-членов */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* карточка занимает всю высоту ячейки */
 }
 
 .spotlights.home .card:hover {
@@ -305,6 +307,7 @@ nav ul li a.active {
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .spotlights.home .card h3 {
@@ -318,4 +321,5 @@ nav ul li a.active {
   font-size: 0.95rem;
   color: #555;
   margin: 0;
+  flex-grow: 1; /* чтобы текст растягивал карточку равномерно */
 }
