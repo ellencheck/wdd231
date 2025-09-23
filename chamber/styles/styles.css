@@ -360,4 +360,14 @@ nav ul li a.active {
 .spotlight .btn:hover {
   background: #0d47a1;
 }
+/* --- Центрирование и фикс 4 колонки для больших экранов --- */
+.spotlights {
+  justify-content: center; /* центрируем ряд, если карточек меньше, чем колонок */
+}
+
+@media (min-width: 1200px) {
+  .spotlights {
+    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд на больших экранах */
+  }
+}
 
