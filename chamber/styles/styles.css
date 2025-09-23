@@ -323,3 +323,20 @@ nav ul li a.active {
   margin: 0;
   flex-grow: 1; /* чтобы текст растягивал карточку равномерно */
 }
+.cards-container,
+.spotlights,
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch; /* растягивает карточки по высоте */
+}
+
+.spotlight,
+.card {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* контент внутри распределяется */
+}
