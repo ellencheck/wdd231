@@ -1,13 +1,17 @@
-// Fetch members from JSON and display
+// Load members from JSON
 async function getMembers() {
-  const response = await fetch("data/members.json");
-  const data = await response.json();
-  displayMembers(data.members); // обратите внимание на .members
+  try {
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    displayMembers(data.members);
+  } catch (err) {
+    console.error("Error loading members:", err);
+  }
 }
 
 function displayMembers(members) {
   const directory = document.querySelector("#directory");
-  directory.innerHTML = ""; // очистить перед рендером
+  directory.innerHTML = ""; // clear before rendering
 
   members.forEach(member => {
     const card = document.createElement("section");
