@@ -34,29 +34,35 @@ fetch(apiURL)
 fetch("data/members.json")
   .then(res => res.json())
   .then(data => {
+    // Фильтруем только Gold и Silver
     const spotlights = data.members.filter(
       m => m.level === "Gold" || m.level === "Silver"
     );
+
+    // Перемешиваем
     spotlights.sort(() => 0.5 - Math.random());
-    const selected = spotlights.slice(0, 3);
+
+    // Выбираем только 2 участника
+    const selected = spotlights.slice(0, 2);
 
     const container = document.getElementById("spotlight-cards");
+    container.innerHTML = ""; // Очищаем контейнер перед вставкой
+
     selected.forEach(member => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = "spotlight"; // используем класс .spotlight для CSS
       card.innerHTML = `
-        <h3>${member.name}</h3>
         <img src="${member.logo}" alt="${member.name} Logo">
+        <h3>${member.name}</h3>
         <p>${member.phone}</p>
         <p>${member.address}</p>
         <p><a href="${member.website}" target="_blank">Website</a></p>
-        <p>Member Level: ${member.level}</p>
+        <p class="category">Member Level: ${member.level}</p>
       `;
       container.appendChild(card);
     });
   })
   .catch(err => console.error("Ошибка spotlight:", err));
-
 // ------------------ Footer ------------------
 document.getElementById("year").textContent = new Date().getFullYear();
 
