@@ -148,188 +148,6 @@ nav ul li a.active {
   margin-bottom: 2rem;
 }
 
-/* ---------- HOME SPOTLIGHTS ---------- */
-.home-spotlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 0 1rem;
-}
-
-.home-spotlights .card {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.home-spotlights .card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.home-spotlights .card:hover {
-  transform: translateY(-5px);
-}
-
-/* ---------- MEMBERSHIP CARDS ---------- */
-.membership-cards {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.membership-cards .card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #f9f9f9;
-  text-align: center;
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-}
-
-.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
-.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
-.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
-.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------- DIRECTORY ---------- */
-#directory.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-#directory.list {
-  display: block;
-}
-
-#directory .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-#directory.grid .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-#directory.list .card {
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-}
-
-#directory.list .card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* ---------- MODALS ---------- */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  padding-top: 80px;
-  left: 0; top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background: #fff;
-  margin: auto;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-}
-
-.close {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* ---------- SPOTLIGHT (общие карточки на home) ---------- */
-.spotlight {
-  background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.spotlight:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.spotlight img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-.spotlight h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  color: #1565c0;
-}
-
-.spotlight .category {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.spotlight .btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #1565c0;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.spotlight .btn:hover {
-  background: #0d47a1;
-}
-
-/* ---------- MEDIA LARGE SCREENS ---------- */
-@media (min-width: 1200px) {
-  .home-spotlights { grid-template-columns: repeat(4, 1fr); }
-}
-
-@media (min-width: 1600px) {
-  .home-spotlights { grid-template-columns: repeat(6, 1fr); }
-}
 /* ---------- Общий стиль карточек ---------- */
 .card {
   background: #fff;
@@ -394,11 +212,69 @@ nav ul li a.active {
   margin-right: 1rem;
 }
 
-/* ---------- Spotlight секция (главная) ---------- */
+/* ---------- Spotlight (главная) ---------- */
 .home-spotlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
   padding: 0 1rem;
+}
+
+/* ---------- MEMBERSHIP CARDS ---------- */
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.membership-cards .card {
+  background: #f9f9f9;
+  animation: fadeInUp 1s forwards;
+  opacity: 0;
+}
+
+.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
+.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
+.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
+.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- MODALS ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 80px;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ---------- MEDIA LARGE SCREENS ---------- */
+@media (min-width: 1200px) {
+  .home-spotlights { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1600px) {
+  .home-spotlights { grid-template-columns: repeat(6, 1fr); }
 }
