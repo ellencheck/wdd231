@@ -1,38 +1,42 @@
+// Fetch members from JSON and display
 async function getMembers() {
   const response = await fetch("data/members.json");
   const data = await response.json();
-  displayMembers(data);
+  displayMembers(data.members); // обратите внимание на .members
 }
 
 function displayMembers(members) {
   const directory = document.querySelector("#directory");
-  directory.innerHTML = ""; // clear before rendering
+  directory.innerHTML = ""; // очистить перед рендером
 
   members.forEach(member => {
     const card = document.createElement("section");
     card.classList.add("card");
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
+      <img src="${member.logo}" alt="${member.name} logo">
       <h3>${member.name}</h3>
       <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
-      <p class="membership">Membership: ${member.membership}</p>
+      ${member.phone ? `<p>${member.phone}</p>` : ""}
+      ${member.website ? `<a href="${member.website}" target="_blank">Visit Website</a>` : ""}
+      <p class="membership">Membership: ${member.level}</p>
     `;
 
     directory.appendChild(card);
   });
 }
 
+// Grid/List toggle
 document.querySelector("#gridBtn").addEventListener("click", () => {
-  document.querySelector("#directory").classList.add("grid");
-  document.querySelector("#directory").classList.remove("list");
+  const directory = document.querySelector("#directory");
+  directory.classList.add("grid");
+  directory.classList.remove("list");
 });
 
 document.querySelector("#listBtn").addEventListener("click", () => {
-  document.querySelector("#directory").classList.add("list");
-  document.querySelector("#directory").classList.remove("grid");
+  const directory = document.querySelector("#directory");
+  directory.classList.add("list");
+  directory.classList.remove("grid");
 });
 
 // Footer dates
@@ -41,10 +45,10 @@ document.getElementById("lastModified").textContent = document.lastModified;
 
 // Load members on page load
 getMembers();
+
+// Mobile menu toggle
 const menuBtn = document.querySelector("#menu");
 const navUl = document.querySelector(".navigation");
-
 menuBtn.addEventListener("click", () => {
   navUl.classList.toggle("show");
 });
-
