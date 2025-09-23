@@ -1,25 +1,26 @@
-/* ---------- BASE ---------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f5f5f5;
 }
 
-/* ---------- HEADER & FOOTER ---------- */
+/* ---------- HEADER и FOOTER ---------- */
 header, footer {
   background: #1d6559;
   color: white;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  background: #1d6559;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  position: sticky;   /* всегда сверху */
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* тень */
 }
 
 .logo h2 {
@@ -28,12 +29,7 @@ header {
   font-weight: 700;
 }
 
-footer p {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
-}
-
-/* ---------- NAVIGATION ---------- */
+/* ---------- NAV ---------- */
 nav {
   position: relative;
 }
@@ -50,24 +46,66 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #ffd700;
-  border-bottom: 2px solid #ffd700;
-  font-weight: bold;
+nav ul li a:hover {
+  color: #ffd700; /* золотистый hover */
 }
 
 /* ---------- BURGER BUTTON ---------- */
 #menu {
-  display: none;
+  display: none; /* по умолчанию скрыт */
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+}
+
+/* ---------- DIRECTORY ---------- */
+#directory.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#directory.list {
+  display: block;
+}
+
+/* --- общий стиль карточки --- */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* --- для Grid --- */
+#directory.grid .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* --- для List --- */
+#directory.list .card {
+  display: flex;
+  flex-direction: row;     /* картинка слева, текст справа */
+  align-items: center;
+  gap: 1rem;
+}
+
+#directory.list .card img {
+  width: 120px;            
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 /* ---------- MOBILE ---------- */
@@ -83,9 +121,9 @@ nav ul li a.active {
     padding: 1rem;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(-10px);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   nav ul.show {
@@ -98,7 +136,6 @@ nav ul li a.active {
     display: block;
   }
 }
-
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -126,174 +163,138 @@ nav ul li a.active {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #ffd700;
-  color: #00332b;
+  color: #1d6559;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #e6c200;
-  color: #001a14;
 }
 
-/* ---------- EVENTS & WEATHER ---------- */
-.events, .weather {
+/* ---------- EVENTS ---------- */
+.events {
   padding: 1rem;
+  background-color: #f9f9f9;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
-.events {
-  background-color: #f9f9f9;
-}
-
+/* ---------- WEATHER ---------- */
 .weather {
-  background-color: #eef7f5;
-}
-
-/* ---------- CARD STYLE FOR ALL ---------- */
-.card {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 12px;
   padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+  background-color: #eef7f5;
   border-radius: 8px;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 0.25rem;
-  color: #1565c0;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0;
-}
-
-/* ---------- DIRECTORY GRID & LIST ---------- */
-#directory.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-#directory.list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-#directory.list .card {
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
-}
-
-#directory.list .card img {
-  width: 120px;
-  height: 120px;
-  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* ---------- SPOTLIGHTS ---------- */
-.home-spotlights, .spotlights .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 0 1rem;
+.spotlights {
+  padding: 1rem 0;
 }
 
-.spotlight {
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.spotlights .card {
+  flex: 1 1 250px;
   background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-
-.spotlight:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.spotlight img {
+.spotlights .card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+/* ---------- WAYFINDING (активная ссылка) ---------- */
+nav ul li a.active {
+  border-bottom: 2px solid #ffd700;
+  font-weight: bold;
+  color: #ffd700; /* подчёркивание + цвет для видимости */
+}
+
+/* ---------- CONTRAST FIX для CTA кнопки ---------- */
+.cta-button {
+  background-color: #ffd700;
+  color: #00332b; /* более тёмный зелёный для контраста AA */
+}
+
+.cta-button:hover {
+  background-color: #e6c200;
+  color: #001a14; /* ещё темнее при ховере */
+}
+
+/* ---------- SPOTLIGHT карточки улучшенные ---------- */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.spotlights .card {
+  flex: 1 1 250px;
+  background: #fff;
+  border: 1px solid #ccc;
   border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
 }
 
-.spotlight h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  color: #1565c0;
+.spotlights .card:hover {
+  transform: translateY(-5px);
 }
-
-.spotlight p {
-  color: #666;
-  font-size: 0.95rem;
-}
-
-/* ---------- MEMBERSHIP CARDS ---------- */
+/* Membership cards animation */
 .membership-cards {
   display: grid;
   gap: 1rem;
   margin-top: 2rem;
 }
-
-.membership-cards .card {
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
   background: #f9f9f9;
+  text-align: center;
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
-
-.membership-cards .card:nth-child(1) { animation-delay: 0.2s; }
-.membership-cards .card:nth-child(2) { animation-delay: 0.4s; }
-.membership-cards .card:nth-child(3) { animation-delay: 0.6s; }
-.membership-cards .card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- MODALS ---------- */
+/* Modals */
 .modal {
   display: none;
   position: fixed;
   z-index: 10;
   padding-top: 80px;
   left: 0; top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.6);
 }
-
 .modal-content {
   background: #fff;
   margin: auto;
@@ -301,22 +302,8 @@ nav ul li a.active {
   border-radius: 8px;
   max-width: 500px;
 }
-
 .close {
   float: right;
   font-size: 24px;
   cursor: pointer;
-}
-
-/* ---------- MEDIA LARGE SCREENS ---------- */
-@media (min-width: 1200px) {
-  .home-spotlights, .spotlights .cards-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1600px) {
-  .home-spotlights, .spotlights .cards-container {
-    grid-template-columns: repeat(6, 1fr);
-  }
 }
