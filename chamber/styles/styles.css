@@ -304,3 +304,118 @@ nav ul li a.active {
   object-fit: cover;
   border-radius: 6px;
 }
+/* === Join Page Styles === */
+main#joinPage {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+main#joinPage h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #003366;
+}
+
+main#joinPage form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+main#joinPage label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+main#joinPage input[type="text"],
+main#joinPage input[type="email"],
+main#joinPage input[type="tel"],
+main#joinPage select,
+main#joinPage textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+main#joinPage input[type="submit"] {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main#joinPage input[type="submit"]:hover {
+  background-color: #0055a5;
+}
+
+main#joinPage .membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+main#joinPage .membership-cards .card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #fff;
+}
+
+main#joinPage .membership-cards .card h3 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+main#joinPage .membership-cards .card a {
+  color: #0055a5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main#joinPage .membership-cards .card a:hover {
+  text-decoration: underline;
+}
+
+/* Modal tweaks only inside Join Page */
+main#joinPage .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+main#joinPage .modal .modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  position: relative;
+}
+
+main#joinPage .modal .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
