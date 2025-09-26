@@ -8,10 +8,9 @@
   <meta name="description" content="Apply to join the City Chamber of Commerce and gain access to networking, events, and business promotion opportunities.">
   <meta name="author" content="Alina Chekalova">
 
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph (локально) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Join the City Chamber of Commerce">
   <meta property="og:description" content="Apply to join the City Chamber of Commerce and gain access to networking, events, and business promotion opportunities.">
   <meta property="og:image" content="images/og-image.jpg">
@@ -26,11 +25,8 @@
 </head>
 
 <body class="join-page">
-  <!-- Header -->
   <header>
-    <div class="logo">
-      <h2>City Chamber</h2>
-    </div>
+    <div class="logo"><h2>City Chamber</h2></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -45,41 +41,41 @@
   <main>
     <h1>Join the City Chamber of Commerce</h1>
 
-    <!-- Membership Form -->
     <form method="get" action="thankyou.html" id="joinForm">
       <label>
         First Name:
-        <input type="text" name="firstName" autocomplete="given-name" required>
+        <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
       </label>
 
       <label>
         Last Name:
-        <input type="text" name="lastName" autocomplete="family-name" required>
+        <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
       </label>
 
       <label>
         Organizational Title:
-        <input type="text" name="organizationTitle" autocomplete="organization-title">
+        <input type="text" name="organizationTitle" title="Enter your organizational title" autocomplete="organization-title" 
+               pattern="[A-Za-z\s-]{7,}">
       </label>
 
       <label>
         Email:
-        <input type="email" name="email" autocomplete="email" required>
+        <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@company.com" required>
       </label>
 
       <label>
         Mobile Phone:
-        <input type="tel" name="phone" autocomplete="tel" required>
+        <input type="tel" name="phone" title="Enter your mobile phone" autocomplete="tel" required>
       </label>
 
       <label>
         Business/Organization Name:
-        <input type="text" name="organization" autocomplete="organization" required>
+        <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
       </label>
 
       <label>
         Membership Level:
-        <select name="membership" required>
+        <select name="membership" title="Select membership level" required>
           <option value="">Select a level</option>
           <option value="np">NP Membership (Free)</option>
           <option value="bronze">Bronze Membership</option>
@@ -90,7 +86,7 @@
 
       <label>
         Business Description:
-        <textarea name="description"></textarea>
+        <textarea name="description" title="Enter a description of your business or organization"></textarea>
       </label>
 
       <input type="hidden" name="timestamp" id="timestamp">
@@ -98,24 +94,11 @@
       <input type="submit" value="Submit Application">
     </form>
 
-    <!-- Membership Cards -->
     <section class="membership-cards">
-      <div class="card">
-        <h3>NP Membership</h3>
-        <a href="#" data-modal="npModal">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>Bronze Membership</h3>
-        <a href="#" data-modal="bronzeModal">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>Silver Membership</h3>
-        <a href="#" data-modal="silverModal">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>Gold Membership</h3>
-        <a href="#" data-modal="goldModal">Learn More</a>
-      </div>
+      <div class="card" id="card-np"><h3>NP Membership</h3><a href="#" data-modal="npModal">Learn More</a></div>
+      <div class="card" id="card-bronze"><h3>Bronze Membership</h3><a href="#" data-modal="bronzeModal">Learn More</a></div>
+      <div class="card" id="card-silver"><h3>Silver Membership</h3><a href="#" data-modal="silverModal">Learn More</a></div>
+      <div class="card" id="card-gold"><h3>Gold Membership</h3><a href="#" data-modal="goldModal">Learn More</a></div>
     </section>
 
     <!-- Modals -->
@@ -159,5 +142,6 @@
   </footer>
 
   <script src="scripts/footer.js"></script>
+  <script src="scripts/join.js"></script>
 </body>
 </html>
