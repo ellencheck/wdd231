@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Discover Our City - City Chamber of Commerce</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Discover local attractions, businesses, and community highlights in our City Chamber of Commerce area.">
+
+  <!-- Author -->
+  <meta name="author" content="Alina Chekalova">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- JS for discover page -->
+  <script defer src="scripts/discover.js"></script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Discover Our City - City Chamber of Commerce">
+  <meta property="og:description" content="Learn more about the highlights of our community through the Chamber Discover Page.">
+  <meta property="og:image" content="https://ellencheck.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://ellencheck.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Header + Navigation -->
+  <header>
+    <div class="logo">
+      <h2>City Chamber</h2>
+    </div>
+    <nav aria-label="Main navigation">
+      <button id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Discover Our City</h1>
+
+    <!-- Visitor Message Section -->
+    <aside id="visit-message" class="visit-message">
+      <!-- JS will inject message here -->
+    </aside>
+
+    <!-- Discover Grid Section -->
+    <section class="discover-grid" id="discover-grid">
+      <!-- JS will load cards dynamically from JSON -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> City Chamber of Commerce</p>
+    <p>WDD 231 | <span id="lastModified"></span></p>
+    <p>Contact: info@citychamber.com</p>
+  </footer>
+</body>
+</html>
