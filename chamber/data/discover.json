@@ -1,0 +1,50 @@
+[
+  {
+    "title": "City Park",
+    "address": "123 Main St, MyCity",
+    "description": "A beautiful green space in the heart of town, perfect for strolls, picnics, and outdoor concerts.",
+    "image": "images/park.webp"
+  },
+  {
+    "title": "History Museum",
+    "address": "45 Heritage Ave, MyCity",
+    "description": "Explore our city's past through exhibits, artifacts, and interactive displays.",
+    "image": "images/museum.webp"
+  },
+  {
+    "title": "Riverwalk Trail",
+    "address": "Riverfront Rd",
+    "description": "Scenic walking and biking path along the river, great for nature lovers and families.",
+    "image": "images/riverwalk.webp"
+  },
+  {
+    "title": "Downtown Market",
+    "address": "Market Square, MyCity",
+    "description": "Vibrant local marketplace featuring food vendors, artisans, and live performances.",
+    "image": "images/market.webp"
+  },
+  {
+    "title": "Art Gallery",
+    "address": "78 Gallery Ln, MyCity",
+    "description": "Local artists showcase their work. Rotating exhibitions open to the public.",
+    "image": "images/gallery.webp"
+  },
+  {
+    "title": "Botanical Gardens",
+    "address": "Garden Rd, MyCity",
+    "description": "Peaceful gardens with native plants, walking paths, and seasonal events.",
+    "image": "images/gardens.webp"
+  },
+  {
+    "title": "Historic Theatre",
+    "address": "101 Broadway, MyCity",
+    "description": "Classic theatre with live performances, ranging from plays to concerts.",
+    "image": "images/theatre.webp"
+  },
+  {
+    "title": "Science Center",
+    "address": "22 Innovation Blvd, MyCity",
+    "description": "Hands-on exhibits and educational programs for all ages.",
+    "image": "images/science.webp"
+  }
+]
