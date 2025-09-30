@@ -1,50 +1,51 @@
 [
   {
-    "title": "City Park",
-    "address": "123 Main St, MyCity",
-    "description": "A beautiful green space in the heart of town, perfect for strolls, picnics, and outdoor concerts.",
-    "image": "images/park.webp"
+    "title": "Plaza Belén",
+    "address": "Calle Buenos Aires 650, Villa Alemana",
+    "description": "La plaza central de Villa Alemana, punto de encuentro con áreas verdes, ferias y actividades comunitarias.",
+    "image": "images/plaza_belen.webp"
   },
   {
-    "title": "History Museum",
-    "address": "45 Heritage Ave, MyCity",
-    "description": "Explore our city's past through exhibits, artifacts, and interactive displays.",
-    "image": "images/museum.webp"
+    "title": "Teatro Pompeya",
+    "address": "Buenos Aires 650, Villa Alemana",
+    "description": "Espacio cultural y patrimonial de la comuna. Aquí se realizan obras de teatro, conciertos y festivales locales.",
+    "image": "images/teatro_pompeya.webp"
   },
   {
-    "title": "Riverwalk Trail",
-    "address": "Riverfront Rd",
-    "description": "Scenic walking and biking path along the river, great for nature lovers and families.",
-    "image": "images/riverwalk.webp"
+    "title": "Museo Municipal de Villa Alemana",
+    "address": "Calle Santiago 674, Villa Alemana",
+    "description": "Museo local con colecciones históricas, culturales y artísticas que reflejan la identidad de la comuna.",
+    "image": "images/museo_villaalemana.webp"
   },
   {
-    "title": "Downtown Market",
-    "address": "Market Square, MyCity",
-    "description": "Vibrant local marketplace featuring food vendors, artisans, and live performances.",
-    "image": "images/market.webp"
+    "title": "Parque Cívico Belén",
+    "address": "Av. Valparaíso, Villa Alemana",
+    "description": "Espacio recreativo con áreas deportivas, juegos infantiles y zonas de picnic, ideal para familias.",
+    "image": "images/parque_belen.webp"
   },
   {
-    "title": "Art Gallery",
-    "address": "78 Gallery Ln, MyCity",
-    "description": "Local artists showcase their work. Rotating exhibitions open to the public.",
-    "image": "images/gallery.webp"
+    "title": "Cerro La Virgen",
+    "address": "Acceso por Calle Maturana, Villa Alemana",
+    "description": "Mirador natural con vista panorámica de la comuna. Lugar tradicional para caminatas y actividades al aire libre.",
+    "image": "images/cerro_virgen.webp"
   },
   {
-    "title": "Botanical Gardens",
-    "address": "Garden Rd, MyCity",
-    "description": "Peaceful gardens with native plants, walking paths, and seasonal events.",
-    "image": "images/gardens.webp"
+    "title": "Mercado Municipal",
+    "address": "Av. Valparaíso 540, Villa Alemana",
+    "description": "Mercado típico donde se pueden encontrar frutas, verduras frescas, artesanías y productos locales.",
+    "image": "images/mercado.webp"
   },
   {
-    "title": "Historic Theatre",
-    "address": "101 Broadway, MyCity",
-    "description": "Classic theatre with live performances, ranging from plays to concerts.",
-    "image": "images/theatre.webp"
+    "title": "Casa de la Cultura",
+    "address": "Calle Santiago 674, Villa Alemana",
+    "description": "Centro cultural con exposiciones de arte, talleres y actividades para toda la comunidad.",
+    "image": "images/casa_cultura.webp"
   },
   {
-    "title": "Science Center",
-    "address": "22 Innovation Blvd, MyCity",
-    "description": "Hands-on exhibits and educational programs for all ages.",
-    "image": "images/science.webp"
+    "title": "Estación Villa Alemana",
+    "address": "Av. Valparaíso s/n, Villa Alemana",
+    "description": "Antigua estación ferroviaria, hoy parte del Metro Valparaíso, símbolo histórico de la ciudad.",
+    "image": "images/estacion.webp"
   }
 ]
+
