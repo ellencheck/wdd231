@@ -66,3 +66,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showVisitMessage();
 });
+// ------------------ Footer ------------------
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  const lastModifiedSpan = document.getElementById("lastModified");
+  if (lastModifiedSpan) {
+    const lastModified = new Date(document.lastModified);
+    const formattedDate = `${String(lastModified.getMonth() + 1).padStart(2, "0")}/` +
+                          `${String(lastModified.getDate()).padStart(2, "0")}/` +
+                          `${lastModified.getFullYear()} ` +
+                          `${String(lastModified.getHours()).padStart(2, "0")}:` +
+                          `${String(lastModified.getMinutes()).padStart(2, "0")}:` +
+                          `${String(lastModified.getSeconds()).padStart(2, "0")}`;
+    lastModifiedSpan.textContent = formattedDate;
+  }
+
+  // ------------------ Mobile Menu ------------------
+  const menuBtn = document.querySelector("#menu");
+  const navUl = document.querySelector(".navigation");
+
+  if (menuBtn && navUl) {
+    menuBtn.addEventListener("click", () => {
+      navUl.classList.toggle("show");
+    });
+  }
+});
