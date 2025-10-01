@@ -66,22 +66,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showVisitMessage();
 });
-// ------------------ Footer ------------------
 document.addEventListener("DOMContentLoaded", () => {
-  // ------------------ Footer ------------------
+  // ------------------ Footer Year ------------------
   const yearSpan = document.getElementById("year");
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 
+  // ------------------ Footer Last Modified ------------------
   const lastModifiedSpan = document.getElementById("lastModified");
   if (lastModifiedSpan) {
-    const lastModified = new Date(document.lastModified);
-    const formattedDate = `${String(lastModified.getMonth() + 1).padStart(2, "0")}/` +
-                          `${String(lastModified.getDate()).padStart(2, "0")}/` +
-                          `${lastModified.getFullYear()} ` +
-                          `${String(lastModified.getHours()).padStart(2, "0")}:` +
-                          `${String(lastModified.getMinutes()).padStart(2, "0")}:` +
-                          `${String(lastModified.getSeconds()).padStart(2, "0")}`;
-    lastModifiedSpan.textContent = formattedDate;
+    // Используем document.lastModified, но если пусто, ставим текущее время
+    const lastModifiedRaw = document.lastModified || new Date().toISOString();
+    const lastModified = new Date(lastModifiedRaw);
+
+    if (!isNaN(lastModified)) {
+      const formattedDate = `${String(lastModified.getMonth() + 1).padStart(2, "0")}/` +
+                            `${String(lastModified.getDate()).padStart(2, "0")}/` +
+                            `${lastModified.getFullYear()} ` +
+                            `${String(lastModified.getHours()).padStart(2, "0")}:` +
+                            `${String(lastModified.getMinutes()).padStart(2, "0")}:` +
+                            `${String(lastModified.getSeconds()).padStart(2, "0")}`;
+      lastModifiedSpan.textContent = formattedDate;
+    } else {
+      // На случай, если дата невалидная
+      lastModifiedSpan.textContent = "Unknown";
+    }
   }
 
   // ------------------ Mobile Menu ------------------
