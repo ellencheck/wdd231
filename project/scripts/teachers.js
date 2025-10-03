@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const container = document.getElementById("teachers-list");
-  try {
-    const response = await fetch("data/teachers.json");
-    const teachers = await response.json();
-    container.innerHTML = teachers
-      .map(t => `<p><strong>${t.name}</strong> — ${t.subject}</p>`)
-      .join("");
-  } catch (err) {
-    container.textContent = "Не удалось загрузить преподавателей.";
-  }
-});
+fetch('data/teachers.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('teachers-list');
+    container.innerHTML = data.map(t => `
+      <div class="teacher">
+        <h3>${t.name}</h3>
+        <p>${t.subject}</p>
+      </div>
+    `).join('');
+  })
+  .catch(err => console.error("Error loading teachers:", err));
