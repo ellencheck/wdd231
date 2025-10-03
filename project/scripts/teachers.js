@@ -1,17 +1,8 @@
 fetch('data/teachers.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('teachers-list');
-    container.innerHTML = data.map(t => `
-      <div class="teacher">
-        <h3>${t.name}</h3>
-        <p>${t.subject}</p>
-      </div>
-    `).join('');
+  .then(response => {
+    if (!response.ok) throw new Error("Cannot load teachers.json");
+    return response.json();
   })
-  .catch(err => console.error("Error loading teachers:", err));
-fetch('data/teachers.json')
-  .then(response => response.json())
   .then(teachers => {
     const container = document.getElementById('teachers-list');
     container.innerHTML = teachers.map(t => `
@@ -27,6 +18,7 @@ fetch('data/teachers.json')
     `).join('');
   })
   .catch(err => {
-    console.error("Error loading teachers:", err);
+    console.error(err);
     document.getElementById('teachers-list').innerText = "Failed to load teachers.";
   });
+
