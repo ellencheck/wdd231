@@ -1,33 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 231 Project</title>
+  <title>Школа WDD 231</title>
   <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
   <header>
-    <h1>WDD 231 Project</h1>
+    <h1>Добро пожаловать в нашу школу</h1>
   </header>
 
-  <main>
-    <section id="courses-section">
-      <h2>Courses</h2>
-      <div id="courses-list"></div>
-    </section>
+  <div class="layout">
+    <!-- Левое меню -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#about">О школе</a></li>
+        <li><a href="#courses-section">Курсы</a></li>
+        <li><a href="#teachers-section">Преподаватели</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
 
-    <section id="teachers-section">
-      <h2>Teachers</h2>
-      <div id="teachers-list"></div>
-    </section>
-  </main>
+    <!-- Контент -->
+    <main>
+      <section id="about">
+        <h2>О школе</h2>
+        <p>
+          Наша школа — это место, где студенты получают современные знания и навыки.
+          Мы стремимся к качественному обучению и заботимся о каждом ученике.
+        </p>
+        <div class="buttons">
+          <a href="#courses-section" class="btn">Посмотреть курсы</a>
+          <a href="#teachers-section" class="btn">Посмотреть преподавателей</a>
+        </div>
+      </section>
+
+      <section id="courses-section">
+        <h2>Курсы</h2>
+        <div id="courses-list">Загрузка курсов...</div>
+      </section>
+
+      <section id="teachers-section">
+        <h2>Преподаватели</h2>
+        <div id="teachers-list">Загрузка преподавателей...</div>
+      </section>
+
+      <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Email: info@school.com</p>
+        <p>Телефон: +56 9 1234 5678</p>
+      </section>
+    </main>
+  </div>
 
   <footer>
-    <p>&copy; 2025 — WDD 231 Project</p>
+    <p>&copy; 2025 — Школа WDD 231. Все права защищены.</p>
   </footer>
 
-  <!-- Подключение твоих скриптов -->
+  <!-- Подключение скриптов -->
   <script src="scripts/courses.js" defer></script>
   <script src="scripts/teachers.js" defer></script>
 </body>
