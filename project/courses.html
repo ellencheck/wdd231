@@ -1,30 +1,35 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — WDD 231 School</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Наши Курсы</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="teachers.html">Преподаватели</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="course-list">
-            <!-- Здесь будет список курсов -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Языковые Курсы</p>
-    </footer>
-    <script src="script/courses.js"></script>
+  <header>
+    <h1>Our Courses</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Available Courses</h2>
+      <div id="courses-list">Loading courses...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 — WDD 231 School</p>
+  </footer>
+
+  <script src="scripts/courses.js" defer></script>
 </body>
 </html>
-
