@@ -1,29 +1,41 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Языковые Курсы</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 Project</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать в наши языковые курсы</h1>
-        <nav>
-            <ul>
-                <li><a href="courses.html">Курсы</a></li>
-                <li><a href="teachers.html">Преподаватели</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>О нас</h2>
-            <p>Мы предлагаем курсы по изучению иностранных языков с опытными преподавателями.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Языковые Курсы</p>
-    </footer>
+  <header>
+    <h1>WDD 231 Project</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="data/courses.json">Courses</a></li>
+        <li><a href="data/teachers.json">Teachers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="courses-section">
+      <h2>Courses</h2>
+      <div id="courses-list">Loading courses...</div>
+    </section>
+
+    <section id="teachers-section">
+      <h2>Teachers</h2>
+      <div id="teachers-list">Loading teachers...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 — WDD 231 Project</p>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="scripts/courses.js" defer></script>
+  <script src="scripts/teachers.js" defer></script>
 </body>
 </html>
