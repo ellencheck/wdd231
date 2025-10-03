@@ -1,68 +1,45 @@
-:root{
-  --blue: #1565c0;
-  --white: #ffffff;
-  --box-bg: rgba(255,255,255,0.9);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.4;color:#222}
-
-.site-header, .site-footer{
-  background: var(--blue);
-  color: var(--white);
+header {
+  background: #1565c0;
+  color: white;
   padding: 1rem;
-  text-align: center;
 }
 
-.main { padding: 1rem; }
-
-.hero{
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 1.25rem auto;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  min-height: 280px;
-  background: #ddd;
+header h1 {
+  margin: 0;
 }
 
-.hero img#hero-img{
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* инфобокс — сверху слева */
-.infobox{
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  max-width: 320px;
-  padding: 0.75rem 1rem;
-  background: var(--box-bg);
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* weather — снизу справа */
-.weatherbox{
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  gap: .5rem;
-  align-items: center;
-  padding: .5rem .75rem;
-  background: var(--box-bg);
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 1rem;
 }
 
-/* адаптивность */
-@media (max-width: 720px){
-  .infobox{ max-width: 80%; top: .75rem; left: .75rem; }
-  .weatherbox{ right: .75rem; bottom: .75rem; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
