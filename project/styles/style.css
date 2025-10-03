@@ -1,45 +1,117 @@
+/* Базовые стили */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   background: #f4f6f9;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
   background: #1565c0;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
   margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
+/* Меню навигации */
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav a:hover {
+  color: #ffd700;
   text-decoration: underline;
 }
 
+/* Основной контент */
 main {
   padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Секции с рамками */
+section {
+  background: white;
+  border: 2px solid #1565c0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Заголовки внутри секций */
+section h2 {
+  color: #1565c0;
+  margin-top: 0;
+}
+
+section h3 {
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+/* Списки */
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-left: 4px solid #1565c0;
+  background: #e3f2fd;
+  border-radius: 4px;
+}
+
+/* Кнопки */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #1565c0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #0d47a1;
+  transform: translateY(-2px);
+}
+
+/* Футер */
 footer {
   background: #1565c0;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   margin-top: 2rem;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
