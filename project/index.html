@@ -1,65 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 231 School</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chile — Test</title>
   <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Our School</h1>
+  <header class="site-header">
+    <h1>Chile — тест страницы</h1>
   </header>
 
-  <div class="layout">
-    <!-- Sidebar menu -->
-    <nav class="sidebar">
-      <ul>
-        <li><a href="#about">About the School</a></li>
-        <li><a href="#courses-section">Courses</a></li>
-        <li><a href="#teachers-section">Teachers</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </nav>
+  <main>
+    <section class="hero">
+      <!-- картинка вставляется в JS (для проверки нескольких путей/размеров) -->
+      <img id="hero-img" alt="Chile hero image" />
 
-    <!-- Content -->
-    <main>
-      <section id="about">
-        <h2>About the School</h2>
-        <p>
-          Our school is a place where students gain modern knowledge and skills.  
-          We are committed to quality education and care about every learner.
-        </p>
-        <div class="buttons">
-          <a href="#courses-section" class="btn">View Courses</a>
-          <a href="#teachers-section" class="btn">View Teachers</a>
+      <aside class="infobox" id="infobox">
+        <h2>About Chile</h2>
+        <p>Краткая справка о стране — инфобокс.</p>
+      </aside>
+
+      <aside class="weatherbox" id="weatherbox">
+        <img id="weather-icon" src="data/weather-icon.svg" alt="weather">
+        <div>
+          <strong>18°C</strong>
+          <div>Sunny</div>
         </div>
-      </section>
+      </aside>
+    </section>
 
-      <section id="courses-section">
-        <h2>Courses</h2>
-        <div id="courses-list">Loading courses...</div>
-      </section>
+    <section class="content">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+      </ul>
+    </section>
+  </main>
 
-      <section id="teachers-section">
-        <h2>Teachers</h2>
-        <div id="teachers-list">Loading teachers...</div>
-      </section>
-
-      <section id="contacts">
-        <h2>Contacts</h2>
-        <p>Email: info@school.com</p>
-        <p>Phone: +56 9 1234 5678</p>
-      </section>
-    </main>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 — WDD 231 School. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>© 2025 — Chile project</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="scripts/courses.js" defer></script>
-  <script src="scripts/teachers.js" defer></script>
+  <script src="scripts/place.js" defer></script>
 </body>
 </html>
