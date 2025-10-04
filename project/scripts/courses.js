@@ -1,68 +1,55 @@
-// ==== Данные курсов прямо в JS (не fetch) ====
-const data = {
-  "courses": [
-    {
-      "language": "Russian",
-      "flag": "🇷🇺",
-      "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Start learning Russian with basics." },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build basic communication skills." }
-      ]
-    },
-    {
-      "language": "English",
-      "flag": "🇬🇧",
-      "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic English grammar and vocabulary." },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Improve fluency and accuracy." }
-      ]
-    }
-  ]
-};
+fetch('data/courses.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('courses-list');
+    const formSelect = document.getElementById('selectedCourse');
 
-const container = document.getElementById('courses-list');
-const formSelect = document.getElementById('selectedCourse');
+    container.innerHTML = ''; // чистим контейнер
 
-// ==== Отображение курсов ====
-container.innerHTML = data.courses.map((c, langIndex) => {
-  return c.levels.map((level, levelIndex) => `
-    <div class="course">
-      <h3>${c.flag} ${c.language} – ${level.level}</h3>
-      <p>${level.description}</p>
-      <p><strong>Duration:</strong> ${level.duration}</p>
-      <p><strong>Price:</strong> ${level.price}</p>
-      <button onclick="openForm(${langIndex}, ${levelIndex})">Sign Up</button>
-    </div>
-  `).join('');
-}).join('');
+    data.courses.forEach((c, langIndex) => {
+      c.levels.forEach((level, levelIndex) => {
+        // создаём карточку курса
+        const div = document.createElement('div');
+        div.className = 'course';
+        div.innerHTML = `
+          <h3>${c.flag} ${c.language} – ${level.level}</h3>
+          <p>${level.description}</p>
+          <p><strong>Duration:</strong> ${level.duration}</p>
+          <p><strong>Price:</strong> ${level.price}</p>
+          <button>Sign Up</button>
+        `;
+        const btn = div.querySelector('button');
+        btn.addEventListener('click', () => openForm(langIndex, levelIndex));
+        container.appendChild(div);
 
-// ==== Заполнение select формы ====
-data.courses.forEach((c, langIndex) => {
-  c.levels.forEach((level, levelIndex) => {
-    const option = document.createElement('option');
-    option.value = `${langIndex}-${levelIndex}`;
-    option.textContent = `${c.flag} ${c.language} – ${level.level} (${level.price})`;
-    formSelect.appendChild(option);
+        // добавляем в select
+        const option = document.createElement('option');
+        option.value = `${langIndex}-${levelIndex}`;
+        option.textContent = `${c.flag} ${c.language} – ${level.level} (${level.price})`;
+        formSelect.appendChild(option);
+      });
+    });
+
+    window.openForm = (langIndex, levelIndex) => {
+      formSelect.value = `${langIndex}-${levelIndex}`;
+      document.getElementById('registration-form').style.display = 'block';
+      document.getElementById('registration-form').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    document.getElementById('courseForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const [langIndex, levelIndex] = formSelect.value.split('-').map(Number);
+      const course = data.courses[langIndex].levels[levelIndex];
+      const language = data.courses[langIndex].language;
+      const flag = data.courses[langIndex].flag;
+      const name = document.getElementById('name').value;
+
+      alert(`Thank you, ${name}! You registered for "${flag} ${language} – ${course.level}".`);
+      e.target.reset();
+      document.getElementById('registration-form').style.display = 'none';
+    });
+  })
+  .catch(err => {
+    console.error('Error loading courses:', err);
+    document.getElementById('courses-list').textContent = 'Failed to load courses.';
   });
-});
-
-// ==== Форма: открытие ====
-window.openForm = function(langIndex, levelIndex) {
-  formSelect.value = `${langIndex}-${levelIndex}`;
-  document.getElementById('registration-form').style.display = 'block';
-  document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
-};
-
-// ==== Отправка формы ====
-document.getElementById('courseForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const [langIndex, levelIndex] = formSelect.value.split('-').map(Number);
-  const course = data.courses[langIndex].levels[levelIndex];
-  const language = data.courses[langIndex].language;
-  const flag = data.courses[langIndex].flag;
-  const name = document.getElementById('name').value;
-
-  alert(`Thank you, ${name}! You registered for "${flag} ${language} – ${course.level}".`);
-  this.reset();
-  document.getElementById('registration-form').style.display = 'none';
-});
