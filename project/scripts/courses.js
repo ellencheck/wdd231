@@ -10,41 +10,41 @@ fetch("data/courses.json")
     container.innerHTML = "";
     formSelect.innerHTML = "";
 
-    // словарь для эмодзи-флагов
     const flagEmojis = {
       "Russian": "🇷🇺",
-  "English": "🇬🇧",
-  "Spanish": "🇪🇸",
-  "French": "🇫🇷",
-  "German": "🇩🇪",
-  "Italian": "🇮🇹",
-  "Japanese": "🇯🇵",
-  "Chinese": "🇨🇳",
-  "Portuguese": "🇵🇹",
-  "Arabic": "🇸🇦"
+      "English": "🇬🇧",
+      "Spanish": "🇪🇸",
+      "French": "🇫🇷",
+      "German": "🇩🇪",
+      "Italian": "🇮🇹",
+      "Japanese": "🇯🇵",
+      "Chinese": "🇨🇳",
+      "Portuguese": "🇵🇹",
+      "Arabic": "🇸🇦"
     };
 
     data.courses.forEach((course, langIndex) => {
-      const emojiFlag = flagEmojis[course.language] || "🏳️"; // белый флаг по умолчанию
+      const emojiFlag = flagEmojis[course.language] || "🏳️";
 
       course.levels.forEach((level, levelIndex) => {
         const div = document.createElement("div");
-        div.className = "course";
+        div.className = "course-card"; // используем твой CSS класс
 
         div.innerHTML = `
-          <h3>
-            <span class="flag-emoji">${emojiFlag}</span>
-            ${course.language} – ${level.level}
-          </h3>
+          <img src="${level.image}" alt="${course.language} – ${level.level}">
+          <h3><span class="flag-emoji">${emojiFlag}</span> ${course.language} – ${level.level}</h3>
           <p>${level.description}</p>
           <p><strong>Duration:</strong> ${level.duration}</p>
           <p><strong>Price:</strong> ${level.price}</p>
           <button>Sign Up</button>
         `;
 
+        // открытие формы при клике
         div.querySelector("button").addEventListener("click", () => openForm(langIndex, levelIndex));
+
         container.appendChild(div);
 
+        // добавление в select
         const option = document.createElement("option");
         option.value = `${langIndex}-${levelIndex}`;
         option.textContent = `${course.language} – ${level.level} (${level.price})`;
@@ -52,6 +52,7 @@ fetch("data/courses.json")
       });
     });
 
+    // функция открытия формы
     window.openForm = (langIndex, levelIndex) => {
       formSelect.value = `${langIndex}-${levelIndex}`;
       const form = document.getElementById("registration-form");
@@ -59,6 +60,7 @@ fetch("data/courses.json")
       form.scrollIntoView({ behavior: "smooth" });
     };
 
+    // отправка формы
     document.getElementById("courseForm").addEventListener("submit", e => {
       e.preventDefault();
       const [langIndex, levelIndex] = formSelect.value.split("-").map(Number);
