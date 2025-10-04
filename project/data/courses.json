@@ -7,7 +7,7 @@
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Start learning Russian with the basics of grammar, vocabulary, and pronunciation.", "image": "images/russian.jpeg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/russian.jpeg" },
         { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop confidence in Russian communication through practical conversation with native speakers.", "image": "images/russian.jpeg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/russian_b2.jpg" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/russian.jpeg" },
         { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Russian fluency for academic, professional, or cultural purposes.", "image": "images/russian.jpeg" },
         { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Achieve full mastery of Russian with native-level speaking, writing, and comprehension.", "image": "images/russian.jpeg" }
       ]
@@ -16,12 +16,12 @@
       "language": "English",
       "flag": "🇬🇧",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential English grammar and vocabulary for everyday situations.", "image": "images/english_a1.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/english_a2.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Improve fluency and accuracy in English through interactive practice.", "image": "images/english_b1.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/english_b2.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop strong academic and professional English communication skills.", "image": "images/english_c1.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Reach native-like English proficiency for any context.", "image": "images/english_c2.jpg" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential English grammar and vocabulary for everyday situations.", "image": "images/english.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/english.webp" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Improve fluency and accuracy in English through interactive practice.", "image": "images/english.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/english.webp" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop strong academic and professional English communication skills.", "image": "images/english.webp" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Reach native-like English proficiency for any context.", "image": "images/english.webp" }
       ]
     },
     {
