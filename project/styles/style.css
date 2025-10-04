@@ -29,14 +29,18 @@ nav ul {
 }
 
 nav ul li a {
-  color: white; /* белый текст на тёмном фоне */
+  background: none; 
+  color: white;    
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffd700; /* яркий жёлтый при наведении */
+  background: #005bb5;
+  color: #ffd700;      
 }
 
 /* ----- Кнопки ----- */
