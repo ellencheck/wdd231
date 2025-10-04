@@ -42,8 +42,6 @@ nav a:active {
   background: none; /* чтобы не появлялся фон */
 }
 
-
-
 /* ----- Кнопки ----- */
 button {
   display: inline-block;
