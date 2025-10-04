@@ -4,8 +4,10 @@ fetch('data/courses.json')
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    container.innerHTML = ''; // убираем "Loading courses..."
+    // Чистим контейнер
+    container.innerHTML = '';
 
+    // Генерация курсов
     data.courses.forEach((course, langIndex) => {
       course.levels.forEach((level, lvlIndex) => {
         const courseDiv = document.createElement('div');
