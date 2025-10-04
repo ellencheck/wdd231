@@ -1,10 +1,13 @@
-fetch('data/courses.json')
-  .then(response => response.json())
+fetch(`../data/courses.json?${Date.now()}`)
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to fetch courses.json');
+    return response.json();
+  })
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Показываем все курсы
+    // Показываем курсы
     container.innerHTML = data.courses.map((c, langIndex) => {
       return c.levels.map((level, levelIndex) => `
         <div class="course">
@@ -27,7 +30,7 @@ fetch('data/courses.json')
       });
     });
 
-    // Открытие формы при нажатии на кнопку
+    // Открытие формы
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
       const formSection = document.getElementById('registration-form');
@@ -49,4 +52,7 @@ fetch('data/courses.json')
       document.getElementById('registration-form').style.display = 'none';
     });
   })
-  .catch(err => console.error("Error loading courses:", err));
+  .catch(err => {
+    console.error("Error loading courses:", err);
+    document.getElementById('courses-list').innerHTML = 'Failed to load courses.';
+  });
