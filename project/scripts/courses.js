@@ -1,16 +1,14 @@
-// Путь к JSON на GitHub Pages
-fetch('/wdd231/data/courses.json')
+fetch('../data/courses.json') // путь относительно courses.html
   .then(response => {
-    if (!response.ok) throw new Error('Network response was not ok');
+    if (!response.ok) throw new Error('Network error');
     return response.json();
   })
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Отображаем все курсы
-    container.innerHTML = data.courses.map((c, langIndex) => {
-      return c.levels.map((level, levelIndex) => `
+    container.innerHTML = data.courses.map((c, langIndex) =>
+      c.levels.map((level, levelIndex) => `
         <div class="course">
           <h3>${c.flag} ${c.language} – ${level.level}</h3>
           <p>${level.description}</p>
@@ -18,27 +16,24 @@ fetch('/wdd231/data/courses.json')
           <p><strong>Price:</strong> ${level.price}</p>
           <button onclick="openForm(${langIndex}, ${levelIndex})">Sign Up</button>
         </div>
-      `).join('');
-    }).join('');
+      `).join('')
+    ).join('');
 
-    // Заполняем select формы
-    data.courses.forEach((c, langIndex) => {
+    data.courses.forEach((c, langIndex) =>
       c.levels.forEach((level, levelIndex) => {
         const option = document.createElement('option');
         option.value = `${langIndex}-${levelIndex}`;
         option.textContent = `${c.flag} ${c.language} – ${level.level} (${level.price})`;
         formSelect.appendChild(option);
-      });
-    });
+      })
+    );
 
-    // Форма: открытие по кнопке
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
       document.getElementById('registration-form').style.display = 'block';
       document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
     };
 
-    // Отправка формы
     document.getElementById('courseForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const [langIndex, levelIndex] = formSelect.value.split('-').map(Number);
@@ -53,6 +48,6 @@ fetch('/wdd231/data/courses.json')
     });
   })
   .catch(err => {
-    console.error("Error loading courses:", err);
-    document.getElementById('courses-list').innerHTML = 'Failed to load courses.';
+    console.error(err);
+    document.getElementById('courses-list').textContent = 'Failed to load courses.';
   });
