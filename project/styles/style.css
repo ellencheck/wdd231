@@ -2,7 +2,7 @@
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  background: #f4f6f9; /* светлый фон контента */
+  background: #f4f6f9;
   color: #333;
   line-height: 1.6;
 }
@@ -12,15 +12,16 @@ header,
 ton,
 nav,
 footer {
-  background: #0b3d91; /* тёмно-синий единый фон */
+  background: #0b3d91;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 nav {
-  background: none; /* убрали фон полностью */
-  padding: 0;       /* сохраняем твои паддинги, если были */
+  background: none;
+  padding: 0;
   text-align: center;
 }
 
@@ -28,36 +29,31 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;            /* горизонтальное расположение */
-  justify-content: center;  /* по центру */
-  gap: 20px;                /* расстояние между пунктами */
-}
-
-nav ul li {
-  margin: 0;   /* не трогаем твои бантики */
-  padding: 0;  /* сохраняем изначальные */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li a {
-  color: #0b3d91;   /* жгучий синий текст */
+  color: #0b3d91;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 1rem; /* оставляем бантики/паддинги */
-  background: none;      /* полностью прозрачный */
-  border-radius: 6px;    /* если у тебя был радиус */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   transition: color 0.3s, background 0.3s;
 }
 
 nav ul li a:hover {
-  color: #2563eb; /* яркий синий при наведении */
-  background: rgba(11, 61, 145, 0.1); /* лёгкий эффект подсветки */
+  color: #2563eb;
+  background: rgba(11, 61, 145, 0.1);
 }
+
 /* ----- Кнопки ----- */
 ton {
   display: inline-block;
   padding: 10px 16px;
-  background: #f4f6f9; /* яркий синий */
-  color: #fff;         /* белый текст */
+  background: #0b3d91;
+  color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
@@ -67,15 +63,15 @@ ton {
 }
 
 ton:hover {
-  background: #005bb5; /* чуть темнее при наведении */
-  transform: translateY(-2px); /* лёгкий эффект «подпрыгивания» */
+  background: #2563eb;
+  transform: translateY(-2px);
 }
 
 /* ----- Футер ----- */
 footer {
   font-size: 0.9rem;
   margin-top: 2rem;
-  border-top: 4px solid #0073e6; /* яркий акцент сверху */
+  border-top: 4px solid #0073e6;
 }
 
 /* Заголовки в header */
@@ -126,13 +122,9 @@ ul li {
 }
 
 /* Кнопки класса .btn */
-.tons {
-  margin-top: 1.5rem;
-}
-
 .btn {
   display: inline-block;
-  background:#f4f6f9; 
+  background: #0b3d91;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -143,7 +135,7 @@ ul li {
 }
 
 .btn:hover {
-  background: #005bb5;
+  background: #2563eb;
   transform: translateY(-2px);
 }
 
@@ -169,15 +161,6 @@ ul li {
   transform: translateY(-5px);
 }
 
-.teacher-card img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  background-color: #f0f0f0;
-}
-
 .teacher-card h3 {
   margin: 0.5rem 0;
   color: #0073e6;
@@ -191,7 +174,7 @@ ul li {
 
 .teacher-card .btn {
   display: inline-block;
-  background: #0073e6;
+  background: #0b3d91;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -202,53 +185,58 @@ ul li {
 }
 
 .teacher-card .btn:hover {
-  background: #f4f6f9;
-  transform: translateY(-2px);
+  background: #2563eb;
 }
 
 /* ----- Стили для курсов ----- */
-#courses-list {
+#courses-list,
+.courses-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 20px;
+  padding: 0;
 }
 
-.course {
+.course,
+.course-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.course:hover {
+.course:hover,
+.course-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-.course h3 {
+.course h3,
+.course-card h3 {
   font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 10px;
+  margin: 12px 0 6px;
+  color: #0b3d91;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", sans-serif;
 }
 
-.course p {
+.course p,
+.course-card p {
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 15px;
 }
 
-.course ton {
+.course ton,
+.course-card button {
   display: inline-block;
   padding: 10px 16px;
-  background: #f4f6f9;
-  color: #fff;
-  font-size: 0.95rem;
+  background: #0b3d91;
+  color: white;
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -256,62 +244,13 @@ ul li {
   transition: background 0.3s ease;
 }
 
-.course ton:hover {
-  background: #005bb5;
+.course ton:hover,
+.course-card button:hover {
+  background: #2563eb;
 }
 
 /* ----- Форма регистрации ----- */
-#registration-form {
-  max-width: 400px;
-  margin: 40px auto;
-  background: #fafafa;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: none;
-}
-
-#registration-form h2 {
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-  text-align: center;
-  color: #333;
-}
-
-#registration-form label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: 600;
-  color: #444;
-}
-
-#registration-form input, 
-#registration-form select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
-}
-
-#registration-form ton {
-  width: 100%;
-  padding: 12px;
-  background: #0073e6;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#registration-form ton:hover {
-  background: #005bb5;
-}
-
-/* ----- Contact Us ----- */
+#registration-form,
 #contact-section {
   max-width: 600px;
   margin: 40px auto;
@@ -321,24 +260,14 @@ ul li {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+#registration-form h2,
 #contact-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
   text-align: center;
-}
-
-#contact-section p {
-  font-size: 1rem;
-  color: #555;
   margin-bottom: 15px;
-  text-align: center;
+  color: #333;
 }
 
-.contact-info p {
-  margin-bottom: 8px;
-  text-align: left;
-}
-
+#registration-form label,
 #contactForm label {
   display: block;
   margin: 10px 0 5px;
@@ -346,6 +275,8 @@ ul li {
   color: #444;
 }
 
+#registration-form input,
+#registration-form select,
 #contactForm input,
 #contactForm textarea {
   width: 100%;
@@ -356,10 +287,11 @@ ul li {
   font-size: 0.95rem;
 }
 
+#registration-form ton,
 #contactForm ton {
   width: 100%;
   padding: 12px;
-  background: #0073e6;
+  background: #0b3d91;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -369,76 +301,19 @@ ul li {
   transition: background 0.3s ease;
 }
 
+#registration-form ton:hover,
 #contactForm ton:hover {
-  background: #005bb5;
-}
-/* ----- Фикс цвета всех кнопок ----- */
-ton, .btn, .course ton, #registration-form ton, #contactForm ton, .teacher-card .btn {
-  background: #0b3d91;
-}
-
-ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contactForm ton:hover, .teacher-card .btn:hover {
   background: #2563eb;
-/* ----- Курсы ----- */
-.courses-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
 }
 
-.course-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.course-card img {
+/* ----- Картинки курсов и учителей ----- */
+.course-card img,
+.teacher-card img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
-}
-
-.course-card h3 {
-  font-size: 1.2rem;
-  margin: 12px 0 6px;
-  color: #0b3d91;
-}
-
-.course-card p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 14px;
-}
-
-.course-card button {
-  background: #0b3d91;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.course-card button:hover {
-  background: #092c6a;
-}
-.course-card img {
-  width: 100%;          
-  height: 150px;         
-  object-fit: cover;     
-  border-radius: 12px;   
+  border-radius: 12px;
   display: block;
-  margin-bottom: 12px;   
+  margin-bottom: 12px;
+  background-color: #f0f0f0;
 }
-
