@@ -2,87 +2,106 @@
   "courses": [
     {
       "language": "Russian",
+      "flag": "🇷🇺",
       "levels": [
-        {"level": "A1", "flag": "🇷🇺", "duration": "4 months", "price": "$400", "description": "Start learning Russian with the basics of grammar, vocabulary, and pronunciation."},
-        {"level": "A2", "flag": "🇷🇺", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇷🇺", "duration": "6 months", "price": "$600", "description": "Build confidence in Russian communication through practical conversation with native speakers."},
-        {"level": "B2", "flag": "🇷🇺", "duration": "6 months", "price": "$600", "description": "Enhance fluency and comprehension in various contexts."},
-        {"level": "C1", "flag": "🇷🇺", "duration": "8 months", "price": "$800", "description": "Develop advanced Russian fluency for academic, professional, or cultural purposes."},
-        {"level": "C2", "flag": "🇷🇺", "duration": "10 months", "price": "$1000", "description": "Achieve full mastery of Russian with native-level speaking, writing, and comprehension."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Start learning Russian with the basics of grammar, vocabulary, and pronunciation."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop confidence in Russian communication through practical conversation with native speakers."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Russian fluency for academic, professional, or cultural purposes."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Achieve full mastery of Russian with native-level speaking, writing, and comprehension."}
       ]
     },
     {
       "language": "English",
+      "flag": "🇬🇧",
       "levels": [
-        {"level": "A1", "flag": "🇬🇧", "duration": "4 months", "price": "$400", "description": "Learn essential English grammar and vocabulary for everyday situations."},
-        {"level": "A2", "flag": "🇬🇧", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇬🇧", "duration": "6 months", "price": "$600", "description": "Improve fluency and accuracy in English through interactive practice."},
-        {"level": "B2", "flag": "🇬🇧", "duration": "6 months", "price": "$600", "description": "Enhance communication skills for various contexts."},
-        {"level": "C1", "flag": "🇬🇧", "duration": "8 months", "price": "$800", "description": "Develop strong academic and professional English communication skills."},
-        {"level": "C2", "flag": "🇬🇧", "duration": "10 months", "price": "$1000", "description": "Reach native-like English proficiency for any context."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential English grammar and vocabulary for everyday situations."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Improve fluency and accuracy in English through interactive practice."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop strong academic and professional English communication skills."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Reach native-like English proficiency for any context."}
       ]
     },
     {
       "language": "Spanish",
+      "flag": "🇪🇸",
       "levels": [
-        {"level": "A1", "flag": "🇪🇸", "duration": "4 months", "price": "$400", "description": "Learn basic Spanish vocabulary and grammar for everyday conversations."},
-        {"level": "A2", "flag": "🇪🇸", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇪🇸", "duration": "6 months", "price": "$600", "description": "Strengthen Spanish communication skills and cultural understanding."},
-        {"level": "B2", "flag": "🇪🇸", "duration": "6 months", "price": "$600", "description": "Enhance fluency in various contexts."},
-        {"level": "C1", "flag": "🇪🇸", "duration": "8 months", "price": "$800", "description": "Achieve advanced Spanish fluency for studies, work, and travel."},
-        {"level": "C2", "flag": "🇪🇸", "duration": "10 months", "price": "$1000", "description": "Master Spanish at a native level, both spoken and written."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Spanish vocabulary and grammar for everyday conversations."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Strengthen Spanish communication skills and cultural understanding."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Spanish fluency for studies, work, and travel."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Spanish at a native level, both spoken and written."}
       ]
     },
     {
       "language": "French",
+      "flag": "🇫🇷",
       "levels": [
-        {"level": "A1", "flag": "🇫🇷", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation."},
-        {"level": "A2", "flag": "🇫🇷", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇫🇷", "duration": "6 months", "price": "$600", "description": "Practice French conversations with native speakers."},
-        {"level": "B2", "flag": "🇫🇷", "duration": "6 months", "price": "$600", "description": "Enhance fluency in various contexts."},
-        {"level": "C1", "flag": "🇫🇷", "duration": "8 months", "price": "$800", "description": "Develop advanced fluency for professional and academic contexts."},
-        {"level": "C2", "flag": "🇫🇷", "duration": "10 months", "price": "$1000", "description": "Master French to communicate like a native speaker."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice French conversations with native speakers."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop advanced fluency for professional and academic contexts."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master French to communicate like a native speaker."}
       ]
     },
     {
       "language": "German",
+      "flag": "🇩🇪",
       "levels": [
-        {"level": "A1", "flag": "🇩🇪", "duration": "4 months", "price": "$400", "description": "Learn German basics for everyday communication."},
-        {"level": "A2", "flag": "🇩🇪", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇩🇪", "duration": "6 months", "price": "$600", "description": "Develop German fluency for work and travel."},
-        {"level": "B2", "flag": "🇩🇪", "duration": "6 months", "price": "$600", "description": "Enhance fluency in various contexts."},
-        {"level": "C1", "flag": "🇩🇪", "duration": "8 months", "price": "$800", "description": "Enhance German proficiency for academic and professional contexts."},
-        {"level": "C2", "flag": "🇩🇪", "duration": "10 months", "price": "$1000", "description": "Achieve near-native mastery of German."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn German basics for everyday communication."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop German fluency for work and travel."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Enhance German proficiency for academic and professional contexts."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Achieve near-native mastery of German."}
       ]
     },
     {
       "language": "Italian",
+      "flag": "🇮🇹",
       "levels": [
-        {"level": "A1", "flag": "🇮🇹", "duration": "4 months", "price": "$400", "description": "Learn the basics of Italian grammar, vocabulary, and pronunciation."},
-        {"level": "A2", "flag": "🇮🇹", "duration": "4 months", "price": "$400", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇮🇹", "duration": "6 months", "price": "$600", "description": "Practice Italian in real-life situations with native speakers."},
-        {"level": "B2", "flag": "🇮🇹", "duration": "6 months", "price": "$600", "description": "Enhance fluency in various contexts."},
-        {"level": "C1", "flag": "🇮🇹", "duration": "8 months", "price": "$800", "description": "Achieve advanced fluency in Italian communication."},
-        {"level": "C2", "flag": "🇮🇹", "duration": "10 months", "price": "$1000", "description": "Master Italian with full native-like proficiency."}
+        {"level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn the basics of Italian grammar, vocabulary, and pronunciation."},
+        {"level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice Italian in real-life situations with native speakers."},
+        {"level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced fluency in Italian communication."},
+        {"level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Italian with full native-like proficiency."}
       ]
     },
     {
       "language": "Japanese",
+      "flag": "🇯🇵",
       "levels": [
-        {"level": "A1", "flag": "🇯🇵", "duration": "5 months", "price": "$450", "description": "Learn the basics of Japanese writing, speaking, and listening."},
-        {"level": "A2", "flag": "🇯🇵", "duration": "5 months", "price": "$450", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇯🇵", "duration": "7 months", "price": "$650", "description": "Develop Japanese conversation and reading skills with native materials."},
-        {"level": "B2", "flag": "🇯🇵", "duration": "7 months", "price": "$650", "description": "Enhance fluency in various contexts."},
-        {"level": "C1", "flag": "🇯🇵", "duration": "9 months", "price": "$850", "description": "Achieve advanced fluency in Japanese for business and academics."},
-        {"level": "C2", "flag": "🇯🇵", "duration": "11 months", "price": "$1050", "description": "Master Japanese for complete native-level proficiency."}
+        {"level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn the basics of Japanese writing, speaking, and listening."},
+        {"level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop Japanese conversation and reading skills with native materials."},
+        {"level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced fluency in Japanese for business and academics."},
+        {"level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Japanese for complete native-level proficiency."}
       ]
     },
     {
       "language": "Chinese",
+      "flag": "🇨🇳",
       "levels": [
-        {"level": "A1", "flag": "🇨🇳", "duration": "5 months", "price": "$450", "description": "Start learning Chinese pronunciation, writing, and basic vocabulary."},
-        {"level": "A2", "flag": "🇨🇳", "duration": "5 months", "price": "$450", "description": "Build upon basic knowledge to improve understanding and communication."},
-        {"level": "B1", "flag": "🇨🇳", "duration": "7 months", "price": "$650", "description": "Improve fluency in spoken and written Chinese with native speakers."},
-        {"level": "B2", "flag": "🇨🇳", "duration": "7 months", "price": "$650", "description": "Enhance flu
-::contentReference[oaicite:0]{index=0}
+        {"level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Start learning Chinese pronunciation, writing, and basic vocabulary."},
+        {"level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication."},
+        {"level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Improve fluency in spoken and written Chinese with native speakers."},
+        {"level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts."},
+        {"level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Develop strong fluency in Chinese for academic and professional use."},
+        {"level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Chinese to communicate like a native speaker."}
+      ]
+    },
+    {
+      "language": "Arabic",
+      "flag": "🇸🇦",
+      "levels": [
+        {"level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn Arabic basics: alphabet, pronunciation, and everyday expressions."},
+        {"level": "Elementary (A2)", "duration":
+::contentReference[oaicite:1]{index=1}
  
+
