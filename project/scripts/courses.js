@@ -1,11 +1,11 @@
-// Данные курсов с эмодзи-флагами
+// Данные курсов
 const data = {
   courses: [
-    { language: "Russian", flag: "🇷🇺", levels: [
+    { language: "Russian", flag: "ru", levels: [
         { level: "Beginner (A1)", duration: "4 months", price: "$400", description: "Start learning Russian with the basics of grammar, vocabulary, and pronunciation." },
         { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." }
     ]},
-    { language: "English", flag: "🇬🇧", levels: [
+    { language: "English", flag: "gb", levels: [
         { level: "Beginner (A1)", duration: "4 months", price: "$400", description: "Learn essential English grammar and vocabulary for everyday situations." },
         { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." }
     ]}
@@ -26,7 +26,7 @@ data.courses.forEach((course, langIndex) => {
     const courseDiv = document.createElement('div');
     courseDiv.className = 'course';
     courseDiv.innerHTML = `
-      <h3>${course.flag} ${course.language} – ${level.level}</h3>
+      <h3><span class="fi fi-${course.flag}"></span> ${course.language} – ${level.level}</h3>
       <p>${level.description}</p>
       <p><strong>Duration:</strong> ${level.duration}</p>
       <p><strong>Price:</strong> ${level.price}</p>
@@ -40,7 +40,7 @@ data.courses.forEach((course, langIndex) => {
     // Добавляем опцию в select
     const option = document.createElement('option');
     option.value = `${langIndex}-${lvlIndex}`;
-    option.textContent = `${course.flag} ${course.language} – ${level.level} (${level.price})`;
+    option.textContent = `${course.language} – ${level.level} (${level.price})`;
     formSelect.appendChild(option);
   });
 });
