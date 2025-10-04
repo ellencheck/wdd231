@@ -10,14 +10,30 @@ fetch("data/courses.json")
     container.innerHTML = "";
     formSelect.innerHTML = "";
 
+    // словарь для эмодзи-флагов
+    const flagEmojis = {
+      "Russian": "🇷🇺",
+  "English": "🇬🇧",
+  "Spanish": "🇪🇸",
+  "French": "🇫🇷",
+  "German": "🇩🇪",
+  "Italian": "🇮🇹",
+  "Japanese": "🇯🇵",
+  "Chinese": "🇨🇳",
+  "Portuguese": "🇵🇹",
+  "Arabic": "🇸🇦"
+    };
+
     data.courses.forEach((course, langIndex) => {
+      const emojiFlag = flagEmojis[course.language] || "🏳️"; // белый флаг по умолчанию
+
       course.levels.forEach((level, levelIndex) => {
         const div = document.createElement("div");
         div.className = "course";
 
         div.innerHTML = `
           <h3>
-            <span class="flag-emoji">${course.flag}</span>
+            <span class="flag-emoji">${emojiFlag}</span>
             ${course.language} – ${level.level}
           </h3>
           <p>${level.description}</p>
@@ -59,3 +75,4 @@ fetch("data/courses.json")
     console.error(err);
     document.getElementById("courses-list").innerText = "Failed to load courses.";
   });
+
