@@ -27,7 +27,7 @@
     "education": "Universidad Complutense de Madrid, Spanish Philology",
     "experience": "6 years teaching Spanish as a foreign language online and in Spain",
     "bio": "Brings Spanish culture into every lesson, making it immersive and fun.",
-    "photo": "images/elsa-lopez.jpg"
+    "photo": "images/elsa-lopez.png"
   },
   {
     "name": "Jeanne Lefevre",
@@ -37,7 +37,7 @@
     "education": "Sorbonne University, French Language and Culture",
     "experience": "5 years teaching French to international students online and in France",
     "bio": "Combines professional expertise with passion for French arts and literature.",
-    "photo": "images/jeanne-lefevre.jpg"
+    "photo": "images/jeanne-lefevre.png"
   },
   {
     "name": "Helga Kramer",
@@ -47,7 +47,7 @@
     "education": "Humboldt University of Berlin, German Language and Literature",
     "experience": "7 years teaching German to international students online and in Germany",
     "bio": "Focuses on grammar, conversation, and real-life German applications.",
-    "photo": "images/helga-kramer.jpg"
+    "photo": "images/helga-kramer.png"
   },
   {
     "name": "Luca Romano",
@@ -57,7 +57,7 @@
     "education": "University of Florence, Italian Language and Culture",
     "experience": "5 years teaching Italian online and in Italy",
     "bio": "Passionate about Italian culture, cuisine, and conversational skills.",
-    "photo": "images/luca-romano.jpg"
+    "photo": "images/luca-romano.png"
   },
   {
     "name": "Juki Tanaka",
@@ -67,7 +67,7 @@
     "education": "Kyoto University, Japanese Language and Culture",
     "experience": "6 years teaching Japanese to international students online",
     "bio": "Combines traditional and modern Japanese culture in lessons.",
-    "photo": "images/juki-tanaka.jpg"
+    "photo": "images/juki-tanaka.png"
   },
   {
     "name": "Li Mei",
@@ -77,7 +77,7 @@
     "education": "Peking University, Chinese Language Teaching",
     "experience": "6 years teaching Mandarin to foreigners online and in China",
     "bio": "Makes learning Mandarin approachable and interactive.",
-    "photo": "images/li-mei.jpg"
+    "photo": "images/li-mei.png"
   },
   {
     "name": "Ahmed Al-Rashid",
@@ -87,7 +87,7 @@
     "education": "American University of Beirut, Arabic Language and Literature",
     "experience": "7 years teaching Modern Standard Arabic and dialects to international students",
     "bio": "Combines traditional teaching methods with modern communication approaches.",
-    "photo": "images/ahmed-al-rashid.jpg"
+    "photo": "images/ahmed-al-rashid.png"
   },
   {
     "name": "Maria Silva",
@@ -97,7 +97,7 @@
     "education": "University of Lisbon, Portuguese Language and Culture",
     "experience": "5 years teaching Portuguese to foreigners online and in Lisbon",
     "bio": "Uses music, texts, and cultural immersion to make lessons engaging.",
-    "photo": "images/maria-silva.jpg"
+    "photo": "images/maria-silva.png"
   }
 ]
 
