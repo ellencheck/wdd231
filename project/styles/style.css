@@ -19,29 +19,28 @@ footer {
 }
 
 /* ----- Навигация ----- */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+nav {
+  background: #0b3d91; /* синий фон хедера/навигации */
+  padding: 1rem;
+  text-align: center;
 }
 
-nav ul li a {
-  background: none; 
-  color: white;    
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0; /* убираем фон и лишние отступы */
+  color: white; /* белый текст */
+  font-weight: bold;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease;
+  background: none; /* убираем любой фон */
 }
 
-nav ul li a:hover {
-  background: #005bb5;
-  color: #ffd700;      
+nav a:hover {
+  color: #ffd700; /* ярко-желтый текст при наведении */
+  background: none; /* чтобы не появлялся фон */
 }
+
 
 /* ----- Кнопки ----- */
 button {
