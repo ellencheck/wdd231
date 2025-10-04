@@ -372,3 +372,11 @@ ul li {
 #contactForm ton:hover {
   background: #005bb5;
 }
+/* ----- Фикс цвета всех кнопок ----- */
+ton, .btn, .course ton, #registration-form ton, #contactForm ton, .teacher-card .btn {
+  background: #0b3d91;
+}
+
+ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contactForm ton:hover, .teacher-card .btn:hover {
+  background: #2563eb;
+}
