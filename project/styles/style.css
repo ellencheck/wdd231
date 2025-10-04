@@ -9,7 +9,7 @@ body {
 
 /* ----- Шапка, навигация и футер ----- */
 header,
-button,
+ton,
 nav,
 footer {
   background: #0b3d91; /* тёмно-синий единый фон */
@@ -53,10 +53,10 @@ nav ul li a:hover {
   background: rgba(11, 61, 145, 0.1); /* лёгкий эффект подсветки */
 }
 /* ----- Кнопки ----- */
-button {
+ton {
   display: inline-block;
   padding: 10px 16px;
-  background: #2b649c; /* яркий синий */
+  background: #f4f6f9; /* яркий синий */
   color: #fff;         /* белый текст */
   font-size: 0.95rem;
   font-weight: 600;
@@ -66,7 +66,7 @@ button {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+ton:hover {
   background: #005bb5; /* чуть темнее при наведении */
   transform: translateY(-2px); /* лёгкий эффект «подпрыгивания» */
 }
@@ -126,13 +126,13 @@ ul li {
 }
 
 /* Кнопки класса .btn */
-.buttons {
+.tons {
   margin-top: 1.5rem;
 }
 
 .btn {
   display: inline-block;
-  background:#2b649c; 
+  background:#f4f6f9; 
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -202,7 +202,7 @@ ul li {
 }
 
 .teacher-card .btn:hover {
-  background: #005bb5;
+  background: #f4f6f9;
   transform: translateY(-2px);
 }
 
@@ -243,10 +243,10 @@ ul li {
   margin-bottom: 15px;
 }
 
-.course button {
+.course ton {
   display: inline-block;
   padding: 10px 16px;
-  background: #0073e6;
+  background: #f4f6f9;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -256,7 +256,7 @@ ul li {
   transition: background 0.3s ease;
 }
 
-.course button:hover {
+.course ton:hover {
   background: #005bb5;
 }
 
@@ -295,7 +295,7 @@ ul li {
   font-size: 0.95rem;
 }
 
-#registration-form button {
+#registration-form ton {
   width: 100%;
   padding: 12px;
   background: #0073e6;
@@ -307,7 +307,7 @@ ul li {
   cursor: pointer;
 }
 
-#registration-form button:hover {
+#registration-form ton:hover {
   background: #005bb5;
 }
 
@@ -356,7 +356,7 @@ ul li {
   font-size: 0.95rem;
 }
 
-#contactForm button {
+#contactForm ton {
   width: 100%;
   padding: 12px;
   background: #0073e6;
@@ -369,6 +369,6 @@ ul li {
   transition: background 0.3s ease;
 }
 
-#contactForm button:hover {
+#contactForm ton:hover {
   background: #005bb5;
 }
