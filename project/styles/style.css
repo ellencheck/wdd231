@@ -9,6 +9,7 @@ body {
 
 /* ----- Шапка, навигация и футер ----- */
 header,
+button,
 nav,
 footer {
   background: #0b3d91; /* тёмно-синий единый фон */
@@ -55,18 +56,19 @@ nav ul li a:hover {
 button {
   display: inline-block;
   padding: 10px 16px;
-  background:#0b3d9;
-  color: #fff;
+  background: #0073e6; /* яркий синий */
+  color: #fff;         /* белый текст */
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background: #005bb5; /* темнее при наведении */
+  background: #005bb5; /* чуть темнее при наведении */
+  transform: translateY(-2px); /* лёгкий эффект «подпрыгивания» */
 }
 
 /* ----- Футер ----- */
