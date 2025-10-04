@@ -1,14 +1,18 @@
-fetch('../data/courses.json') // путь относительно courses.html
+// scripts/courses.js
+
+// Правильный путь к JSON
+fetch('../data/courses.json')
   .then(response => {
-    if (!response.ok) throw new Error('Network error');
+    if (!response.ok) throw new Error('Network response was not ok');
     return response.json();
   })
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    container.innerHTML = data.courses.map((c, langIndex) =>
-      c.levels.map((level, levelIndex) => `
+    // Отображаем курсы
+    container.innerHTML = data.courses.map((c, langIndex) => {
+      return c.levels.map((level, levelIndex) => `
         <div class="course">
           <h3>${c.flag} ${c.language} – ${level.level}</h3>
           <p>${level.description}</p>
@@ -16,24 +20,28 @@ fetch('../data/courses.json') // путь относительно courses.html
           <p><strong>Price:</strong> ${level.price}</p>
           <button onclick="openForm(${langIndex}, ${levelIndex})">Sign Up</button>
         </div>
-      `).join('')
-    ).join('');
+      `).join('');
+    }).join('');
 
-    data.courses.forEach((c, langIndex) =>
+    // Заполняем select формы
+    data.courses.forEach((c, langIndex) => {
       c.levels.forEach((level, levelIndex) => {
         const option = document.createElement('option');
         option.value = `${langIndex}-${levelIndex}`;
         option.textContent = `${c.flag} ${c.language} – ${level.level} (${level.price})`;
         formSelect.appendChild(option);
-      })
-    );
+      });
+    });
 
+    // Функция открытия формы
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
-      document.getElementById('registration-form').style.display = 'block';
-      document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
+      const form = document.getElementById('registration-form');
+      form.style.display = 'block';
+      form.scrollIntoView({ behavior: 'smooth' });
     };
 
+    // Отправка формы
     document.getElementById('courseForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const [langIndex, levelIndex] = formSelect.value.split('-').map(Number);
@@ -48,6 +56,6 @@ fetch('../data/courses.json') // путь относительно courses.html
     });
   })
   .catch(err => {
-    console.error(err);
-    document.getElementById('courses-list').textContent = 'Failed to load courses.';
+    console.error("Error loading courses:", err);
+    document.getElementById('courses-list').textContent = "Failed to load courses.";
   });
