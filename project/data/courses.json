@@ -25,12 +25,12 @@
     {
       "language": "Spanish",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Spanish vocabulary and grammar for everyday conversations.", "image": "images/spanish_a1.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/spanish_a2.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Strengthen Spanish communication skills and cultural understanding.", "image": "images/spanish_b1.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/spanish_b2.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Spanish fluency for studies, work, and travel.", "image": "images/spanish_c1.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Spanish at a native level, both spoken and written.", "image": "images/spanish_c2.jpg" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Spanish vocabulary and grammar for everyday conversations.", "image": "images/spanish.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/spanish.webp" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Strengthen Spanish communication skills and cultural understanding.", "image": "images/spanish.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/spanish.webp" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Spanish fluency for studies, work, and travel.", "image": "images/spanish.webp" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Spanish at a native level, both spoken and written.", "image": "images/spanish.webp" }
       ]
     },
     {
