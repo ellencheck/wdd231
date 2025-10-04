@@ -17,29 +17,15 @@ footer {
   padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-/* ----- Навигация ----- */
-nav {
-  background: #0b3d91; /* синий фон хедера/навигации */
-  padding: 1rem;
-  text-align: center;
+nav ul li a {
+  background-color: #0b3d91; /* сохраним фон синим */
+  color: #ffffff; /* белый текст */
+  text-decoration: none; /* без изменения структуры */
 }
 
-nav a {
-  display: inline-block;
-  margin: 0 15px;
-  padding: 0; /* убираем фон и лишние отступы */
-  color: white; /* белый текст */
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  background: none; /* убираем любой фон */
-  -webkit-tap-highlight-color: transparent; /* убираем серый/белый эффект при тапе на iPhone */
-}
-
-nav a:hover,
-nav a:active {
-  color: #ffd700; /* ярко-желтый текст при наведении */
-  background: none; /* чтобы не появлялся фон */
+nav ul li a:hover {
+  background-color: #2563eb; /* чуть ярче при наведении */
+  color: #ffd700; /* текст золотой для контраста */
 }
 
 /* ----- Кнопки ----- */
