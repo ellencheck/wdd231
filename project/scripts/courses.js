@@ -1,10 +1,13 @@
-fetch('data/courses.json')
-  .then(response => response.json())
+fetch('./data/courses.json')
+  .then(response => {
+    if (!response.ok) throw new Error("Could not load courses.json");
+    return response.json();
+  })
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Генерация списка курсов
+    // Генерация списка курсов с уровнями
     container.innerHTML = data.courses.map((course, langIndex) => {
       return course.levels.map((level, lvlIndex) => `
         <div class="course">
@@ -17,21 +20,22 @@ fetch('data/courses.json')
       `).join('');
     }).join('');
 
-    // Заполняем select
+    // Заполнение select
     data.courses.forEach((course, langIndex) => {
       course.levels.forEach((level, lvlIndex) => {
         const option = document.createElement('option');
         option.value = `${langIndex}-${lvlIndex}`; // уникальный идентификатор
-        option.textContent = `${course.language} – ${level.level} (${level.price})`;
+        option.textContent = `${course.flag} ${course.language} – ${level.level} (${level.price})`;
         formSelect.appendChild(option);
       });
     });
 
-    // Форма: открытие
+    // Функция открытия формы
     window.openForm = function(langIndex, lvlIndex) {
       formSelect.value = `${langIndex}-${lvlIndex}`;
-      document.getElementById('registration-form').style.display = 'block';
-      document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
+      const form = document.getElementById('registration-form');
+      form.style.display = 'block';
+      form.scrollIntoView({ behavior: 'smooth' });
     };
 
     // Отправка формы
@@ -41,11 +45,14 @@ fetch('data/courses.json')
       const course = data.courses[langIndex];
       const level = course.levels[lvlIndex];
       const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
 
       alert(`Thank you, ${name}! You registered for "${course.language} – ${level.level}".`);
       this.reset();
       document.getElementById('registration-form').style.display = 'none';
     });
   })
-  .catch(err => console.error("Error loading courses:", err));
+  .catch(err => {
+    console.error("Error loading courses:", err);
+    document.getElementById('courses-list').textContent = "Failed to load courses.";
+  });
+
