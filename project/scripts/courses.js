@@ -1,7 +1,6 @@
 // scripts/courses.js
 
-// Правильный путь к JSON
-fetch('../data/courses.json')
+fetch('/wdd231/data/courses.json') // путь для GitHub Pages
   .then(response => {
     if (!response.ok) throw new Error('Network response was not ok');
     return response.json();
@@ -10,7 +9,7 @@ fetch('../data/courses.json')
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Отображаем курсы
+    // Показываем курсы
     container.innerHTML = data.courses.map((c, langIndex) => {
       return c.levels.map((level, levelIndex) => `
         <div class="course">
@@ -33,12 +32,11 @@ fetch('../data/courses.json')
       });
     });
 
-    // Функция открытия формы
+    // Форма: открытие по кнопке
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
-      const form = document.getElementById('registration-form');
-      form.style.display = 'block';
-      form.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('registration-form').style.display = 'block';
+      document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
     };
 
     // Отправка формы
