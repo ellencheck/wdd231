@@ -423,3 +423,65 @@ ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contact
   color: #0B3D91;
   border-bottom: 2px solid #0B3D91;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #0B3D91;
+  padding: 1rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+header nav ul li a.active {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: #2563EB;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.teachers img {
+  width: 200px;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .teachers img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
