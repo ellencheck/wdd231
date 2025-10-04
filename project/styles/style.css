@@ -1,27 +1,51 @@
 /* ----- Базовые стили ----- */
+/* ----- Базовые стили ----- */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  background: #f4f6f9;
+  background: #ffffff; /* белый фон для контента */
   color: #333;
   line-height: 1.6;
 }
 
-/* ----- Хедер ----- */
-header {
-  background: #0d47a1; /* тёмно-синий — контраст с белым 12.63:1 */
+/* ----- Общая шапка/футер/навигация ----- */
+header,
+footer,
+nav {
+  background: #0d47a1; /* жгучий тёмно-синий */
   color: white;
-  padding: 1.5rem 2rem;
   text-align: center;
+  padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ----- Навигация ----- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white; /* контраст 12.6:1 — отлично читается */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #bbdefb; /* светло-голубой при наведении */
 }
 
 /* ----- Кнопки ----- */
 button {
   display: inline-block;
   padding: 10px 16px;
-  background: #1565c0; /* насыщенный синий, контраст с белым 7.54:1 */
-  color: #fff; /* белый текст — читаемый */
+  background: #1565c0; /* насыщенный синий */
+  color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
@@ -31,7 +55,17 @@ button {
 }
 
 button:hover {
-  background: #0d47a1; /* ещё темнее при наведении (контраст >10:1) */
+  background: #0d47a1; /* темнее при наведении */
+}
+/* ----- Футер ----- */
+footer {
+  background: #0d47a1; /* жгучий тёмно-синий */
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 4px solid #1565c0; /* яркий акцент сверху */
 }
 
 header h1 {
