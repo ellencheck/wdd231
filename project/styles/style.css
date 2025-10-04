@@ -433,4 +433,12 @@ ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contact
 .course-card button:hover {
   background: #092c6a;
 }
+.course-card img {
+  width: 100%;          
+  height: 150px;         
+  object-fit: cover;     
+  border-radius: 12px;   
+  display: block;
+  margin-bottom: 12px;   
+}
 
