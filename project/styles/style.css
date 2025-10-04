@@ -291,3 +291,64 @@ footer {
   gap: 8px;
   font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", sans-serif;
 }
+/* ----- Contact Us ----- */
+#contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#contact-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#contact-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+#contactForm label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 12px;
+  background: #0077ff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contactForm button:hover {
+  background: #005ed1;
+}
