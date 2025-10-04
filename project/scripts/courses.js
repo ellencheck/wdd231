@@ -15,7 +15,7 @@ fetch('data/courses.json')
         const div = document.createElement('div');
         div.className = 'course';
         div.innerHTML = `
-          <h3><span class="fi ${course.flagClass}"></span> ${course.language} – ${level.level}</h3>
+          <h3>${course.flag} ${course.language} – ${level.level}</h3>
           <p>${level.description}</p>
           <p><strong>Duration:</strong> ${level.duration}</p>
           <p><strong>Price:</strong> ${level.price}</p>
