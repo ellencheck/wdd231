@@ -10,23 +10,14 @@ fetch("data/courses.json")
     container.innerHTML = "";
     formSelect.innerHTML = "";
 
-    const flagEmojis = {
-      "Russian": "🇷🇺", "English": "🇬🇧", "Spanish": "🇪🇸",
-      "French": "🇫🇷", "German": "🇩🇪", "Italian": "🇮🇹",
-      "Japanese": "🇯🇵", "Chinese": "🇨🇳", "Portuguese": "🇵🇹",
-      "Arabic": "🇸🇦"
-    };
-
     data.courses.forEach((course, langIndex) => {
-      const emojiFlag = flagEmojis[course.language] || "🏳️";
-
       course.levels.forEach((level, levelIndex) => {
         const div = document.createElement("div");
         div.className = "course course-card";
 
         div.innerHTML = `
-          <img src="${level.image}" alt="${course.language} ${level.level}" />
-          <h3><span class="flag-emoji">${emojiFlag}</span> ${course.language} – ${level.level}</h3>
+          <img class="course-image" src="${level.image}" alt="${course.language} – ${level.level}">
+          <h3>${course.language} – ${level.level}</h3>
           <p>${level.description}</p>
           <p><strong>Duration:</strong> ${level.duration}</p>
           <p><strong>Price:</strong> ${level.price}</p>
@@ -66,14 +57,3 @@ fetch("data/courses.json")
     console.error(err);
     document.getElementById("courses-list").innerText = "Failed to load courses.";
   });
-div.innerHTML = `
-  <img class="course-image" src="${level.image}" alt="${course.language} – ${level.level}">
-  <h3>
-    <span class="flag-emoji">${emojiFlag}</span>
-    ${course.language} – ${level.level}
-  </h3>
-  <p>${level.description}</p>
-  <p><strong>Duration:</strong> ${level.duration}</p>
-  <p><strong>Price:</strong> ${level.price}</p>
-  <button>Sign Up</button>
-`;
