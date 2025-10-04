@@ -2,7 +2,6 @@
   "courses": [
     {
       "language": "Russian",
-      "flag": "🇷🇺",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Start learning Russian with the basics of grammar, vocabulary, and pronunciation.", "image": "images/russian.jpeg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/russian.jpeg" },
@@ -14,7 +13,6 @@
     },
     {
       "language": "English",
-      "flag": "🇬🇧",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential English grammar and vocabulary for everyday situations.", "image": "images/english.webp" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/english.webp" },
@@ -26,7 +24,6 @@
     },
     {
       "language": "Spanish",
-      "flag": "🇪🇸",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Spanish vocabulary and grammar for everyday conversations.", "image": "images/spanish_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/spanish_a2.jpg" },
@@ -38,7 +35,6 @@
     },
     {
       "language": "French",
-      "flag": "🇫🇷",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation.", "image": "images/french_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/french_a2.jpg" },
@@ -50,7 +46,6 @@
     },
     {
       "language": "German",
-      "flag": "🇩🇪",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn German basics for everyday communication.", "image": "images/german_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/german_a2.jpg" },
@@ -62,7 +57,6 @@
     },
     {
       "language": "Italian",
-      "flag": "🇮🇹",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn the basics of Italian grammar, vocabulary, and pronunciation.", "image": "images/italian_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/italian_a2.jpg" },
@@ -74,7 +68,6 @@
     },
     {
       "language": "Japanese",
-      "flag": "🇯🇵",
       "levels": [
         { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn the basics of Japanese writing, speaking, and listening.", "image": "images/japanese_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/japanese_a2.jpg" },
@@ -86,7 +79,6 @@
     },
     {
       "language": "Chinese",
-      "flag": "🇨🇳",
       "levels": [
         { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Mandarin vocabulary, tones, and characters.", "image": "images/chinese_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/chinese_a2.jpg" },
@@ -98,7 +90,6 @@
     },
     {
       "language": "Arabic",
-      "flag": "🇸🇦",
       "levels": [
         { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Arabic vocabulary, pronunciation, and script.", "image": "images/arabic_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/arabic_a2.jpg" },
@@ -110,7 +101,6 @@
     },
     {
       "language": "Portuguese",
-      "flag": "🇵🇹",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Portuguese grammar, vocabulary, and pronunciation.", "image": "images/portuguese_a1.jpg" },
         { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/portuguese_a2.jpg" },
