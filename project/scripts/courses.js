@@ -15,7 +15,6 @@ fetch("data/courses.json")
         const div = document.createElement("div");
         div.className = "course";
 
-        // Используем span с классом для маленького эмодзи
         div.innerHTML = `
           <h3>
             <span class="flag-emoji">${course.flag}</span>
