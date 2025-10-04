@@ -6,7 +6,7 @@ fetch('data/courses.json')
 
     container.innerHTML = data.courses.map((c, index) => `
       <div class="course">
-        <h3><span class="fi fi-${c.flag}"></span> ${c.language} – ${c.level}</h3>
+        <h3><span class="fi fi-${c.flagCode}"></span> ${c.language} – ${c.level}</h3>
         <p>${c.description}</p>
         <p><strong>Duration:</strong> ${c.duration}</p>
         <p><strong>Price:</strong> ${c.price}</p>
@@ -14,22 +14,19 @@ fetch('data/courses.json')
       </div>
     `).join('');
 
-    // Заполняем select
     data.courses.forEach((c, index) => {
       const option = document.createElement('option');
       option.value = index;
-      option.innerHTML = `<span class="fi fi-${c.flag}"></span> ${c.language} – ${c.level} (${c.price})`;
+      option.textContent = `${c.language} – ${c.level} (${c.price})`;
       formSelect.appendChild(option);
     });
 
-    // Форма: открытие
     window.openForm = function(index) {
       formSelect.value = index;
       document.getElementById('registration-form').style.display = 'block';
       document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
     };
 
-    // Отправка формы
     document.getElementById('courseForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const course = data.courses[formSelect.value];
@@ -42,3 +39,4 @@ fetch('data/courses.json')
     });
   })
   .catch(err => console.error("Error loading courses:", err));
+
