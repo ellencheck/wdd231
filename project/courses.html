@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
-        <li><a href="courses.html">Courses</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
         <li><a href="teachers.html">Teachers</a></li>
         <li><a href="contacts.html">Contacts</a></li>
       </ul>
@@ -23,6 +23,23 @@
     <section>
       <h2>Available Courses</h2>
       <div id="courses-list">Loading courses...</div>
+    </section>
+
+    <!-- 🔽 Форма регистрации -->
+    <section id="registration-form">
+      <h2>Register for a Course</h2>
+      <form id="courseForm">
+        <label for="selectedCourse">Selected Course:</label>
+        <select id="selectedCourse" name="course"></select>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Submit</button>
+      </form>
     </section>
   </main>
 
