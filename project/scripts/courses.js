@@ -1,11 +1,10 @@
-// Добавляем cache-busting
-fetch(`data/courses.json?v=${new Date().getTime()}`)
+fetch('data/courses.json')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Показываем курсы
+    // Показываем все курсы
     container.innerHTML = data.courses.map((c, langIndex) => {
       return c.levels.map((level, levelIndex) => `
         <div class="course">
@@ -28,11 +27,12 @@ fetch(`data/courses.json?v=${new Date().getTime()}`)
       });
     });
 
-    // Форма: открытие по кнопке
+    // Открытие формы при нажатии на кнопку
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
-      document.getElementById('registration-form').style.display = 'block';
-      document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
+      const formSection = document.getElementById('registration-form');
+      formSection.style.display = 'block';
+      formSection.scrollIntoView({behavior: "smooth"});
     };
 
     // Отправка формы
