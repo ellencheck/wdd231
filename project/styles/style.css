@@ -17,17 +17,40 @@ footer {
   padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+nav {
+  background: none; /* убрали фон полностью */
+  padding: 0;       /* сохраняем твои паддинги, если были */
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;            /* горизонтальное расположение */
+  justify-content: center;  /* по центру */
+  gap: 20px;                /* расстояние между пунктами */
+}
+
+nav ul li {
+  margin: 0;   /* не трогаем твои бантики */
+  padding: 0;  /* сохраняем изначальные */
+}
+
 nav ul li a {
-  background-color: #0b3d91; /* сохраним фон синим */
-  color: #ffffff; /* белый текст */
-  text-decoration: none; /* без изменения структуры */
+  color: #0b3d91;   /* жгучий синий текст */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* оставляем бантики/паддинги */
+  background: none;      /* полностью прозрачный */
+  border-radius: 6px;    /* если у тебя был радиус */
+  transition: color 0.3s, background 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: #2563eb; /* чуть ярче при наведении */
-  color: #ffd700; /* текст золотой для контраста */
+  color: #2563eb; /* яркий синий при наведении */
+  background: rgba(11, 61, 145, 0.1); /* лёгкий эффект подсветки */
 }
-
 /* ----- Кнопки ----- */
 button {
   display: inline-block;
