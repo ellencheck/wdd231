@@ -326,13 +326,4 @@ ul li {
   margin-bottom: 12px;
   background-color: #f0f0f0;
 }
-.teacher-card img {
-  width: 100%;
-  height: 250px; /* чуть выше */
-  object-fit: cover;
-  object-position: top; /* показываем верхнюю часть изображения */
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 12px;
-  background-color: #f0f0f0;
-}
+
