@@ -11,7 +11,7 @@ body {
 header,
 footer,
 nav {
-  background: #0d47a1; /* более контрастный тёмно-синий */
+  background: #0b3d91; /* тёмно-синий, контрастный */
   color: white;
   text-align: center;
   padding: 1rem 2rem;
@@ -29,22 +29,21 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: white; /* белый на тёмном фоне — читаемость идеальная */
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffd700; /* золотой при наведении */
+  color: #ffd700; /* яркий желтый при наведении */
 }
 
 /* ----- Кнопки ----- */
-button,
-#contactForm button {
+button {
   display: inline-block;
   padding: 10px 16px;
-  background: #1976d2; /* насыщенный синий */
+  background: #0073e6; /* яркий синий */
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -54,49 +53,26 @@ button,
   transition: background 0.3s ease;
 }
 
-button:hover,
-#contactForm button:hover {
-  background: #115293; /* темнее при наведении */
+button:hover {
+  background: #005bb5; /* темнее при наведении */
 }
 
 /* ----- Футер ----- */
 footer {
-  background: #0d47a1;
+  background: #0b3d91; /* тёмно-синий */
   color: white;
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
   margin-top: 2rem;
-  border-top: 4px solid #1565c0; /* яркий акцент сверху */
+  border-top: 4px solid #0073e6; /* яркий акцент сверху */
 }
 
-/* Заголовки */
+/* Заголовки в header */
 header h1 {
   margin: 0;
   font-size: 2rem;
   letter-spacing: 1px;
-}
-
-/* Меню навигации */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ffd700;
-  text-decoration: underline;
 }
 
 /* Основной контент */
@@ -109,21 +85,20 @@ main {
 /* Секции с рамками */
 section {
   background: white;
-  border: 2px solid #1565c0; /* яркий синий для рамки */
+  border: 2px solid #0073e6;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Заголовки внутри секций */
 section h2 {
-  color: #1565c0;
+  color: #0073e6;
   margin-top: 0;
 }
 
 section h3 {
-  color: #0d47a1;
+  color: #0b3d91;
   margin-bottom: 0.5rem;
 }
 
@@ -135,19 +110,19 @@ ul {
 ul li {
   margin-bottom: 0.5rem;
   padding: 0.3rem 0.5rem;
-  border-left: 4px solid #1565c0;
+  border-left: 4px solid #0073e6;
   background: #e3f2fd;
   border-radius: 4px;
 }
 
-/* Кнопки */
+/* Кнопки класса .btn */
 .buttons {
   margin-top: 1.5rem;
 }
 
 .btn {
   display: inline-block;
-  background: #1976d2;
+  background: #0073e6;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -158,11 +133,11 @@ ul li {
 }
 
 .btn:hover {
-  background: #115293;
+  background: #005bb5;
   transform: translateY(-2px);
 }
 
-/* ---------- Стиль для страницы Teachers ---------- */
+/* ----- Стили для Teachers ----- */
 #teachers-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -172,7 +147,7 @@ ul li {
 
 .teacher-card {
   background: white;
-  border: 2px solid #1565c0;
+  border: 2px solid #0073e6;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -195,7 +170,7 @@ ul li {
 
 .teacher-card h3 {
   margin: 0.5rem 0;
-  color: #1565c0;
+  color: #0073e6;
 }
 
 .teacher-card p {
@@ -206,7 +181,7 @@ ul li {
 
 .teacher-card .btn {
   display: inline-block;
-  background: #1976d2;
+  background: #0073e6;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -217,11 +192,11 @@ ul li {
 }
 
 .teacher-card .btn:hover {
-  background: #115293;
+  background: #005bb5;
   transform: translateY(-2px);
 }
 
-/* ----- СТИЛИ ДЛЯ КУРСОВ ----- */
+/* ----- Стили для курсов ----- */
 #courses-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -261,7 +236,7 @@ ul li {
 .course button {
   display: inline-block;
   padding: 10px 16px;
-  background: #1976d2;
+  background: #0073e6;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -272,10 +247,10 @@ ul li {
 }
 
 .course button:hover {
-  background: #115293;
+  background: #005bb5;
 }
 
-/* ----- ФОРМА ----- */
+/* ----- Форма регистрации ----- */
 #registration-form {
   max-width: 400px;
   margin: 40px auto;
@@ -313,7 +288,7 @@ ul li {
 #registration-form button {
   width: 100%;
   padding: 12px;
-  background: #1976d2;
+  background: #0073e6;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -323,7 +298,7 @@ ul li {
 }
 
 #registration-form button:hover {
-  background: #115293;
+  background: #005bb5;
 }
 
 /* ----- Contact Us ----- */
@@ -340,7 +315,6 @@ ul li {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
-  color: #1565c0;
 }
 
 #contact-section p {
@@ -375,7 +349,7 @@ ul li {
 #contactForm button {
   width: 100%;
   padding: 12px;
-  background: #1976d2;
+  background: #0073e6;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -386,5 +360,5 @@ ul li {
 }
 
 #contactForm button:hover {
-  background: #115293;
+  background: #005bb5;
 }
