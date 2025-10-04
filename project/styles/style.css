@@ -174,3 +174,103 @@ footer {
   background: #0d47a1;
   transform: translateY(-2px);
 }
+/* ----- СТИЛИ ДЛЯ КУРСОВ ----- */
+#courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.course h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.course button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.course button:hover {
+  background: #005ed1;
+}
+
+/* ----- ФОРМА ----- */
+#registration-form {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none; /* изначально скрыта */
+}
+
+#registration-form h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #333;
+}
+
+#registration-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+#registration-form input, 
+#registration-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+#registration-form button {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#registration-form button:hover {
+  background: #218838;
+}
