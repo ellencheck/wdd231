@@ -380,3 +380,23 @@ ton, .btn, .course ton, #registration-form ton, #contactForm ton, .teacher-card 
 ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contactForm ton:hover, .teacher-card .btn:hover {
   background: #2563eb;
 }
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0b3d91;
+}
