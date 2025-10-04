@@ -1,39 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Основные мета-теги -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title и Meta Description -->
-    <title>Ellen Check Foreign Language School</title>
-    <meta name="description" content="Learn languages online and offline with expert teachers at Ellen Check Foreign Language School.">
-    <meta name="author" content="Alina">
+  <!-- Основные мета-теги -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Title и Meta Description -->
+  <title>Ellen Check Foreign Language School</title>
+  <meta name="description" content="Learn languages online and offline with expert teachers at Ellen Check Foreign Language School.">
+  <meta name="author" content="Alina">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Ellen Check Foreign Language School">
-    <meta property="og:description" content="Learn languages online and offline with expert teachers at Ellen Check Foreign Language School.">
-    <meta property="og:image" content="https://yourusername.github.io/wdd231/images/og-image.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/wdd231/index.html">
-    <meta property="og:type" content="website">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/style.css">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Ellen Check Foreign Language School">
+  <meta property="og:description" content="Learn languages online and offline with expert teachers at Ellen Check Foreign Language School.">
+  <meta property="og:image" content="https://yourusername.github.io/wdd231/images/og-image.jpg">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
   <header>
     <h1>Ellen Check Foreign Language School</h1>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     <nav>
       <ul>
-        <li><a href="index.html">About</a></li>
+        <li><a href="index.html" class="active">About</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="teachers.html">Teachers</a></li>
         <li><a href="contacts.html">Contacts</a></li>
@@ -45,7 +47,7 @@
     <section id="about">
       <h2>About Foreign Language School</h2>
       <p>
-        <strong>Ellen Check Language School</strong> offers high-quality language education where all instructors are **native speakers**.  
+        <strong>Ellen Check Language School</strong> offers high-quality language education where all instructors are <strong>native speakers</strong>.  
         You can learn multiple languages including: <strong>Russian, English, German, French, Italian, Arabic, Chinese, Japanese, and Portuguese</strong>.
       </p>
 
@@ -56,6 +58,7 @@
         <li>Advanced (C1)</li>
         <li>Proficient (C2)</li>
       </ul>
+
       <p>
         For example, Russian courses progress from A1 → B1 → C1 → C2.  
         All other languages follow the same level structure.
@@ -67,12 +70,13 @@
         Students study grammar, vocabulary, and video lessons independently, then practice actively with native speaker instructors during lessons.  
         This ensures immediate application of knowledge in real conversation.
       </p>
+
       <p>
-        Every teacher is a **native speaker**, combining correct pronunciation, real-life communication, and professional pedagogical techniques.  
+        Every teacher is a <strong>native speaker</strong>, combining correct pronunciation, real-life communication, and professional pedagogical techniques.  
         This approach guarantees that students learn languages authentically and effectively.
       </p>
 
-      <h3>Why Choose Ellen Chek Foreign Language School?</h3>
+      <h3>Why Choose Ellen Check Foreign Language School?</h3>
       <ul>
         <li>Full immersion in the language from the first lesson</li>
         <li>Practice-focused learning, not just theory</li>
@@ -90,7 +94,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 — Ellen Chek Foreign Language School. All rights reserved.</p>
+    <p>&copy; <span id="current-year"></span> — Ellen Check Foreign Language School. All rights reserved.</p>
   </footer>
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>
