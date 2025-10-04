@@ -116,6 +116,7 @@ footer {
   box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
 /* ---------- Стиль для страницы Teachers ---------- */
+/* ---------- Стиль для страницы Teachers ---------- */
 #teachers-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -136,13 +137,13 @@ footer {
 .teacher-card:hover {
   transform: translateY(-5px);
 }
-
 .teacher-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 200px;          /* увеличили размер */
+  height: 200px;         /* квадрат */
+  object-fit: contain;    /* показывает весь объект, не обрезая */
+  border-radius: 12px;    /* слегка скругляем углы, можно убрать для идеального квадрата */
   margin-bottom: 1rem;
+  background-color: #f0f0f0; /* светлый фон, если фото не полностью квадратное */
 }
 
 .teacher-card h3 {
@@ -156,7 +157,7 @@ footer {
   line-height: 1.3;
 }
 
-/* Кнопки внутри карточек, если понадобятся */
+/* Кнопки внутри карточек */
 .teacher-card .btn {
   display: inline-block;
   background: #1565c0;
