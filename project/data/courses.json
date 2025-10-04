@@ -2,213 +2,83 @@
   "courses": [
     {
       "language": "Russian",
+      "flag": "🇷🇺",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Foundational Russian course for beginners to reach intermediate level."
     },
     {
-      "language": "Russian",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Intermediate Russian course to advance students to higher proficiency."
-    },
-    {
-      "language": "Russian",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Advanced Russian course for achieving fluency and mastery."
-    },
-    {
       "language": "English",
+      "flag": "🇬🇧",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Beginner English course with focus on communication and grammar."
     },
     {
-      "language": "English",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Develop advanced English skills for academic and professional use."
-    },
-    {
-      "language": "English",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Mastery of English for fluent speaking and writing."
-    },
-    {
       "language": "Spanish",
+      "flag": "🇪🇸",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Introductory Spanish course for beginners to intermediate learners."
     },
     {
-      "language": "Spanish",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Expand Spanish skills to advanced proficiency."
-    },
-    {
-      "language": "Spanish",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Achieve fluency in Spanish with advanced conversation and writing."
-    },
-    {
       "language": "French",
+      "flag": "🇫🇷",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Foundational French course for beginners to reach intermediate level."
     },
     {
-      "language": "French",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Develop advanced French skills for academic and professional use."
-    },
-    {
-      "language": "French",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Mastery of French for fluent speaking and writing."
-    },
-    {
       "language": "German",
+      "flag": "🇩🇪",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Introductory German course for beginners to intermediate learners."
     },
     {
-      "language": "German",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Expand German skills to advanced proficiency."
-    },
-    {
-      "language": "German",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Achieve fluency in German with advanced conversation and writing."
-    },
-    {
       "language": "Italian",
+      "flag": "🇮🇹",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Foundational Italian course for beginners to reach intermediate level."
     },
     {
-      "language": "Italian",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Develop advanced Italian skills for academic and professional use."
-    },
-    {
-      "language": "Italian",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Mastery of Italian for fluent speaking and writing."
-    },
-    {
       "language": "Japanese",
+      "flag": "🇯🇵",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Introductory Japanese course for beginners to intermediate learners."
     },
     {
-      "language": "Japanese",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Expand Japanese skills to advanced proficiency."
-    },
-    {
-      "language": "Japanese",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Achieve fluency in Japanese with advanced conversation and writing."
-    },
-    {
       "language": "Chinese",
+      "flag": "🇨🇳",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Introductory Chinese course for beginners to intermediate learners."
     },
     {
-      "language": "Chinese",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Expand Chinese skills to advanced proficiency."
-    },
-    {
-      "language": "Chinese",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Achieve fluency in Chinese with advanced conversation and writing."
-    },
-    {
       "language": "Arabic",
+      "flag": "🇸🇦",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Introductory Arabic course for beginners to intermediate learners."
     },
     {
-      "language": "Arabic",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Expand Arabic skills to advanced proficiency."
-    },
-    {
-      "language": "Arabic",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Achieve fluency in Arabic with advanced conversation and writing."
-    },
-    {
       "language": "Portuguese",
+      "flag": "🇵🇹",
       "level": "Beginner to Intermediate (A1→B1)",
       "duration": "6 months",
       "price": "$500",
       "description": "Foundational Portuguese course for beginners to reach intermediate level."
-    },
-    {
-      "language": "Portuguese",
-      "level": "Intermediate to Advanced (B1→C1)",
-      "duration": "6 months",
-      "price": "$600",
-      "description": "Develop advanced Portuguese skills for academic and professional use."
-    },
-    {
-      "language": "Portuguese",
-      "level": "Advanced to Fluent (C1→C2)",
-      "duration": "6 months",
-      "price": "$700",
-      "description": "Mastery of Portuguese for fluent speaking and writing."
     }
   ]
 }
