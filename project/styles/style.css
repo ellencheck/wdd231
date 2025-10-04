@@ -2,7 +2,7 @@
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
-  background: #ffffff; /* белый фон для контента */
+  background: #f0f4f8; /* светлый фон страницы, чтобы блоки выделялись */
   color: #333;
   line-height: 1.6;
 }
@@ -15,7 +15,7 @@ nav {
   color: white;
   text-align: center;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 /* ----- Навигация ----- */
@@ -40,21 +40,24 @@ nav ul li a:hover {
 }
 
 /* ----- Кнопки ----- */
-button {
+button,
+.btn {
   display: inline-block;
   padding: 10px 16px;
-  background: #0073e6; /* яркий синий */
-  color: #fff;
+  background: #ffd700; /* ярко-жёлтые кнопки */
+  color: #0b3d91; /* контрастный текст */
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background: #005bb5; /* темнее при наведении */
+button:hover,
+.btn:hover {
+  background: #ffc107; /* чуть светлее при наведении */
+  transform: translateY(-2px);
 }
 
 /* ----- Футер ----- */
@@ -65,7 +68,7 @@ footer {
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
   margin-top: 2rem;
-  border-top: 4px solid #0073e6; /* яркий акцент сверху */
+  border-top: 4px solid #ffd700; /* яркий акцент сверху */
 }
 
 /* Заголовки в header */
@@ -80,12 +83,13 @@ main {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
+  background: #f0f4f8; /* светлый фон для страницы */
 }
 
 /* Секции с рамками */
 section {
   background: white;
-  border: 2px solid #0073e6;
+  border: 2px solid #0b3d91;
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -93,7 +97,7 @@ section {
 }
 
 section h2 {
-  color: #0073e6;
+  color: #0b3d91;
   margin-top: 0;
 }
 
@@ -110,31 +114,9 @@ ul {
 ul li {
   margin-bottom: 0.5rem;
   padding: 0.3rem 0.5rem;
-  border-left: 4px solid #0073e6;
+  border-left: 4px solid #0b3d91;
   background: #e3f2fd;
   border-radius: 4px;
-}
-
-/* Кнопки класса .btn */
-.buttons {
-  margin-top: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  background: #0073e6;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 0.5rem;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  background: #005bb5;
-  transform: translateY(-2px);
 }
 
 /* ----- Стили для Teachers ----- */
@@ -147,7 +129,7 @@ ul li {
 
 .teacher-card {
   background: white;
-  border: 2px solid #0073e6;
+  border: 2px solid #0b3d91;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -170,7 +152,7 @@ ul li {
 
 .teacher-card h3 {
   margin: 0.5rem 0;
-  color: #0073e6;
+  color: #0b3d91;
 }
 
 .teacher-card p {
@@ -181,8 +163,8 @@ ul li {
 
 .teacher-card .btn {
   display: inline-block;
-  background: #0073e6;
-  color: white;
+  background: #ffd700;
+  color: #0b3d91;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-decoration: none;
@@ -192,7 +174,7 @@ ul li {
 }
 
 .teacher-card .btn:hover {
-  background: #005bb5;
+  background: #ffc107;
   transform: translateY(-2px);
 }
 
@@ -205,7 +187,7 @@ ul li {
 }
 
 .course {
-  background: #fff;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 20px;
@@ -236,8 +218,8 @@ ul li {
 .course button {
   display: inline-block;
   padding: 10px 16px;
-  background: #0073e6;
-  color: #fff;
+  background: #ffd700;
+  color: #0b3d91;
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
@@ -247,7 +229,7 @@ ul li {
 }
 
 .course button:hover {
-  background: #005bb5;
+  background: #ffc107;
 }
 
 /* ----- Форма регистрации ----- */
@@ -288,17 +270,17 @@ ul li {
 #registration-form button {
   width: 100%;
   padding: 12px;
-  background: #0073e6;
+  background: #ffd700;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: #0b3d91;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 #registration-form button:hover {
-  background: #005bb5;
+  background: #ffc107;
 }
 
 /* ----- Contact Us ----- */
@@ -315,6 +297,7 @@ ul li {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
+  color: #0b3d91;
 }
 
 #contact-section p {
@@ -327,6 +310,7 @@ ul li {
 .contact-info p {
   margin-bottom: 8px;
   text-align: left;
+  color: #0b3d91;
 }
 
 #contactForm label {
@@ -349,16 +333,15 @@ ul li {
 #contactForm button {
   width: 100%;
   padding: 12px;
-  background: #0073e6;
+  background: #ffd700;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: #0b3d91;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 #contactForm button:hover {
-  background: #005bb5;
+  background: #ffc107;
 }
