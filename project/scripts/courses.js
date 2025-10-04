@@ -1,6 +1,4 @@
-// scripts/courses.js
-
-fetch('/wdd231/data/courses.json') // путь для GitHub Pages
+fetch('/wdd231/data/courses.json')
   .then(response => {
     if (!response.ok) throw new Error('Network response was not ok');
     return response.json();
@@ -9,7 +7,7 @@ fetch('/wdd231/data/courses.json') // путь для GitHub Pages
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // Показываем курсы
+    // Отображаем курсы
     container.innerHTML = data.courses.map((c, langIndex) => {
       return c.levels.map((level, levelIndex) => `
         <div class="course">
