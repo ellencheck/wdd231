@@ -379,3 +379,9 @@ ton, .btn, .course ton, #registration-form ton, #contactForm ton, .teacher-card 
 
 ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contactForm ton:hover, .teacher-card .btn:hover {
   background: #2563eb;
+.flag-emoji {
+  font-size: 20px;      /* размер как смайлик */
+  line-height: 1;       /* чтобы центрировалось вертикально */
+  display: inline-block;
+  vertical-align: middle;
+}
