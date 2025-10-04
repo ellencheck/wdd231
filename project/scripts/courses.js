@@ -1,31 +1,24 @@
-// scripts/courses.js
-fetch('data/courses.json')
-  .then(response => {
-    if (!response.ok) throw new Error("Failed to load courses.json");
-    return response.json();
-  })
+// Добавляем cache-busting
+fetch(`data/courses.json?v=${new Date().getTime()}`)
+  .then(response => response.json())
   .then(data => {
     const container = document.getElementById('courses-list');
     const formSelect = document.getElementById('selectedCourse');
 
-    // 1️⃣ Отображаем курсы
-    let html = '';
-    data.courses.forEach((c, langIndex) => {
-      c.levels.forEach((level, levelIndex) => {
-        html += `
-          <div class="course">
-            <h3>${c.flag} ${c.language} – ${level.level}</h3>
-            <p>${level.description}</p>
-            <p><strong>Duration:</strong> ${level.duration}</p>
-            <p><strong>Price:</strong> ${level.price}</p>
-            <button onclick="openForm(${langIndex}, ${levelIndex})">Sign Up</button>
-          </div>
-        `;
-      });
-    });
-    container.innerHTML = html;
+    // Показываем курсы
+    container.innerHTML = data.courses.map((c, langIndex) => {
+      return c.levels.map((level, levelIndex) => `
+        <div class="course">
+          <h3>${c.flag} ${c.language} – ${level.level}</h3>
+          <p>${level.description}</p>
+          <p><strong>Duration:</strong> ${level.duration}</p>
+          <p><strong>Price:</strong> ${level.price}</p>
+          <button onclick="openForm(${langIndex}, ${levelIndex})">Sign Up</button>
+        </div>
+      `).join('');
+    }).join('');
 
-    // 2️⃣ Заполняем select формы
+    // Заполняем select формы
     data.courses.forEach((c, langIndex) => {
       c.levels.forEach((level, levelIndex) => {
         const option = document.createElement('option');
@@ -35,14 +28,14 @@ fetch('data/courses.json')
       });
     });
 
-    // 3️⃣ Открытие формы по кнопке
+    // Форма: открытие по кнопке
     window.openForm = function(langIndex, levelIndex) {
       formSelect.value = `${langIndex}-${levelIndex}`;
       document.getElementById('registration-form').style.display = 'block';
       document.getElementById('registration-form').scrollIntoView({behavior: "smooth"});
     };
 
-    // 4️⃣ Отправка формы
+    // Отправка формы
     document.getElementById('courseForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const [langIndex, levelIndex] = formSelect.value.split('-').map(Number);
