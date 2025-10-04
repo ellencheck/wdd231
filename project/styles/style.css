@@ -400,3 +400,26 @@ ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contact
 .btn:hover {
   background-color: #0b3d91;
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
+.active {
+  font-weight: bold;
+  color: #0B3D91;
+  border-bottom: 2px solid #0B3D91;
+}
