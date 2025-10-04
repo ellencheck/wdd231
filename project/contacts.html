@@ -1,25 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts – Ellen Check Foreign Language School</title>
-    <meta name="description" content="Contact Ellen Check Foreign Language School for questions or enrollment information.">
-    <meta name="author" content="Alina">
-
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Contacts – Ellen Check Foreign Language School">
-    <meta property="og:description" content="Contact Ellen Check Foreign Language School for questions or enrollment information.">
-    <meta property="og:image" content="https://yourusername.github.io/wdd231/images/og-image.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/wdd231/contacts.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Ellen Check Language School</title>
+  <meta name="description" content="Get in touch with Ellen Check Foreign Language School for enrollment and course information.">
+  <meta name="author" content="Alina">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Contact Ellen Check Language School">
+  <meta property="og:description" content="Contact us for course enrollment or language program questions.">
+  <meta property="og:image" content="https://ellencheck.github.io/wdd231/images/og-image.jpg">
+  <meta property="og:url" content="https://ellencheck.github.io/wdd231/contacts.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header>
@@ -29,49 +25,24 @@
         <li><a href="index.html">About</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="teachers.html">Teachers</a></li>
-        <li><a href="contacts.html" class="active">Contacts</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="contact-section">
+    <section>
       <h2>Get in Touch</h2>
-      <p>We’d love to hear from you! Fill out the form below or reach us by phone or email.</p>
-
-      <div class="contact-info">
-        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-        <p><strong>Email:</strong> info@wdd231school.com</p>
-        <p><strong>Address:</strong> 123 Learning St., Education City</p>
-      </div>
-
-      <form id="contactForm">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+      <p>Email: info@ellencheckschool.com</p>
+      <p>Phone: +1 (234) 567-890</p>
+      <p>Address: 123 Language Street, Santiago, Chile</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 — Ellen Chek Foreign Language School. All rights reserved.</p>
+    <p>&copy; 2025 — Ellen Check Foreign Language School. All rights reserved.</p>
   </footer>
 
-  <script>
-    // Простая отправка формы
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      alert(`Thank you, ${name}! Your message has been sent.`);
-      this.reset();
-    });
-  </script>
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>
