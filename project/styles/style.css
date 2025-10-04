@@ -1,5 +1,4 @@
 /* ----- Базовые стили ----- */
-/* ----- Базовые стили ----- */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -12,7 +11,7 @@ body {
 header,
 footer,
 nav {
-  background: #0d47a1; /* жгучий тёмно-синий */
+  background: #0d47a1; /* более контрастный тёмно-синий */
   color: white;
   text-align: center;
   padding: 1rem 2rem;
@@ -30,21 +29,22 @@ nav ul {
 }
 
 nav ul li a {
-  color: white; /* контраст 12.6:1 — отлично читается */
+  color: white;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #bbdefb; /* светло-голубой при наведении */
+  color: #ffd700; /* золотой при наведении */
 }
 
 /* ----- Кнопки ----- */
-button {
+button,
+#contactForm button {
   display: inline-block;
   padding: 10px 16px;
-  background: #1565c0; /* насыщенный синий */
+  background: #1976d2; /* насыщенный синий */
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -54,12 +54,14 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
-  background: #0d47a1; /* темнее при наведении */
+button:hover,
+#contactForm button:hover {
+  background: #115293; /* темнее при наведении */
 }
+
 /* ----- Футер ----- */
 footer {
-  background: #0d47a1; /* жгучий тёмно-синий */
+  background: #0d47a1;
   color: white;
   text-align: center;
   padding: 1.5rem 2rem;
@@ -68,6 +70,7 @@ footer {
   border-top: 4px solid #1565c0; /* яркий акцент сверху */
 }
 
+/* Заголовки */
 header h1 {
   margin: 0;
   font-size: 2rem;
@@ -106,7 +109,7 @@ main {
 /* Секции с рамками */
 section {
   background: white;
-  border: 2px solid #1565c0;
+  border: 2px solid #1565c0; /* яркий синий для рамки */
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -144,7 +147,7 @@ ul li {
 
 .btn {
   display: inline-block;
-  background: #1565c0;
+  background: #1976d2;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -155,20 +158,10 @@ ul li {
 }
 
 .btn:hover {
-  background: #0d47a1;
+  background: #115293;
   transform: translateY(-2px);
 }
 
-/* Футер */
-footer {
-  background: #1565c0;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-}
-/* ---------- Стиль для страницы Teachers ---------- */
 /* ---------- Стиль для страницы Teachers ---------- */
 #teachers-list {
   display: grid;
@@ -190,13 +183,14 @@ footer {
 .teacher-card:hover {
   transform: translateY(-5px);
 }
+
 .teacher-card img {
-  width: 200px;          /* увеличили размер */
-  height: 200px;         /* квадрат */
-  object-fit: contain;    /* показывает весь объект, не обрезая */
-  border-radius: 12px;    /* слегка скругляем углы, можно убрать для идеального квадрата */
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
   margin-bottom: 1rem;
-  background-color: #f0f0f0; /* светлый фон, если фото не полностью квадратное */
+  background-color: #f0f0f0;
 }
 
 .teacher-card h3 {
@@ -210,10 +204,9 @@ footer {
   line-height: 1.3;
 }
 
-/* Кнопки внутри карточек */
 .teacher-card .btn {
   display: inline-block;
-  background: #1565c0;
+  background: #1976d2;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -224,9 +217,10 @@ footer {
 }
 
 .teacher-card .btn:hover {
-  background: #0d47a1;
+  background: #115293;
   transform: translateY(-2px);
 }
+
 /* ----- СТИЛИ ДЛЯ КУРСОВ ----- */
 #courses-list {
   display: grid;
@@ -252,6 +246,10 @@ footer {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", sans-serif;
 }
 
 .course p {
@@ -263,7 +261,7 @@ footer {
 .course button {
   display: inline-block;
   padding: 10px 16px;
-  background: #0077ff;
+  background: #1976d2;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -274,7 +272,7 @@ footer {
 }
 
 .course button:hover {
-  background: #005ed1;
+  background: #115293;
 }
 
 /* ----- ФОРМА ----- */
@@ -285,7 +283,7 @@ footer {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: none; /* изначально скрыта */
+  display: none;
 }
 
 #registration-form h2 {
@@ -315,7 +313,7 @@ footer {
 #registration-form button {
   width: 100%;
   padding: 12px;
-  background: #28a745;
+  background: #1976d2;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -325,25 +323,9 @@ footer {
 }
 
 #registration-form button:hover {
-  background: #218838;
+  background: #115293;
 }
-.course h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.course h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", sans-serif;
-}
+
 /* ----- Contact Us ----- */
 #contact-section {
   max-width: 600px;
@@ -358,6 +340,7 @@ footer {
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
+  color: #1565c0;
 }
 
 #contact-section p {
@@ -392,7 +375,7 @@ footer {
 #contactForm button {
   width: 100%;
   padding: 12px;
-  background: #0077ff;
+  background: #1976d2;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -403,5 +386,5 @@ footer {
 }
 
 #contactForm button:hover {
-  background: #005ed1;
+  background: #115293;
 }
