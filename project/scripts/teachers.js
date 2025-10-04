@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("teachers-list");
+  
+  // Если контейнера нет, значит это не страница Teachers → выходим
+  if (!container) return;
 
   try {
     const response = await fetch("data/teachers.json");
@@ -29,13 +32,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(err);
   }
 
-  document.getElementById("close-teacher").onclick = () => {
-    document.getElementById("teacher-modal").style.display = "none";
-  };
+  const modal = document.getElementById("teacher-modal");
+  const closeBtn = document.getElementById("close-teacher");
+
+  if (closeBtn) {
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+  }
 
   window.onclick = event => {
-    if (event.target === document.getElementById("teacher-modal")) {
-      document.getElementById("teacher-modal").style.display = "none";
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
   };
 });
