@@ -379,9 +379,58 @@ ton, .btn, .course ton, #registration-form ton, #contactForm ton, .teacher-card 
 
 ton:hover, .btn:hover, .course ton:hover, #registration-form ton:hover, #contactForm ton:hover, .teacher-card .btn:hover {
   background: #2563eb;
-.flag-emoji {
-  font-size: 20px;      /* размер как смайлик */
-  line-height: 1;       /* чтобы центрировалось вертикально */
-  display: inline-block;
-  vertical-align: middle;
+/* ----- Курсы ----- */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
+
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin: 12px 0 6px;
+  color: #0b3d91;
+}
+
+.course-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.course-card button {
+  background: #0b3d91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.course-card button:hover {
+  background: #092c6a;
+}
+
