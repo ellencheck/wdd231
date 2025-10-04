@@ -40,6 +40,16 @@
     "photo": "images/jeanne-lefevre.png"
   },
   {
+  "name": "Carlos Méndez",
+  "language": "Spanish",
+  "city": "Barcelona",
+  "country": "Spain",
+  "education": "Universitat de Barcelona, Hispanic Studies",
+  "experience": "8 years teaching Spanish as a foreign language online and in language schools across Europe",
+  "bio": "Passionate about Spanish literature and conversation, Carlos makes every lesson engaging and practical.",
+  "photo": "images/carlos-mendez.png"
+}
+  {
     "name": "Helga Kramer",
     "language": "German",
     "city": "Berlin",
@@ -69,6 +79,16 @@
     "bio": "Combines traditional and modern Japanese culture in lessons.",
     "photo": "images/juki-tanaka.png"
   },
+  {
+    "name": "Franz Weber",
+    "language": "German",
+    "city": "Munich",
+    "country": "Germany",
+    "education": "Ludwig Maximilian University of Munich, German as a Foreign Language",
+    "experience": "5 years teaching German to international students online and in Germany",
+    "bio": "Specializes in conversational German, pronunciation, and cultural context.",
+    "photo": "images/franz-weber.png"
+}
   {
     "name": "Li Mei",
     "language": "Chinese (Mandarin)",
