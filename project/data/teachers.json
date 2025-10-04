@@ -50,14 +50,14 @@
     "photo": "images/helga-kramer.png"
   },
   {
-    "name": "Luca Romano",
+    "name": "Francesco Romano",
     "language": "Italian",
     "city": "Florence",
     "country": "Italy",
     "education": "University of Florence, Italian Language and Culture",
     "experience": "5 years teaching Italian online and in Italy",
     "bio": "Passionate about Italian culture, cuisine, and conversational skills.",
-    "photo": "images/luca-romano.png"
+    "photo": "images/francesco-romano.png"
   },
   {
     "name": "Juki Tanaka",
@@ -90,14 +90,14 @@
     "photo": "images/ahmed-al-rashid.png"
   },
   {
-    "name": "Maria Silva",
+    "name": "Felipa Silva",
     "language": "Portuguese",
     "city": "Lisbon",
     "country": "Portugal",
     "education": "University of Lisbon, Portuguese Language and Culture",
     "experience": "5 years teaching Portuguese to foreigners online and in Lisbon",
     "bio": "Uses music, texts, and cultural immersion to make lessons engaging.",
-    "photo": "images/maria-silva.png"
+    "photo": "images/felipa-silva.png"
   }
 ]
 
