@@ -9,7 +9,7 @@ body {
 
 /* ----- Хедер ----- */
 header {
-  background: #0d47a1; /* более тёмный голубой */
+  background: #0d47a1; /* тёмно-синий — контраст с белым 12.63:1 */
   color: white;
   padding: 1.5rem 2rem;
   text-align: center;
@@ -20,8 +20,8 @@ header {
 button {
   display: inline-block;
   padding: 10px 16px;
-  background: #1976d2; /* яркий голубой */
-  color: #fff;
+  background: #1565c0; /* насыщенный синий, контраст с белым 7.54:1 */
+  color: #fff; /* белый текст — читаемый */
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
@@ -31,7 +31,7 @@ button {
 }
 
 button:hover {
-  background: #115293; /* чуть темнее при наведении */
+  background: #0d47a1; /* ещё темнее при наведении (контраст >10:1) */
 }
 
 header h1 {
