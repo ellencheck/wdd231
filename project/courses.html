@@ -1,29 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Ellen Check Language School</title>
-  <meta name="description" content="Learn languages with native speakers at Ellen Check Language School.">
-  <meta name="author" content="Alina">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
+  <title>Courses — Ellen Check Language School</title>
   <link rel="stylesheet" href="styles/style.css">
-
-  <!-- Flag Icons CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.10.2/css/flag-icons.min.css" integrity="sha512-+I9dDZX0/wlPibfW+fXmq0cxfWunIVrMk1ikb5aX3cA+8kJaf0CuzYZkqScBz7h6xqH0d9bwq0+E2Vq+H2Tlg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="About Ellen Check Language School">
-  <meta property="og:description" content="Learn languages with native speakers at Ellen Check Language School.">
-  <meta property="og:image" content="https://yourusername.github.io/wdd231/images/og-image.png">
-  <meta property="og:url" content="https://yourusername.github.io/wdd231/index.html">
 </head>
 <body>
   <header>
@@ -44,18 +25,17 @@
       <div id="courses-list">Loading courses...</div>
     </section>
 
-    <!-- 🔽 Форма регистрации -->
-    <section id="registration-form">
+    <section id="registration-form" style="display:none;">
       <h2>Register for a Course</h2>
       <form id="courseForm">
         <label for="selectedCourse">Selected Course:</label>
-        <select id="selectedCourse" name="course"></select>
+        <select id="selectedCourse"></select>
 
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" required>
 
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" required>
 
         <button type="submit">Submit</button>
       </form>
@@ -63,7 +43,7 @@
   </main>
 
   <footer>
-    <p>&copy; © 2025 — Ellen Chek Foreign Language School. All rights reserved.</p>
+    <p>&copy; 2025 — Ellen Check Language School</p>
   </footer>
 
   <script src="scripts/courses.js" defer></script>
