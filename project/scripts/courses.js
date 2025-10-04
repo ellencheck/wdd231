@@ -1,33 +1,26 @@
-// Данные курсов с кодами стран для flag-icons
+// Данные курсов
 const data = {
   courses: [
     { language: "Russian", flag: "ru", levels: [
         { level: "Beginner (A1)", duration: "4 months", price: "$400", description: "Start learning Russian with the basics of grammar, vocabulary, and pronunciation." },
-        { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." },
-        { level: "Intermediate (B1)", duration: "6 months", price: "$600", description: "Develop confidence in Russian communication through practical conversation with native speakers." },
-        { level: "Upper Intermediate (B2)", duration: "7 months", price: "$700", description: "Enhance fluency and comprehension in various contexts." },
-        { level: "Advanced (C1)", duration: "8 months", price: "$800", description: "Achieve advanced Russian fluency for academic, professional, or cultural purposes." },
-        { level: "Proficient (C2)", duration: "10 months", price: "$1000", description: "Achieve full mastery of Russian with native-level speaking, writing, and comprehension." }
-      ]
-    },
+        { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." }
+    ]},
     { language: "English", flag: "gb", levels: [
         { level: "Beginner (A1)", duration: "4 months", price: "$400", description: "Learn essential English grammar and vocabulary for everyday situations." },
-        { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." },
-        { level: "Intermediate (B1)", duration: "6 months", price: "$600", description: "Improve fluency and accuracy in English through interactive practice." },
-        { level: "Upper Intermediate (B2)", duration: "7 months", price: "$700", description: "Enhance fluency and comprehension in various contexts." },
-        { level: "Advanced (C1)", duration: "8 months", price: "$800", description: "Develop strong academic and professional English communication skills." },
-        { level: "Proficient (C2)", duration: "10 months", price: "$1000", description: "Reach native-like English proficiency for any context." }
-      ]
-    },
-    // ...другие языки
+        { level: "Elementary (A2)", duration: "5 months", price: "$500", description: "Build on basic knowledge to handle simple communication." }
+    ]}
+    // Добавляй остальные языки по аналогии
   ]
 };
 
-// Контейнер и select
+// Элементы
 const container = document.getElementById('courses-list');
 const formSelect = document.getElementById('selectedCourse');
 
-// Генерация списка курсов
+// Очищаем текст "Loading courses..."
+container.innerHTML = "";
+
+// Генерация курсов
 data.courses.forEach((course, langIndex) => {
   course.levels.forEach((level, lvlIndex) => {
     const courseDiv = document.createElement('div');
@@ -42,8 +35,7 @@ data.courses.forEach((course, langIndex) => {
     container.appendChild(courseDiv);
 
     // Кнопка регистрации
-    const btn = courseDiv.querySelector('.register-btn');
-    btn.addEventListener('click', () => openForm(langIndex, lvlIndex));
+    courseDiv.querySelector('.register-btn').addEventListener('click', () => openForm(langIndex, lvlIndex));
 
     // Добавляем опцию в select
     const option = document.createElement('option');
