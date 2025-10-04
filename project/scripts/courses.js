@@ -66,3 +66,14 @@ fetch("data/courses.json")
     console.error(err);
     document.getElementById("courses-list").innerText = "Failed to load courses.";
   });
+div.innerHTML = `
+  <img class="course-image" src="${level.image}" alt="${course.language} – ${level.level}">
+  <h3>
+    <span class="flag-emoji">${emojiFlag}</span>
+    ${course.language} – ${level.level}
+  </h3>
+  <p>${level.description}</p>
+  <p><strong>Duration:</strong> ${level.duration}</p>
+  <p><strong>Price:</strong> ${level.price}</p>
+  <button>Sign Up</button>
+`;
