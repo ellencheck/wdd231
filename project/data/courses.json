@@ -37,7 +37,7 @@
       "language": "French",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation.", "image": "images/french.webp" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/frenchfrench.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/french.webp" },
         { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice French conversations with native speakers.", "image": "images/french.webp" },
         { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/french.webp" },
         { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop advanced fluency for professional and academic contexts.", "image": "images/french.webp" },
