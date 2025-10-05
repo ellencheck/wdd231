@@ -36,34 +36,34 @@
     {
       "language": "French",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation.", "image": "images/french_a1.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/french_a2.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice French conversations with native speakers.", "image": "images/french_b1.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/french_b2.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop advanced fluency for professional and academic contexts.", "image": "images/french_c1.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master French to communicate like a native speaker.", "image": "images/french_c2.jpg" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn essential French vocabulary, grammar, and pronunciation.", "image": "images/french.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/frenchfrench.webp" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice French conversations with native speakers.", "image": "images/french.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/french.webp" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Develop advanced fluency for professional and academic contexts.", "image": "images/french.webp" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master French to communicate like a native speaker.", "image": "images/frenchfrench.webp" }
       ]
     },
     {
       "language": "German",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn German basics for everyday communication.", "image": "images/german_a1.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/german_a2.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop German fluency for work and travel.", "image": "images/german_b1.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/german_b2.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Enhance German proficiency for academic and professional contexts.", "image": "images/german_c1.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Achieve near-native mastery of German.", "image": "images/german_c2.jpg" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn German basics for everyday communication.", "image": "images/german.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/german.webp" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop German fluency for work and travel.", "image": "images/german.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/german.webp" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Enhance German proficiency for academic and professional contexts.", "image": "images/german.webp" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Achieve near-native mastery of German.", "image": "images/german.webp" }
       ]
     },
     {
       "language": "Italian",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn the basics of Italian grammar, vocabulary, and pronunciation.", "image": "images/italian_a1.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/italian_a2.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice Italian in real-life situations with native speakers.", "image": "images/italian_b1.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/italian_b2.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced fluency in Italian communication.", "image": "images/italian_c1.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Italian with full native-like proficiency.", "image": "images/italian_c2.jpg" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn the basics of Italian grammar, vocabulary, and pronunciation.", "image": "images/italian.webp" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/italian.webp" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Practice Italian in real-life situations with native speakers.", "image": "images/italian.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/italian.webp" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced fluency in Italian communication.", "image": "images/italian.webp" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Italian with full native-like proficiency.", "image": "images/italian.webp" }
       ]
     },
     {
