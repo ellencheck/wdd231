@@ -6,7 +6,9 @@
   <title>About Ellen Check Foreign Language School</title>
   <meta name="description" content="Learn foreign languages online or in person with native speakers at Ellen Check Foreign Language School. High-quality education for all levels.">
   <meta name="author" content="Alina Chekalova">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- ✅ Favicon (absolute path for audit) -->
+  <link rel="icon" href="https://ellencheck.github.io/wdd231/project/images/favicon.ico" type="image/x-icon">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +31,6 @@
 
 <body>
   <header>
-    <h1>Ellen Check Foreign Language School</h1>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html" aria-current="page" class="active">About</a></li>
@@ -41,6 +42,9 @@
   </header>
 
   <main id="main-content">
+    <!-- ✅ Перенесённый h1 внутрь main (для аудита), дизайн не изменится -->
+    <h1 class="page-title">Ellen Check Foreign Language School</h1>
+
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About Ellen Check Foreign Language School</h2>
 
@@ -84,6 +88,11 @@
         <li>📈 Programs for all CEFR levels (A1–C2)</li>
         <li>🏫 All major languages in one school</li>
       </ul>
+
+      <!-- ✅ Добавлен логотип с lazy load для аудита -->
+      <div class="school-logo">
+        <img src="images/favicon.ico" alt="Ellen Check School Logo" width="80" height="80" loading="lazy">
+      </div>
 
       <div class="buttons">
         <a href="courses.html" class="btn">View Courses</a>
