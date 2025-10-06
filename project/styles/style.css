@@ -357,3 +357,8 @@ ul li {
   clip: rect(0,0,0,0);
   border: 0;
 }
+.school-logo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
