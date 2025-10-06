@@ -337,4 +337,13 @@ ul li {
   justify-content: center;
   margin-top: 1.5rem;
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  main {
+    padding: 1rem;
+  }
+}
 
