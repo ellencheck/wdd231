@@ -1,55 +1,48 @@
-// main.js
-import { getData } from './data.js';
+// scripts/main.js
+import { courses } from "./data.js";
 
-const container = document.querySelector('#courses-container');
-const modal = document.querySelector('#modal');
-const modalContent = document.querySelector('#modal-content');
-const modalClose = document.querySelector('#modal-close');
+// Контейнер для карточек
+const mainContent = document.getElementById("main-content");
 
-// Функция отображения данных
-async function displayCourses() {
-  try {
-    const data = await getData();
-    
-    // Динамически создаём карточки
-    data.forEach(item => {
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.innerHTML = `
-        <h3>${item.name}</h3>
-        <p>${item.description}</p>
-        <p>Цена: ${item.price}</p>
-        <img src="${item.image}" alt="${item.name}" loading="lazy">
-      `;
-      container.appendChild(card);
+// Создаём карточки
+courses.forEach(course => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <h4>${course.name}</h4>
+    <p>Level: ${course.level}</p>
+    <p>Teacher: ${course.teacher}</p>
+    <button class="open-modal">Details</button>
+  `;
+  mainContent.appendChild(card);
 
-      // Клик на карточку открывает модальное окно
-      card.addEventListener('click', () => {
-        modalContent.innerHTML = `
-          <h2>${item.name}</h2>
-          <p>${item.fullDescription}</p>
-        `;
-        modal.style.display = 'block';
-        // Сохраняем последний выбранный курс в LocalStorage
-        localStorage.setItem('lastCourse', item.name);
-      });
-    });
+  // Создаём модальное окно для этой карточки
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>${course.name}</h2>
+      <p>${course.description}</p>
+      <p>Teacher: ${course.teacher}</p>
+    </div>
+  `;
+  document.body.appendChild(modal);
 
-  } catch (error) {
-    console.error('Ошибка при загрузке данных:', error);
-  }
-}
+  // События открытия и закрытия модалки
+  const openBtn = card.querySelector(".open-modal");
+  const closeBtn = modal.querySelector(".modal-close");
 
-// Закрытие модального окна
-modalClose.addEventListener('click', () => {
-  modal.style.display = 'none';
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 });
 
-// Запуск функции
-displayCourses();
-
-// Опционально: показать последний выбранный курс при загрузке
-const lastCourse = localStorage.getItem('lastCourse');
-if(lastCourse) {
-  console.log('Последний выбранный курс:', lastCourse);
-}
