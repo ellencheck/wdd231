@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Ellen Check Foreign Language School</title>
-  <meta name="description" content="Ellen Check Foreign Language School — learn foreign languages with native speakers and professional instructors online and in person.">
+  <meta name="description" content="Learn foreign languages online or in person with native speakers at Ellen Check Foreign Language School. High-quality education for all levels.">
   <meta name="author" content="Alina Chekalova">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -18,9 +18,10 @@
 
   <!-- Open Graph for social sharing -->
   <meta property="og:title" content="Ellen Check Foreign Language School">
-  <meta property="og:description" content="Learn foreign languages online with native speakers — flexible programs and real conversation practice.">
+  <meta property="og:description" content="Learn foreign languages with native speakers — flexible programs and real practice.">
   <meta property="og:image" content="https://ellencheck.github.io/wdd231/images/og-image.png">
   <meta property="og:url" content="https://ellencheck.github.io/wdd231/project/index.html">
+  <meta property="og:type" content="website">
 
   <!-- Accessibility & SEO -->
   <meta name="theme-color" content="#0b3d91">
@@ -31,7 +32,7 @@
     <h1>Ellen Check Foreign Language School</h1>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" class="active" aria-current="page">About</a></li>
+        <li><a href="index.html" aria-current="page" class="active">About</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="teachers.html">Teachers</a></li>
         <li><a href="contacts.html">Contacts</a></li>
@@ -40,12 +41,14 @@
   </header>
 
   <main id="main-content">
-    <section id="about">
-      <h1>About Ellen Check Foreign Language School</h1>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Ellen Check Foreign Language School</h2>
+
       <p>
-        At <strong>Ellen Check Foreign Language School</strong>, you can learn multiple languages with the help of <strong>native speakers and experienced teachers</strong>.  
+        At <strong>Ellen Check Foreign Language School</strong>, you can learn multiple languages with the help of 
+        <strong>native speakers and experienced teachers</strong>.  
         We offer courses in <strong>Russian, English, German, French, Italian, Arabic, Chinese, Japanese, and Portuguese</strong>.  
-        Our school offers high-quality language education where all instructors are <strong>native speakers</strong>.
+        All instructors are <strong>native speakers</strong> and professional educators.
       </p>
 
       <h3>Language Levels</h3>
@@ -56,30 +59,30 @@
         <li>Proficient (C2) 🏆</li>
       </ul>
       <p>
-        For example, Russian courses progress from A1 → B1 → C1 → C2.  
-        All other languages follow the same level structure.
+        For example, Russian courses progress from A1 → B1 → C1 → C2, and other languages follow the same structure.
       </p>
 
       <h3>Our Unique Teaching Method</h3>
       <p>
-        Our school focuses on <strong>practical learning</strong> rather than memorization of words and grammar.  
-        Students study grammar, vocabulary, and video lessons independently, then practice actively with native speaker instructors during lessons.  
-        This ensures immediate application of knowledge in real conversation.
-      </p>
-      <p>
-        Every teacher is a <strong>native speaker</strong>, combining correct pronunciation, real-life communication, and professional pedagogical techniques.  
-        This approach guarantees that students learn languages authentically and effectively.
+        Our approach focuses on <strong>practical communication</strong> instead of rote memorization.  
+        Students first study grammar, vocabulary, and video lessons independently, and then practice real conversation with native instructors.  
+        This ensures immediate application and faster fluency.
       </p>
 
-      <h3>Why Choose Ellen Check Foreign Language School?</h3>
+      <p>
+        Every teacher is a <strong>native speaker</strong> with teaching experience, correct pronunciation, and cultural authenticity — 
+        helping students achieve natural, confident communication.
+      </p>
+
+      <h3>Why Choose Ellen Check?</h3>
       <ul>
-        <li>🌍 Full immersion in the language from the first lesson</li>
-        <li>💬 Practice-focused learning, not just theory</li>
-        <li>🎥 Video lessons and materials for self-study</li>
-        <li>👩‍🏫 Experienced teachers and native speakers</li>
-        <li>🗣️ All instructors are native speakers</li>
-        <li>📈 Flexible programs for all levels: A1 → B1 → C1 → C2</li>
-        <li>🏫 All languages available in one school</li>
+        <li>🌍 Full immersion from the first lesson</li>
+        <li>💬 Focus on speaking and real-life practice</li>
+        <li>🎥 Video lessons for self-study</li>
+        <li>👩‍🏫 Experienced native-speaker teachers</li>
+        <li>🗣️ Authentic pronunciation and culture</li>
+        <li>📈 Programs for all CEFR levels (A1–C2)</li>
+        <li>🏫 All major languages in one school</li>
       </ul>
 
       <div class="buttons">
@@ -90,14 +93,12 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> — Ellen Check Foreign Language School. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Ellen Check Foreign Language School. All rights reserved.</p>
   </footer>
 
   <script>
-    // Automatically updates copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
   <script src="scripts/main.js" defer></script>
 </body>
 </html>
