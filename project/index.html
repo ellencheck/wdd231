@@ -120,9 +120,13 @@
     <p>&copy; <span id="year"></span> Ellen Check Foreign Language School. All rights reserved.</p>
   </footer>
 
+  <!-- Скрипт для года -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <script src="scripts/main.js" defer></script>
+
+  <!-- Подключение main.js как ES Module -->
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
+
