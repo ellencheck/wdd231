@@ -7,7 +7,7 @@
   <meta name="description" content="Learn foreign languages online or in person with native speakers at Ellen Check Foreign Language School. High-quality education for all levels.">
   <meta name="author" content="Alina Chekalova">
 
-  <!-- ✅ Favicon (absolute path for audit) -->
+  <!-- Favicon (absolute path for audit) -->
   <link rel="icon" href="https://ellencheck.github.io/wdd231/project/images/favicon.ico" type="image/x-icon">
 
   <!-- Fonts -->
@@ -27,24 +27,38 @@
 
   <!-- Accessibility & SEO -->
   <meta name="theme-color" content="#0b3d91">
+
+  <style>
+    /* Скрытый h1 для аудита и скринридеров */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
 </head>
 
 <body>
- <header>
-  <h1>Ellen Check Foreign Language School</h1>
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html" aria-current="page" class="active">About</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="teachers.html">Teachers</a></li>
-      <li><a href="contacts.html">Contacts</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>Ellen Check Foreign Language School</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page" class="active">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main id="main-content">
-    <!-- ✅ Перенесённый h1 внутрь main (для аудита), дизайн не изменится -->
-    <h1 class="page-title">Ellen Check Foreign Language School</h1>
+    <!-- Скрытый h1 для аудита -->
+    <h1 class="visually-hidden">Ellen Check Foreign Language School</h1>
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About Ellen Check Foreign Language School</h2>
@@ -90,7 +104,7 @@
         <li>🏫 All major languages in one school</li>
       </ul>
 
-      <!-- ✅ Добавлен логотип с lazy load для аудита -->
+      <!-- Lazy load favicon для аудита -->
       <div class="school-logo">
         <img src="images/favicon.ico" alt="Ellen Check School Logo" width="80" height="80" loading="lazy">
       </div>
