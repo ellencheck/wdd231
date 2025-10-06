@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(teachers => {
       container.innerHTML = teachers.map(t => `
         <div class="teacher-card">
-          <img src="${t.photo}" alt="${t.name}">
+          <img src="${t.photo}" alt="Photo of ${t.name}" loading="lazy">
           <h3>${t.name}</h3>
           <p><strong>Language:</strong> ${t.language}</p>
           <p><strong>City:</strong> ${t.city}, ${t.country}</p>
@@ -24,3 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerText = "Failed to load teachers.";
     });
 });
+
