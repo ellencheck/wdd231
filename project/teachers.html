@@ -1,25 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Ellen Check Language School</title>
-  <meta name="description" content="Learn languages with native speakers at Ellen Check Language School.">
-  <meta name="author" content="Alina">
+  <title>Our Teachers — Ellen Check Language School</title>
+  <meta name="description" content="Meet native-speaking teachers at Ellen Check Language School. Learn with experts from around the world.">
+  <meta name="author" content="Alina Chekalova">
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
 
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="About Ellen Check Language School">
-  <meta property="og:description" content="Learn languages with native speakers at Ellen Check Language School.">
-  <meta property="og:image" content="https://yourusername.github.io/wdd231/images/og-image.png">
-  <meta property="og:url" content="https://yourusername.github.io/wdd231/index.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meet Our Teachers — Ellen Check Language School">
+  <meta property="og:description" content="Learn from native speakers at Ellen Check Language School.">
+  <meta property="og:image" content="https://ellencheck.github.io/wdd231/images/og-image.png">
+  <meta property="og:url" content="https://ellencheck.github.io/wdd231/project/teachers.html">
+  <meta property="og:type" content="website">
 </head>
+
 <body>
   <header>
     <h1>Our Teachers</h1>
@@ -27,11 +33,12 @@
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="courses.html">Courses</a></li>
-        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="teachers.html" class="active" aria-current="page">Teachers</a></li>
         <li><a href="contacts.html">Contacts</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>Meet Our Teachers</h2>
@@ -40,9 +47,20 @@
   </main>
 
   <footer>
-   <p>&copy; 2025 — Ellen Chek Foreign Language School. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Ellen Check Foreign Language School. All rights reserved.</p>
+    <div class="project-video">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank" rel="noopener">🎥 Watch Project Video</a>
+    </div>
   </footer>
 
-  <script src="scripts/teachers.js" defer></script>
+  <!-- JS: автоматическое обновление года -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Модули JS -->
+  <script type="module" src="scripts/data.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/teachers.js"></script>
 </body>
 </html>
