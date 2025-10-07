@@ -1,4 +1,4 @@
-Courses.fetch("data/courses.json")
+fetch("data/courses.json")
   .then(response => {
     if (!response.ok) throw new Error("Failed to fetch courses");
     return response.json();
