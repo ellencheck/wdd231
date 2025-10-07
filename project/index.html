@@ -100,6 +100,11 @@
 
   <footer>
     <p>&copy; <span id="year"></span> Ellen Check Foreign Language School. All rights reserved.</p>
+
+    <!-- Project Video Button -->
+    <p>
+      <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_LINK" target="_blank" class="btn video-btn">🎥 Watch Project Video</a>
+    </p>
   </footer>
 
   <!-- Скрипт для года -->
@@ -107,7 +112,8 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Подключение main.js как ES Module -->
+  <!-- Подключение внешних JS файлов -->
+  <script type="module" src="scripts/data.js"></script>
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
