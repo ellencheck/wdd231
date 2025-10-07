@@ -60,5 +60,21 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 — Ellen Chek Foreign Language School. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Ellen Check Foreign Language School. All rights reserved.</p>
+    <div class="project-video">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank" rel="noopener">🎥 Watch Project Video</a>
+    </div>
   </footer>
+
+  <!-- JS: обновление года -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Подключение JavaScript как модулей -->
+  <script type="module" src="scripts/data.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/contacts.js"></script>
+</body>
+</html>
+
