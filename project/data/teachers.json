@@ -1,3 +1,4 @@
+
 [
   {
     "name": "Alina Chekalova",
@@ -18,6 +19,16 @@
     "experience": "7 years teaching English online and in language institutes to non-native speakers",
     "bio": "Makes learning English practical and enjoyable, preparing students for real-life communication.",
     "photo": "images/ellen-chek.jpg"
+  },
+   {
+    "name": "Franz Weber",
+    "language": "German",
+    "city": "Munich",
+    "country": "Germany",
+    "education": "Ludwig Maximilian University of Munich, German as a Foreign Language",
+    "experience": "5 years teaching German to international students online and in Germany",
+    "bio": "Specializes in conversational German, pronunciation, and cultural context.",
+    "photo": "images/franz-weber.png"
   },
   {
     "name": "Elsa Lopez",
@@ -78,16 +89,6 @@
     "experience": "6 years teaching Japanese to international students online",
     "bio": "Combines traditional and modern Japanese culture in lessons.",
     "photo": "images/juki-tanaka.png"
-  },
-  {
-    "name": "Franz Weber",
-    "language": "German",
-    "city": "Munich",
-    "country": "Germany",
-    "education": "Ludwig Maximilian University of Munich, German as a Foreign Language",
-    "experience": "5 years teaching German to international students online and in Germany",
-    "bio": "Specializes in conversational German, pronunciation, and cultural context.",
-    "photo": "images/franz-weber.png"
   },
   {
     "name": "Li Mei",
