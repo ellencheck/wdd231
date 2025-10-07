@@ -25,14 +25,15 @@ fetch("data/courses.json")
           <button class="signup-btn">Sign Up</button>
         `;
 
-        // Кнопка "Sign Up"
+        // Sign Up
         div.querySelector(".signup-btn").addEventListener("click", () => openForm(langIndex, levelIndex));
 
-        // Кнопка "Details" (модальное окно)
+        // Details modal
         div.querySelector(".details-btn").addEventListener("click", () => openModal(course.language, level));
 
         container.appendChild(div);
 
+        // Добавляем опцию в select
         const option = document.createElement("option");
         option.value = `${langIndex}-${levelIndex}`;
         option.textContent = `${course.language} – ${level.level} (${level.price})`;
@@ -47,11 +48,7 @@ fetch("data/courses.json")
       form.style.display = "block";
       form.scrollIntoView({ behavior: "smooth" });
 
-      // Сохраняем последний выбранный курс в LocalStorage
-      localStorage.setItem("lastViewedCourse", JSON.stringify({
-        langIndex,
-        levelIndex
-      }));
+      localStorage.setItem("lastViewedCourse", JSON.stringify({ langIndex, levelIndex }));
     };
 
     // Отправка формы
@@ -67,7 +64,7 @@ fetch("data/courses.json")
       document.getElementById("registration-form").style.display = "none";
     });
 
-    // При загрузке страницы показываем последний выбранный курс (если есть)
+    // Показ последнего выбранного курса
     const lastCourse = JSON.parse(localStorage.getItem("lastViewedCourse"));
     if (lastCourse) {
       console.log("Last viewed course:", data.courses[lastCourse.langIndex].language, "-", data.courses[lastCourse.langIndex].levels[lastCourse.levelIndex].level);
@@ -78,9 +75,11 @@ fetch("data/courses.json")
     document.getElementById("courses-list").innerText = "Failed to load courses.";
   });
 
-
-// --- Функция модального окна ---
+// --- Модальное окно ---
 function openModal(language, level) {
+  // Проверяем, есть ли уже открытое модальное окно
+  if (document.querySelector(".modal")) return;
+
   const modal = document.createElement("div");
   modal.className = "modal";
   modal.innerHTML = `
@@ -95,20 +94,16 @@ function openModal(language, level) {
   `;
   document.body.appendChild(modal);
 
-  // Закрытие по кнопке
-  modal.querySelector(".close-btn").addEventListener("click", () => {
-    document.body.removeChild(modal);
-  });
-
-  // Закрытие при клике вне контента
-  modal.addEventListener("click", e => {
-    if (e.target === modal) document.body.removeChild(modal);
-  });
-
-  // Закрытие по Esc
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && document.body.contains(modal)) {
+  const closeModal = () => {
+    if (document.body.contains(modal)) {
       document.body.removeChild(modal);
+      document.removeEventListener("keydown", escListener);
     }
-  });
+  };
+
+  const escListener = e => { if (e.key === "Escape") closeModal(); };
+
+  modal.querySelector(".close-btn").addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", escListener);
 }
