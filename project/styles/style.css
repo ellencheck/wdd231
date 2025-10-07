@@ -347,16 +347,6 @@ ul li {
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
 .school-logo {
   margin-top: 20px;
   display: flex;
@@ -388,4 +378,18 @@ ul li {
   float: right;
   cursor: pointer;
   font-size: 20px;
+}
+.btn, .video-btn {
+  display: inline-block;
+  background-color: #0B3D91;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover, .video-btn:hover {
+  background-color: #2563EB;
 }
