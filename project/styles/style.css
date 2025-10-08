@@ -24,6 +24,40 @@ nav {
   padding: 0;
   text-align: center;
 }
+/* Мобильная адаптация горизонтального меню */
+@media screen and (max-width: 768px) {
+  header nav ul {
+    display: flex;
+    flex-direction: column; /* вертикально */
+    gap: 8px; /* отступ между пунктами */
+    padding: 10px; /* внутренние отступы */
+    background-color: #f8f8f8; /* лёгкий фон */
+    border-radius: 8px; /* скругление */
+    max-width: 220px; /* ограничиваем ширину */
+    margin: 10px auto; /* по центру экрана */
+  }
+
+  header nav ul li {
+    margin: 0; /* убираем горизонтальные отступы */
+  }
+
+  header nav ul li a {
+    display: block; /* чтобы ссылка занимала всю ширину пункта */
+    text-decoration: none;
+    color: #333; /* обычный цвет текста */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  header nav ul li a:hover {
+    background-color: #e0e0e0; /* лёгкий hover-эффект */
+    color: #333;
+  }
+}
+
 
 nav ul {
   list-style: none;
