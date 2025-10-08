@@ -436,8 +436,51 @@ ul li {
   width: 100%;             /* полностью заполняют кнопку */
 }
 
-/* --- Финальное исправление мобильного меню (читабельное) --- */
 @media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b3d91; /* синий фон меню */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    border-top: 2px solid #2563eb;
+    z-index: 2000;
+  }
+
+  nav ul.show-menu {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1.1rem;
+    color: #ffffff;             /* белый текст */
+    background-color: #0b3d91;  /* ← теперь синий фон всегда */
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #2563eb;  /* немного светлее при наведении */
+    color: #fff;
+  }
+
   .hamburger {
     display: flex;
     position: absolute;
@@ -448,7 +491,7 @@ ul li {
     width: 30px;
     height: 24px;
     cursor: pointer;
-    z-index: 2001; /* бургер всегда сверху */
+    z-index: 2001;
   }
 
   .hamburger span {
@@ -456,57 +499,5 @@ ul li {
     width: 100%;
     background-color: #fff;
     border-radius: 2px;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-    background-color: #0b3d91 !important; /* ТЕМНО-СИНИЙ фон — принудительно */
-    color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    border-top: 2px solid #2563eb;
-    z-index: 2000; /* меню поверх всего */
-  }
-
-  nav ul.show-menu {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 6px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 0.9rem 1rem;
-    font-size: 1.1rem;
-    color: #ffffff; /* белый текст — виден всегда */
-    background: transparent;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    background-color: #2563eb;
-    color: #fff;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  main {
-    padding: 1rem;
   }
 }
