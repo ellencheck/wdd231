@@ -393,121 +393,34 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🔹 Гамбургер-кнопка */
-.hamburger {
-  display: none; /* скрыта по умолчанию */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 40px;  /* крупная кнопка */
-  height: 35px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1000;
-}
-
-.hamburger span {
-  display: block;
-  height: 5px;              /* толщина полосок */
-  background-color: #fff;    /* белые полоски */
-  border-radius: 3px;
-}
-
-/* Мобильное меню: гамбургер */
-/* Кнопка гамбургера */
-.mobile-menu-button {
-  background-color: #ffffff !important; /* белый фон */
-  border: none !important;
-  padding: 0.5rem !important;
-  cursor: pointer !important;
-  border-radius: 0.25rem !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  gap: 5px !important; /* расстояние между полосками */
-  z-index: 1100 !important;
-}
-
-/* Полоски гамбургера */
-.mobile-menu-button span {
-  display: block !important;
-  width: 25px !important;
-  height: 3px !important;
-  background-color: #ffffff !important; /* делаем полоски белыми */
-  transition: 0.3s !important;
-}
-/* Панель мобильного меню */
-.mobile-nav {
-  background-color: #1E40AF;    /* синий фон */
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  display: none;                /* скрыта по умолчанию */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Открытое меню */
-.mobile-nav.open {
-  display: flex;
-}
-
-/* Ссылки внутри меню */
-.mobile-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  transition: opacity 0.3s;
-}
-
-.mobile-nav a:hover {
-  opacity: 0.7;
-}
-
-/* 🔹 Только для мобильных экранов */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;         
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+/* Адаптив для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Скрываем десктопное меню */
+  #main-navigation {
+    display: none;
   }
 
-  nav ul {
-    display: none;         
+  /* Показываем мобильное меню */
+  .mobile-nav-buttons {
+    display: flex;
     flex-direction: column;
-    background-color: #084192;
-    position: absolute;
-    top: 60px;             
-    right: 0;
-    width: 100%;
-    padding: 1rem 0;
-    margin: 0;
-    list-style: none;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
   }
 
-  nav ul.show-menu {
-    display: flex;         
-  }
-
-  nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  nav ul li a {
-    color: #0b3d91;      /* синие ссылки */
-    font-size: 1.3rem;   
-    font-weight: bold;
+  .mobile-nav-buttons a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+
+  .mobile-nav-buttons a:hover {
+    background-color: #007BFF;
+    color: #fff;
   }
 }
