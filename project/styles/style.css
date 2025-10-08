@@ -415,40 +415,57 @@ ul li {
   border-radius: 3px;
 }
 
-/* ----- Только для мобильных экранов ----- */
+/* --- Улучшенное мобильное меню --- */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* показываем на мобильных */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b3d91;
     position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav ul.show-menu {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 90%;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    background-color: #f0f4ff;
+    color: #0b3d91;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  /* уменьшенный бургер */
+  .hamburger {
     top: 1rem;
     right: 1rem;
   }
 
-  nav ul {
-    display: none; /* меню скрыто по умолчанию */
-    flex-direction: column;
-    background-color: #0b3d91; /* такой же фон, как header/footer */
-    position: absolute;
-    top: 60px;  /* чуть ниже шапки */
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-  }
-
-  nav ul.show-menu {
-    display: flex; /* показываем при клике на гамбургер */
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    color: #fff;       /* ссылки белые */
-    font-size: 1.2rem; /* крупнее на мобильных */
-    font-weight: bold;
-    text-decoration: none;
+  .hamburger span {
+    height: 3px;
   }
 }
