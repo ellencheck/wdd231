@@ -371,6 +371,20 @@ ul li {
   justify-content: center;
   margin-top: 1.5rem;
 }
+.btn, .video-btn {
+  display: inline-block;
+  background-color: #0B3D91;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover, .video-btn:hover {
+  background-color: #2563EB;
+}
 /* Мобильная адаптация горизонтального меню — компактное и тонкое */
 @media screen and (max-width: 768px) {
   header nav ul {
