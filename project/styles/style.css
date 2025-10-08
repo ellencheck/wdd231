@@ -415,50 +415,30 @@ ul li {
 }
 
 /* Мобильное меню: гамбургер */
-/* Кнопка гамбургера */
-.mobile-menu-button {
-  background-color: white;  /* фон кнопки */
-  color: #1E40AF;           /* если есть значок или текст, сделать синим */
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  font-size: 1.2rem;
+/* Стиль для мобильного меню */
+.mobile-menu {
+  background-color: #003366; /* фон как у хедера */
+  padding: 0;
 }
 
-/* Панель мобильного меню */
-.mobile-nav {
-  background-color: #1E40AF; /* синий фон, как хедер */
-  position: absolute;        /* чтобы перекрывало контент */
-  top: 0;
-  right: 0;
-  width: 100%;
-  display: none;             /* скрыта по умолчанию */
-  flex-direction: column;
-  text-align: center;
-  padding: 2rem 0;
-  z-index: 1000;
-}
-
-/* Ссылки внутри мобильного меню */
-.mobile-nav a {
-  color: white;             /* текст белый */
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1rem 0;
+.mobile-menu a {
   display: block;
+  color: #003366; /* синий текст */
+  background-color: #ffffff; /* белый фон для каждой кнопки */
+  text-align: center;
+  padding: 12px 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 2px solid #003366; /* синие промежутки */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Наведение на ссылки */
-.mobile-nav a:hover {
-  opacity: 0.8;             /* лёгкий эффект при наведении */
+/* При наведении мышки — обратные цвета */
+.mobile-menu a:hover {
+  background-color: #003366;
+  color: #ffffff;
 }
-
-/* Открытие меню (класс добавляется через JS при клике) */
-.mobile-nav.open {
-  display: flex;
-}
-
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
