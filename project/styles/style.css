@@ -416,15 +416,13 @@ ul li {
 
 /* Мобильное меню: гамбургер */
 /* --- Кнопка гамбургера --- */
-.mobile-menu-button {
-  background-color: white;  /* фон кнопки */
-  color: #fff;           
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  font-size: 1.2rem;
-}
+.mobile-menu-button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: white;  /* делаем полоски белыми */
+  transition: 0.3s;
 
 /* --- Панель мобильного меню --- */
 .mobile-nav {
