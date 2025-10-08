@@ -439,6 +439,7 @@ ul li {
   background-color: #003366;
   color: #ffffff;
 }
+
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
