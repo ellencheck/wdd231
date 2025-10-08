@@ -436,42 +436,74 @@ ul li {
   width: 100%;             /* полностью заполняют кнопку */
 }
 
-/* 🔹 Только для мобильных экранов */
+/* --- Финальное исправление мобильного меню (читабельное) --- */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;          /* показываем на мобильных */
+    display: flex;
     position: absolute;
     top: 1rem;
     right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
   }
 
   nav ul {
-    display: none;          /* скрыто по умолчанию */
+    display: none;
     flex-direction: column;
-    background-color: #0b3d91; /* фон меню как шапка и футер */
+    align-items: center;
+    background-color: #0b3d91; /* тёмно-синий фон */
     position: absolute;
-    top: 60px;              /* под шапкой */
+    top: 60px;
     right: 0;
     width: 100%;
-    padding: 1rem 0;
+    text-align: center;
+    padding: 0.8rem 0;
     margin: 0;
-    list-style: none;
-    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    border-top: 2px solid #2563eb;
   }
 
   nav ul.show-menu {
-    display: flex;          /* показываем меню при клике */
+    display: flex;
   }
 
   nav ul li {
-    margin: 10px 0;
-    text-align: center;
+    width: 100%;
+    margin: 5px 0;
   }
 
   nav ul li a {
-    color: #fff;            /* белые ссылки */
-    font-size: 1.3rem;      /* крупный шрифт */
-    font-weight: bold;
+    display: block;
+    padding: 0.9rem 1rem;
+    font-size: 1.1rem;
+    color: #ffffff; /* белый текст — всегда виден */
     text-decoration: none;
+    font-weight: 700; /* как в header/footer */
+    background: transparent; /* без голубого фона */
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #2563eb;
+    color: #fff;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1rem;
   }
 }
