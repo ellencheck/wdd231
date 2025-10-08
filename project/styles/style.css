@@ -393,13 +393,13 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
+/* Мобильное меню по умолчанию скрыто */
+.mobile-nav-buttons {
+  display: none;
+}
+
 /* Адаптив для мобильных устройств */
 @media screen and (max-width: 768px) {
-  /* Скрываем десктопное меню */
-  #main-navigation {
-    display: none;
-  }
-
   /* Показываем мобильное меню */
   .mobile-nav-buttons {
     display: flex;
@@ -408,6 +408,7 @@ ul li {
     background-color: #f8f8f8;
     padding: 10px;
     border-radius: 8px;
+    margin-bottom: 15px; /* Отступ снизу */
   }
 
   .mobile-nav-buttons a {
@@ -416,7 +417,7 @@ ul li {
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   .mobile-nav-buttons a:hover {
@@ -424,3 +425,5 @@ ul li {
     color: #fff;
   }
 }
+
+/* Десктопное меню #main-navigation не трогаем, остаётся как было */
