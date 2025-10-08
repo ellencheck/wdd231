@@ -394,11 +394,12 @@ ul li {
   background-color: #2563EB;
 }
 /* 🔹 Базовые настройки гамбургера */
+/* 🔹 Базовые настройки гамбургера */
 .hamburger {
   display: none; /* по умолчанию скрыта */
   flex-direction: column;
   justify-content: space-around;
-  width: 40px;       /* крупнее, как раньше */
+  width: 40px;       /* крупнее */
   height: 35px;      /* крупнее */
   background: none;
   border: none;
@@ -424,9 +425,9 @@ ul li {
   }
 
   nav ul {
-    display: none;          /* меню скрыто по умолчанию */
+    display: none;          /* скрыто по умолчанию */
     flex-direction: column;
-    background-color: #0b3d91; /* фон меню как шапка/футер */
+    background-color: #0b3d91; /* точно как header и nav */
     position: absolute;
     top: 60px;             /* чуть ниже шапки */
     right: 0;
@@ -444,7 +445,7 @@ ul li {
   }
 
   nav ul li a {
-    color: #fff;           /* ссылки белые */
+    color: #fff;           /* белые ссылки */
     font-size: 1.2rem;     /* крупнее на мобильных */
   }
 }
