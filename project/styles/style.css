@@ -398,8 +398,8 @@ ul li {
   display: none; /* по умолчанию скрыта */
   flex-direction: column;
   justify-content: space-around;
-  width: 40px; /* крупнее, как раньше */
-  height: 35px; /* крупнее */
+  width: 40px;       /* крупнее, как раньше */
+  height: 35px;      /* крупнее */
   background: none;
   border: none;
   cursor: pointer;
@@ -409,7 +409,7 @@ ul li {
 
 .hamburger span {
   display: block;
-  height: 5px; /* толщина полосок */
+  height: 5px;           /* толщина полосок */
   background-color: #fff; /* белые полоски */
   border-radius: 3px;
 }
@@ -417,18 +417,18 @@ ul li {
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* показываем на мобильных */
+    display: flex;         /* показываем на мобильных */
     position: absolute;
     top: 1rem;
     right: 1rem;
   }
 
   nav ul {
-    display: none; /* меню скрыто по умолчанию */
+    display: none;          /* меню скрыто по умолчанию */
     flex-direction: column;
-    background-color: #0b3d91; /* цвет шапки и футера */
+    background-color: #0b3d91; /* фон меню как шапка/футер */
     position: absolute;
-    top: 60px; /* чуть ниже шапки */
+    top: 60px;             /* чуть ниже шапки */
     right: 0;
     width: 100%;
     text-align: center;
@@ -436,7 +436,7 @@ ul li {
   }
 
   nav ul.show-menu {
-    display: flex; /* показываем меню при клике */
+    display: flex;          /* показываем меню при клике */
   }
 
   nav ul li {
@@ -444,7 +444,7 @@ ul li {
   }
 
   nav ul li a {
-    color: #fff; /* ссылки тоже белые */
-    font-size: 1.2rem; /* крупнее на мобильных */
+    color: #fff;           /* ссылки белые */
+    font-size: 1.2rem;     /* крупнее на мобильных */
   }
 }
