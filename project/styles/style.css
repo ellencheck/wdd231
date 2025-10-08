@@ -400,30 +400,25 @@ ul li {
 
 /* Адаптив для мобильных устройств */
 @media screen and (max-width: 768px) {
-  /* Показываем мобильное меню */
   .mobile-nav-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-color: #f8f8f8;
+    gap: 8px;
     padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px; /* Отступ снизу */
+    margin-bottom: 15px;
   }
 
   .mobile-nav-buttons a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.2s, color 0.2s;
+    color: #333; /* обычный текст, не выделяется */
+    font-weight: 400; /* обычная читаемость */
+    padding: 6px 10px;
   }
 
   .mobile-nav-buttons a:hover {
-    background-color: #007BFF;
-    color: #fff;
+    text-decoration: underline; /* лёгкий hover-эффект для удобства */
+    color: #333; /* без ярких цветов */
   }
 }
 
-/* Десктопное меню #main-navigation не трогаем, остаётся как было */
+/* Десктопное меню #main-navigation полностью сохраняется, не трогаем */
