@@ -393,12 +393,12 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* ----- Гамбургер для мобильных ----- */
+/* 🔹 Гамбургер-кнопка */
 .hamburger {
-  display: none; /* по умолчанию скрыт */
+  display: none; /* по умолчанию скрыта */
   flex-direction: column;
   justify-content: space-around;
-  width: 40px;  /* крупные полоски */
+  width: 40px; /* крупная кнопка */
   height: 35px;
   background: none;
   border: none;
@@ -409,63 +409,46 @@ ul li {
 
 .hamburger span {
   display: block;
-  height: 5px;       /* толщина полосок */
-  width: 100%;
-  background-color: #fff;  /* белые полоски */
+  height: 5px; /* толщина полосок */
+  background-color: #fff; /* белые полоски */
   border-radius: 3px;
 }
 
-/* --- Улучшенное мобильное меню --- */
+/* 🔹 Мобильные экраны */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0b3d91;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 0 0 10px 10px;
-  }
-
-  nav ul.show-menu {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 90%;
-    margin: 5px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    background-color: #f0f4ff;
-    color: #0b3d91;
-    padding: 0.7rem 1rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav ul li a:hover {
-    background-color: #2563eb;
-    color: white;
-  }
-
-  /* уменьшенный бургер */
   .hamburger {
+    display: flex; /* показываем гамбургер */
+    position: absolute;
     top: 1rem;
     right: 1rem;
   }
 
-  .hamburger span {
-    height: 3px;
+  nav ul {
+    display: none; /* скрываем меню по умолчанию */
+    flex-direction: column;
+    background-color: #0b3d91; /* такой же цвет, как шапка и футер */
+    position: absolute;
+    top: 60px; /* под шапкой */
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+    list-style: none;
+    z-index: 999;
+  }
+
+  nav ul.show-menu {
+    display: flex; /* показываем меню при клике */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    color: #fff; /* белые ссылки */
+    font-size: 1.2rem; /* крупнее для удобства */
+    font-weight: bold;
+    text-decoration: none;
   }
 }
