@@ -393,32 +393,3 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* Мобильное меню по умолчанию скрыто */
-.mobile-nav-buttons {
-  display: none;
-}
-
-/* Адаптив для мобильных устройств */
-@media screen and (max-width: 768px) {
-  .mobile-nav-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-
-  .mobile-nav-buttons a {
-    text-decoration: none;
-    color: #333; /* обычный текст, не выделяется */
-    font-weight: 400; /* обычная читаемость */
-    padding: 6px 10px;
-  }
-
-  .mobile-nav-buttons a:hover {
-    text-decoration: underline; /* лёгкий hover-эффект для удобства */
-    color: #333; /* без ярких цветов */
-  }
-}
-
-/* Десктопное меню #main-navigation полностью сохраняется, не трогаем */
