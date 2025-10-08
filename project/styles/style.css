@@ -417,39 +417,50 @@ ul li {
 /* Мобильное меню: гамбургер */
 /* --- Кнопка гамбургера --- */
 /* --- Кнопка гамбургера --- */
+/* Кнопка гамбургера */
+.mobile-menu-button {
+  background-color: white;      /* белый фон кнопки */
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  position: relative;
+  z-index: 1100;
+}
+
+/* Полоски гамбургера */
 .mobile-menu-button span {
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px 0;
-  background-color: white;  /* делаем полоски белыми */
+  background-color: white;      /* полоски белые */
   transition: 0.3s;
-} /* ← здесь обязательно закрыть блок */
+}
 
-/* --- Панель мобильного меню --- */
+/* Панель мобильного меню */
 .mobile-nav {
-  background-color: #1E40AF; /* синий фон, как хедер */
-  position: fixed;           /* чтобы перекрывало контент */
+  background-color: #1E40AF;    /* синий фон */
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;             /* занимает весь экран */
-  display: none;             /* скрыта по умолчанию */
+  height: 100vh;
+  display: none;                /* скрыта по умолчанию */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 0;
 }
 
-/* --- Открытое меню --- */
+/* Открытое меню */
 .mobile-nav.open {
   display: flex;
 }
 
-/* --- Ссылки в мобильном меню --- */
+/* Ссылки внутри меню */
 .mobile-nav a {
-  color: white;             /* текст белый */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
@@ -460,6 +471,7 @@ ul li {
 .mobile-nav a:hover {
   opacity: 0.7;
 }
+
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
