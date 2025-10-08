@@ -473,7 +473,7 @@ ul li {
   nav ul {
     display: none;         
     flex-direction: column;
-    background-color: #fff;  /* белый фон меню */
+    background-color: ##084192;
     position: absolute;
     top: 60px;             
     right: 0;
