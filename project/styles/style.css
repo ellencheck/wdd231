@@ -417,40 +417,70 @@ ul li {
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;           /* показываем на мобильных */
+    display: flex;
     position: absolute;
     top: 1rem;
     right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
   }
 
   nav ul {
-    display: none;           /* скрываем меню по умолчанию */
+    display: none;
     flex-direction: column;
-    background-color: #0b3d91; /* фон такой же, как у шапки и футера */
+    align-items: center;
+    background-color: #0b3d91; /* такой же фон, как header */
     position: absolute;
-    top: 60px;               /* чуть ниже шапки */
+    top: 60px;
     right: 0;
     width: 100%;
-    padding: 1rem 0;
+    text-align: center;
+    padding: 0.5rem 0;
     margin: 0;
-    list-style: none;
-    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    border-top: 2px solid #2563eb;
   }
 
   nav ul.show-menu {
-    display: flex;           /* показываем меню при клике */
+    display: flex;
   }
 
   nav ul li {
-    margin: 10px 0;
+    width: 100%;
+    margin: 4px 0;
   }
 
   nav ul li a {
-    color: #fff;             /* белые ссылки */
-    font-size: 1.2rem;       /* крупнее на мобильных */
-    font-weight: bold;
+    display: block;
+    padding: 0.8rem;
+    font-size: 1rem; /* нормальный размер */
+    color: #ffffff; /* белый текст */
     text-decoration: none;
+    font-weight: 600; /* как в header/footer */
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #2563eb;
+    color: #fff;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1rem;
   }
 }
-
-
