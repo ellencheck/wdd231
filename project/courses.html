@@ -9,7 +9,13 @@
 <body>
   <header>
     <h1>Our Courses</h1>
-    <nav>
+
+    <!-- Кнопка-гамбургер (только HTML, без JS и CSS) -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+      ☰
+    </button>
+
+    <nav id="main-menu">
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="courses.html" class="active">Courses</a></li>
@@ -48,6 +54,7 @@
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank" rel="noopener">🎥 Watch Project Video</a>
     </div>
   </footer>
+
   <!-- Подключение скриптов как модулей -->
   <script type="module" src="scripts/data.js"></script>
   <script type="module" src="scripts/main.js"></script>
