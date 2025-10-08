@@ -418,7 +418,7 @@ ul li {
 /* --- Кнопка гамбургера --- */
 .mobile-menu-button {
   background-color: white;  /* фон кнопки */
-  color: #1E40AF;           /* цвет значка гамбургера синий, как хедер */
+  color: #fff;           
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
