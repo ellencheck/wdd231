@@ -414,30 +414,27 @@ ul li {
   border-radius: 3px;
 }
 
-/* 🔹 Гамбургер-кнопка */
-.hamburger {
-  display: none; 
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50px;  
-  height: 40px;
-  background-color: #fff;  /* белый фон кнопки */
+/* Мобильное меню: гамбургер */
+.mobile-menu-button {
+  background-color: white; /* фон кнопки */
+  color: #ffffff; /* если на кнопке есть текст, он белый */
   border: none;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  padding: 5px;
-  border-radius: 8px;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 0.25rem;
 }
 
-.hamburger span {
+/* Ссылки внутри мобильного меню */
+.mobile-nav a {
+  color: #64748B; /* цвет футера, замени на свой точный цвет */
+  text-decoration: none;
   display: block;
-  height: 6px;           
-  background-color: #0b3d91;  /* синие полоски */
-  border-radius: 4px;
-  width: 100%;            
+  padding: 0.5rem 1rem;
 }
 
+.mobile-nav a:hover {
+  color: #1E40AF; /* можно оставить эффект наведения, если нужно */
+}
 /* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
   .hamburger {
