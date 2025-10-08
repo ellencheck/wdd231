@@ -397,9 +397,9 @@ ul li {
 .hamburger {
   display: none; /* по умолчанию скрыта */
   flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
+  justify-content: space-around;
+  width: 40px; /* крупнее, как раньше */
+  height: 35px; /* крупнее */
   background: none;
   border: none;
   cursor: pointer;
@@ -409,9 +409,9 @@ ul li {
 
 .hamburger span {
   display: block;
-  height: 4px;
+  height: 5px; /* толщина полосок */
   background-color: #fff; /* белые полоски */
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /* 🔹 Только для мобильных экранов */
@@ -426,7 +426,7 @@ ul li {
   nav ul {
     display: none; /* меню скрыто по умолчанию */
     flex-direction: column;
-    background-color: #6a0dad; /* сиреневый фон для меню */
+    background-color: #0b3d91; /* цвет шапки и футера */
     position: absolute;
     top: 60px; /* чуть ниже шапки */
     right: 0;
@@ -441,5 +441,10 @@ ul li {
 
   nav ul li {
     margin: 10px 0;
+  }
+
+  nav ul li a {
+    color: #fff; /* ссылки тоже белые */
+    font-size: 1.2rem; /* крупнее на мобильных */
   }
 }
