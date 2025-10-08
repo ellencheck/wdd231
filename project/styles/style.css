@@ -416,88 +416,65 @@ ul li {
 
 /* 🔹 Гамбургер-кнопка */
 .hamburger {
-  display: none; /* по умолчанию скрыта */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
-  width: 50px;  /* чуть крупнее */
+  width: 50px;  
   height: 40px;
-  background: transparent;
+  background-color: #fff;  /* белый фон кнопки */
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 5px;
+  border-radius: 8px;
   z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .hamburger span {
   display: block;
-  height: 6px;            /* толщина полосок */
-  background-color: #fff;  /* белые полоски */
+  height: 6px;           
+  background-color: #0b3d91;  /* синие полоски */
   border-radius: 4px;
-  width: 100%;             /* полностью заполняют кнопку */
+  width: 100%;            
 }
 
+/* 🔹 Только для мобильных экранов */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0b3d91; /* синий фон меню */
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem 0;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-    border-top: 2px solid #2563eb;
-    z-index: 2000;
-  }
-
-  nav ul.show-menu {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 0.9rem 1rem;
-    font-size: 1.1rem;
-    color: #ffffff;             /* белый текст */
-    background-color: #0b3d91;  /* ← теперь синий фон всегда */
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav ul li a:hover {
-    background-color: #2563eb;  /* немного светлее при наведении */
-    color: #fff;
-  }
-
   .hamburger {
-    display: flex;
+    display: flex;         
     position: absolute;
     top: 1rem;
     right: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 2001;
   }
 
-  .hamburger span {
-    height: 3px;
+  nav ul {
+    display: none;         
+    flex-direction: column;
+    background-color: #fff;  /* белый фон меню */
+    position: absolute;
+    top: 60px;             
+    right: 0;
     width: 100%;
-    background-color: #fff;
-    border-radius: 2px;
+    padding: 1rem 0;
+    margin: 0;
+    list-style: none;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show-menu {
+    display: flex;         
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: #0b3d91;      /* синие ссылки */
+    font-size: 1.3rem;   
+    font-weight: bold;
+    text-decoration: none;
   }
 }
