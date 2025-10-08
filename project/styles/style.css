@@ -416,16 +416,17 @@ ul li {
 
 /* Мобильное меню: гамбургер */
 /* --- Кнопка гамбургера --- */
-/* --- Кнопка гамбургера --- */
 /* Кнопка гамбургера */
 .mobile-menu-button {
-  background-color: white;      /* белый фон кнопки */
+  background-color: #1E40AF; /* фон кнопки, как хедер */
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   cursor: pointer;
   border-radius: 0.25rem;
-  position: relative;
-  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px; /* расстояние между полосками */
 }
 
 /* Полоски гамбургера */
@@ -433,8 +434,7 @@ ul li {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 5px 0;
-  background-color: white;      /* полоски белые */
+  background-color: white; /* делаем полоски белыми */
   transition: 0.3s;
 }
 
