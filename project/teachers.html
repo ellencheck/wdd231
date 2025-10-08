@@ -29,7 +29,13 @@
 <body>
   <header>
     <h1>Our Teachers</h1>
-    <nav>
+
+    <!-- 🔹 Гамбургер-меню (только HTML, без CSS и JS) -->
+    <button class="hamburger" aria-label="Menu" aria-controls="main-navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-navigation">
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -52,6 +58,7 @@
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank" rel="noopener">🎥 Watch Project Video</a>
     </div>
   </footer>
+
   <!-- Модули JS -->
   <script type="module" src="scripts/data.js"></script>
   <script type="module" src="scripts/main.js"></script>
