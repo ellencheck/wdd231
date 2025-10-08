@@ -415,27 +415,47 @@ ul li {
 }
 
 /* Мобильное меню: гамбургер */
-/* Кнопка гамбургера */
+/* === Кнопка гамбургера (исправленный вариант) === */
 .mobile-menu-button {
-  background-color: #ffffff;  /* фон кнопки — белый */
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;                   /* расстояние между полосками */
-  z-index: 1100;              /* кнопка выше контента */
+  background-color: #ffffff !important; /* фон кнопки — белый */
+  border: none !important;
+  padding: 0.5rem !important;
+  cursor: pointer !important;
+  border-radius: 0.25rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 5px !important; /* расстояние между полосками */
+  z-index: 1100 !important; /* кнопка выше контента */
 }
 
-/* Полоски гамбургера */
+/* === Полоски гамбургера === */
 .mobile-menu-button span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #000000;  /* полоски чёрные */
-  transition: 0.3s;
+  display: block !important;
+  width: 25px !important;
+  height: 3px !important;
+  background-color: #000000 !important; /* полоски — чёрные */
+  border-radius: 2px !important;
+  transition: 0.3s !important;
+}
+
+/* Если полоски вдруг задаются через псевдоэлементы — фиксируем их тоже */
+.mobile-menu-button::before,
+.mobile-menu-button::after {
+  content: "" !important;
+  display: block !important;
+  width: 25px !important;
+  height: 3px !important;
+  background-color: #000000 !important;
+  margin: 4px 0 !important;
+}
+
+/* Убираем любые фильтры и смешивания */
+.mobile-menu-button,
+.mobile-menu-button * {
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 /* Панель мобильного меню */
