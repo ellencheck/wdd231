@@ -32,7 +32,13 @@
 <body>
   <header>
     <h1>Ellen Check Foreign Language School</h1>
-    <nav aria-label="Main navigation">
+
+    <!-- Гамбургер-меню (только HTML, без JS и CSS) -->
+    <button class="hamburger" aria-label="Menu" aria-controls="main-navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html" aria-current="page" class="active">About</a></li>
         <li><a href="courses.html">Courses</a></li>
