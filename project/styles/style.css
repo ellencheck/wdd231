@@ -448,6 +448,7 @@ ul li {
     width: 30px;
     height: 24px;
     cursor: pointer;
+    z-index: 2001; /* бургер всегда сверху */
   }
 
   .hamburger span {
@@ -461,16 +462,18 @@ ul li {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #0b3d91; /* тёмно-синий фон */
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     text-align: center;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
     margin: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    background-color: #0b3d91 !important; /* ТЕМНО-СИНИЙ фон — принудительно */
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     border-top: 2px solid #2563eb;
+    z-index: 2000; /* меню поверх всего */
   }
 
   nav ul.show-menu {
@@ -479,19 +482,19 @@ ul li {
 
   nav ul li {
     width: 100%;
-    margin: 5px 0;
+    margin: 6px 0;
   }
 
   nav ul li a {
     display: block;
+    width: 100%;
     padding: 0.9rem 1rem;
     font-size: 1.1rem;
-    color: #ffffff; /* белый текст — всегда виден */
+    color: #ffffff; /* белый текст — виден всегда */
+    background: transparent;
     text-decoration: none;
-    font-weight: 700; /* как в header/footer */
-    background: transparent; /* без голубого фона */
-    letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
   }
 
   nav ul li a:hover {
