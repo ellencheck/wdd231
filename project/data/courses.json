@@ -91,11 +91,11 @@
     {
       "language": "Arabic",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Arabic vocabulary, pronunciation, and script.", "image": "images/arabic.webp" },
-        { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/arabic.webp" },
-        { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Arabic.", "image": "images/arabic.webp" },
-        { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/arabic.webp" },
-        { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Arabic fluency for professional and academic purposes.", "image": "images/arabic.web" },
+        { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Arabic vocabulary, pronunciation, and script.", "image": "images/arabic.avif" },
+        { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/arabic.avif" },
+        { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Arabic.", "image": "images/arabic.avif" },
+        { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/arabic.avif" },
+        { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Arabic fluency for professional and academic purposes.", "image": "images/arabic.avif" },
         { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Arabic at a native level.", "image": "images/arabic.webp" }
       ]
     },
