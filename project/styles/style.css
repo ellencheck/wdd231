@@ -385,43 +385,53 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия — аккуратное горизонтальное меню без изменения стиля */
+/* 🌐 Мобильная версия — компактное горизонтальное меню в одну линию */
 @media screen and (max-width: 768px) {
   header {
-    padding: 8px 0;
+    padding: 6px 0; /* тонкий хедер */
   }
 
   header h1 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* уменьшаем заголовок */
+    margin-bottom: 4px;
     text-align: center;
-    margin-bottom: 6px;
+  }
+
+  header nav {
+    width: 100%;
+    text-align: center;
   }
 
   header nav ul {
     display: flex;
-    justify-content: center; /* выравниваем всё по центру */
+    flex-wrap: nowrap; /* всё в одну линию */
+    justify-content: center; /* по центру */
     align-items: center;
-    flex-wrap: nowrap; /* не переносим вниз */
-    list-style: none;
-    margin: 0;
+    gap: 10px; /* небольшие промежутки */
     padding: 0;
-    gap: 10px; /* расстояние между пунктами */
+    margin: 0;
+    list-style: none;
   }
 
   header nav ul li {
+    display: inline-block;
     margin: 0;
   }
 
   header nav ul li a {
+    display: inline-block;
     text-decoration: none;
-    color: inherit; /* сохраняет цвет из десктопной версии */
-    font-size: 14px;
+    color: #333;
+    font-size: 13px; /* делаем компактнее */
     font-weight: 500;
-    padding: 4px 8px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
-    color: #ffd700; /* или тот же hover-цвет, что в десктопе */
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
   }
 }
