@@ -385,38 +385,39 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* Мобильная адаптация горизонтального меню — компактное и тонкое */
+/* 🌐 Мобильная адаптация меню — компактная горизонтальная версия */
 @media screen and (max-width: 768px) {
   header nav ul {
     display: flex;
-    flex-direction: column; /* вертикально */
-    align-items: center;    /* центрируем по горизонтали */
-    gap: 6px;               /* небольшой отступ между пунктами */
-    padding: 5px;            /* минимальные внутренние отступы */
-    background-color: transparent; /* без фона, чтобы не растягивалось */
-    border-radius: 5px;
-    max-width: 180px;       /* ограниченная ширина */
-    margin: 10px auto;      /* центр по горизонтали */
+    justify-content: center;     /* центрируем меню по горизонтали */
+    flex-wrap: wrap;             /* перенос, если не помещается */
+    gap: 10px;                   /* расстояние между пунктами */
+    padding: 6px 8px;            /* компактные отступы */
+    background-color: rgba(255, 255, 255, 0.9); /* лёгкий фон */
+    backdrop-filter: blur(6px);  /* лёгкое размытие — красиво и аккуратно */
+    border-radius: 20px;         /* округлые края */
+    width: fit-content;
+    margin: 10px auto;           /* по центру */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* лёгкая тень для “плашки” */
   }
 
   header nav ul li {
-    margin: 0;              /* убираем лишние отступы */
-    width: 100%;            /* чтобы ссылка занимала всю ширину li */
+    margin: 0;
   }
 
   header nav ul li a {
-    display: block;
     text-decoration: none;
-    color: #333;            /* обычный цвет текста */
+    color: #333;
     font-weight: 500;
-    font-size: 14px;        /* чуть меньше для компактности */
-    text-align: center;
-    padding: 4px 0;         /* тонкий вертикальный padding */
-    transition: color 0.2s, background-color 0.2s;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    transition: background-color 0.2s, color 0.2s;
   }
 
-  header nav ul li a:hover {
-    color: #007BFF;         /* лёгкий hover-эффект */
-    background-color: rgba(0,123,255,0.1); /* прозрачный фон на hover */
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007BFF;
   }
 }
