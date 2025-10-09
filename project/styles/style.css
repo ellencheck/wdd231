@@ -385,7 +385,7 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия — аккуратное горизонтальное меню */
+/* 🌐 Мобильная версия — аккуратное горизонтальное меню без изменения стиля */
 @media screen and (max-width: 768px) {
   header {
     padding: 8px 0;
@@ -399,13 +399,13 @@ ul li {
 
   header nav ul {
     display: flex;
-    justify-content: center; /* всё по центру */
+    justify-content: center; /* выравниваем всё по центру */
     align-items: center;
-    flex-wrap: nowrap; /* не переносится вниз */
+    flex-wrap: nowrap; /* не переносим вниз */
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 8px; /* расстояние между пунктами */
+    gap: 10px; /* расстояние между пунктами */
   }
 
   header nav ul li {
@@ -413,19 +413,15 @@ ul li {
   }
 
   header nav ul li a {
-    display: inline-block;
     text-decoration: none;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.15);
-    font-size: 13px;
+    color: inherit; /* сохраняет цвет из десктопной версии */
+    font-size: 14px;
     font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 6px;
-    transition: background-color 0.2s;
+    padding: 4px 8px;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
-    background: rgba(255, 255, 255, 0.3);
+    color: #ffd700; /* или тот же hover-цвет, что в десктопе */
   }
 }
