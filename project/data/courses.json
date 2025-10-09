@@ -102,12 +102,12 @@
     {
       "language": "Portuguese",
       "levels": [
-        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Portuguese grammar, vocabulary, and pronunciation.", "image": "images/portuguese.webp" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/portuguese.webp" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop Portuguese conversation and comprehension skills.", "image": "images/portuguese.webp" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/portuguese.webp" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Portuguese fluency for studies, work, and travel.", "image": "images/portuguese.webp" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Portuguese at a native level, both spoken and written.", "image": "images/portuguese.webp" }
+        { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Portuguese grammar, vocabulary, and pronunciation.", "image": "images/portuguese.jpg" },
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/portuguese.jpg" },
+        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop Portuguese conversation and comprehension skills.", "image": "images/portuguese.jpg" },
+        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/portuguese.jpg" },
+        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Portuguese fluency for studies, work, and travel.", "image": "images/portuguese.jpg" },
+        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Portuguese at a native level, both spoken and written.", "image": "images/portuguese.jpg" }
       ]
     }
   ]
