@@ -385,10 +385,10 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия — компактное горизонтальное меню */
+/* 🌐 Мобильная версия — аккуратное горизонтальное меню */
 @media screen and (max-width: 768px) {
   header {
-    padding: 6px 0;
+    padding: 8px 0;
   }
 
   header h1 {
@@ -398,24 +398,18 @@ ul li {
   }
 
   header nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto); /* четыре кнопки в ряд */
-    justify-content: center;
+    display: flex;
+    justify-content: center; /* всё по центру */
     align-items: center;
-    gap: 8px;
+    flex-wrap: nowrap; /* не переносится вниз */
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 8px; /* расстояние между пунктами */
   }
 
-  /* Меняем порядок кнопок с помощью nth-child */
-  header nav ul li:nth-child(1) { order: 1; } /* About */
-  header nav ul li:nth-child(4) { order: 2; } /* Contacts */
-  header nav ul li:nth-child(3) { order: 3; } /* Teachers */
-  header nav ul li:nth-child(2) { order: 4; } /* Courses */
-
   header nav ul li {
-    display: inline-block;
+    margin: 0;
   }
 
   header nav ul li a {
@@ -425,7 +419,7 @@ ul li {
     background: rgba(255, 255, 255, 0.15);
     font-size: 13px;
     font-weight: 500;
-    padding: 5px 8px;
+    padding: 5px 10px;
     border-radius: 6px;
     transition: background-color 0.2s;
   }
