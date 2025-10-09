@@ -385,49 +385,46 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия меню — тонкое горизонтальное, все пункты в ряд */
+/* 🌐 Мобильная адаптация меню — компактное горизонтальное */
 @media screen and (max-width: 768px) {
-  header {
-    padding: 8px 0; /* уменьшаем высоту шапки */
-  }
-
-  header h1 {
-    font-size: 1.2rem; /* чуть меньше заголовок */
-    margin-bottom: 6px;
-    text-align: center;
-  }
-
   header nav ul {
     display: flex;
-    justify-content: space-around; /* равномерно распределяем пункты */
+    justify-content: center;          /* центрируем меню */
     align-items: center;
-    list-style: none;
-    padding: 4px 8px; /* минимальные отступы */
-    margin: 0 auto;
-    width: 100%; /* чтобы занимало всю ширину хедера */
-    max-width: 360px; /* ограничиваем по центру, чтобы не растягивалось сильно */
-    background-color: transparent; /* без плашки — лёгкий и чистый вид */
+    flex-wrap: wrap;                  /* перенос строк, если не влезает */
+    gap: 10px;                        /* расстояние между пунктами */
+    padding: 6px 10px;                /* компактные отступы */
+    margin: 10px auto;                /* центрируем */
+    width: fit-content;               /* ширина по содержимому */
+    background-color: rgba(255, 255, 255, 0.9); /* лёгкий фон */
+    backdrop-filter: blur(6px);       /* размытие подложки — эффект "стекла" */
+    border-radius: 20px;              /* скруглённые края */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* лёгкая тень */
   }
 
   header nav ul li {
-    flex: 1; /* равномерно делим пространство между пунктами */
-    text-align: center;
+    margin: 0;
   }
 
   header nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 13px; /* делаем компактнее */
-    padding: 4px 0;
-    display: block;
-    border-radius: 6px;
-    transition: color 0.2s, background-color 0.2s;
+    font-size: 14px;
+    padding: 4px 10px;                /* небольшие отступы — компактно */
+    border-radius: 12px;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
+    background-color: rgba(0, 123, 255, 0.1);
     color: #007BFF;
-    background-color: rgba(0, 123, 255, 0.08);
+  }
+
+  header h1 {
+    font-size: 1.4rem;                /* немного меньше заголовок, чтобы всё гармонично */
+    text-align: center;
   }
 }
