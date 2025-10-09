@@ -385,20 +385,21 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная адаптация меню — компактная горизонтальная версия */
+/* 🌐 Мобильная адаптация меню — компактное горизонтальное */
 @media screen and (max-width: 768px) {
   header nav ul {
     display: flex;
-    justify-content: center;     /* центрируем меню по горизонтали */
-    flex-wrap: wrap;             /* перенос, если не помещается */
-    gap: 10px;                   /* расстояние между пунктами */
-    padding: 6px 8px;            /* компактные отступы */
+    justify-content: center;          /* центрируем меню */
+    align-items: center;
+    flex-wrap: wrap;                  /* перенос строк, если не влезает */
+    gap: 10px;                        /* расстояние между пунктами */
+    padding: 6px 10px;                /* компактные отступы */
+    margin: 10px auto;                /* центрируем */
+    width: fit-content;               /* ширина по содержимому */
     background-color: rgba(255, 255, 255, 0.9); /* лёгкий фон */
-    backdrop-filter: blur(6px);  /* лёгкое размытие — красиво и аккуратно */
-    border-radius: 20px;         /* округлые края */
-    width: fit-content;
-    margin: 10px auto;           /* по центру */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* лёгкая тень для “плашки” */
+    backdrop-filter: blur(6px);       /* размытие подложки — эффект "стекла" */
+    border-radius: 20px;              /* скруглённые края */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* лёгкая тень */
   }
 
   header nav ul li {
@@ -406,11 +407,12 @@ ul li {
   }
 
   header nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #333;
     font-weight: 500;
     font-size: 14px;
-    padding: 4px 10px;
+    padding: 4px 10px;                /* небольшие отступы — компактно */
     border-radius: 12px;
     transition: background-color 0.2s, color 0.2s;
   }
@@ -419,5 +421,10 @@ ul li {
   header nav ul li a.active {
     background-color: rgba(0, 123, 255, 0.1);
     color: #007BFF;
+  }
+
+  header h1 {
+    font-size: 1.4rem;                /* немного меньше заголовок, чтобы всё гармонично */
+    text-align: center;
   }
 }
