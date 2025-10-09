@@ -384,6 +384,25 @@ ul li {
 
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
+  .project-video {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.project-video .btn {
+  display: inline-block;
+  background-color: #1E40AF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-video .btn:hover {
+  background-color: #163296;
+}
+
 }
 /* 🌐 Мобильная адаптация меню — компактное горизонтальное */
 @media screen and (max-width: 768px) {
