@@ -385,53 +385,53 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия — компактное горизонтальное меню в одну линию */
+/* 🌐 Мобильная версия — компактное горизонтальное меню */
 @media screen and (max-width: 768px) {
   header {
-    padding: 6px 0; /* тонкий хедер */
+    padding: 6px 0;
   }
 
   header h1 {
-    font-size: 1.1rem; /* уменьшаем заголовок */
-    margin-bottom: 4px;
+    font-size: 1rem;
     text-align: center;
-  }
-
-  header nav {
-    width: 100%;
-    text-align: center;
+    margin-bottom: 6px;
   }
 
   header nav ul {
-    display: flex;
-    flex-wrap: nowrap; /* всё в одну линию */
-    justify-content: center; /* по центру */
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* четыре кнопки в ряд */
+    justify-content: center;
     align-items: center;
-    gap: 10px; /* небольшие промежутки */
-    padding: 0;
-    margin: 0;
+    gap: 8px;
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
+
+  /* Меняем порядок кнопок с помощью nth-child */
+  header nav ul li:nth-child(1) { order: 1; } /* About */
+  header nav ul li:nth-child(4) { order: 2; } /* Contacts */
+  header nav ul li:nth-child(3) { order: 3; } /* Teachers */
+  header nav ul li:nth-child(2) { order: 4; } /* Courses */
 
   header nav ul li {
     display: inline-block;
-    margin: 0;
   }
 
   header nav ul li a {
     display: inline-block;
     text-decoration: none;
-    color: #333;
-    font-size: 13px; /* делаем компактнее */
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 13px;
     font-weight: 500;
-    padding: 4px 6px;
+    padding: 5px 8px;
     border-radius: 6px;
-    transition: color 0.2s, background-color 0.2s;
+    transition: background-color 0.2s;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
   }
 }
