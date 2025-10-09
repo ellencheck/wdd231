@@ -85,7 +85,7 @@
         { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Chinese.", "image": "images/chinese.webp" },
         { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/chinese.webp" },
         { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Chinese fluency for professional and academic purposes.", "image": "images/chinese.webp" },
-        { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Mandarin Chinese at a native level.", "image": "images/chinese.webp" }
+        { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Mandarin Chinese at a native level.", "image": "image": "images/chinese.webp" }, 
       ]
     },
     {
