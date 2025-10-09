@@ -385,53 +385,49 @@ ul li {
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
 }
-/* 🌐 Мобильная версия — компактное горизонтальное меню в одну линию */
+/* 🌐 Мобильная версия меню — тонкое горизонтальное, все пункты в ряд */
 @media screen and (max-width: 768px) {
   header {
-    padding: 6px 0; /* тонкий хедер */
+    padding: 8px 0; /* уменьшаем высоту шапки */
   }
 
   header h1 {
-    font-size: 1.1rem; /* уменьшаем заголовок */
-    margin-bottom: 4px;
-    text-align: center;
-  }
-
-  header nav {
-    width: 100%;
+    font-size: 1.2rem; /* чуть меньше заголовок */
+    margin-bottom: 6px;
     text-align: center;
   }
 
   header nav ul {
     display: flex;
-    flex-wrap: nowrap; /* всё в одну линию */
-    justify-content: center; /* по центру */
+    justify-content: space-around; /* равномерно распределяем пункты */
     align-items: center;
-    gap: 10px; /* небольшие промежутки */
-    padding: 0;
-    margin: 0;
     list-style: none;
+    padding: 4px 8px; /* минимальные отступы */
+    margin: 0 auto;
+    width: 100%; /* чтобы занимало всю ширину хедера */
+    max-width: 360px; /* ограничиваем по центру, чтобы не растягивалось сильно */
+    background-color: transparent; /* без плашки — лёгкий и чистый вид */
   }
 
   header nav ul li {
-    display: inline-block;
-    margin: 0;
+    flex: 1; /* равномерно делим пространство между пунктами */
+    text-align: center;
   }
 
   header nav ul li a {
-    display: inline-block;
     text-decoration: none;
     color: #333;
-    font-size: 13px; /* делаем компактнее */
     font-weight: 500;
-    padding: 4px 6px;
+    font-size: 13px; /* делаем компактнее */
+    padding: 4px 0;
+    display: block;
     border-radius: 6px;
     transition: color 0.2s, background-color 0.2s;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.1);
+    color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.08);
   }
 }
