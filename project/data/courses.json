@@ -85,30 +85,22 @@
         { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Chinese.", "image": "images/chinese.webp" },
         { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/chinese.webp" },
         { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Chinese fluency for professional and academic purposes.", "image": "images/chinese.webp" },
-        { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Mandarin Chinese at a native level.", "image": "image": "images/chinese.webp" }, 
+        { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Mandarin Chinese at a native level.", "image": "images/chinese.webp" }
       ]
     },
     {
-   {
-  "language": "Arabic",
-  "levels": [
-    { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Arabic vocabulary, pronunciation, and script.", "image": "images/arabic.webp" },
-    { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/arabic.webp" },
-    { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Arabic.", "image": "images/arabic.webp" },
-    { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/arabic.webp" },
-    { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Arabic fluency for professional and academic purposes.", "image": "images/arabic.webp" },
-    { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Arabic at a native level.", "image": "images/arabic.webp" }
-  ]
-}
+      "language": "Arabic",
+      "levels": [
+        { "level": "Beginner (A1)", "duration": "5 months", "price": "$450", "description": "Learn basic Arabic vocabulary, pronunciation, and script.", "image": "images/arabic.webp" },
+        { "level": "Elementary (A2)", "duration": "6 months", "price": "$550", "description": "Build on basic knowledge to handle simple communication.", "image": "images/arabic.webp" },
+        { "level": "Intermediate (B1)", "duration": "7 months", "price": "$650", "description": "Develop conversational and reading skills in Arabic.", "image": "images/arabic.webp" },
+        { "level": "Upper Intermediate (B2)", "duration": "8 months", "price": "$750", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/arabic.webp" },
+        { "level": "Advanced (C1)", "duration": "9 months", "price": "$850", "description": "Achieve advanced Arabic fluency for professional and academic purposes.", "image": "images/arabic.webp" },
+        { "level": "Proficient (C2)", "duration": "11 months", "price": "$1050", "description": "Master Arabic at a native level.", "image": "images/arabic.webp" }
+      ]
+    },
+    {
       "language": "Portuguese",
       "levels": [
         { "level": "Beginner (A1)", "duration": "4 months", "price": "$400", "description": "Learn basic Portuguese grammar, vocabulary, and pronunciation.", "image": "images/portuguese.jpg" },
-        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description": "Build on basic knowledge to handle simple communication.", "image": "images/portuguese.jpg" },
-        { "level": "Intermediate (B1)", "duration": "6 months", "price": "$600", "description": "Develop Portuguese conversation and comprehension skills.", "image": "images/portuguese.jpg" },
-        { "level": "Upper Intermediate (B2)", "duration": "7 months", "price": "$700", "description": "Enhance fluency and comprehension in various contexts.", "image": "images/portuguese.jpg" },
-        { "level": "Advanced (C1)", "duration": "8 months", "price": "$800", "description": "Achieve advanced Portuguese fluency for studies, work, and travel.", "image": "images/portuguese.jpg" },
-        { "level": "Proficient (C2)", "duration": "10 months", "price": "$1000", "description": "Master Portuguese at a native level, both spoken and written.", "image": "images/portuguese.jpg" }
-      ]
-    }
-  ]
-}
+        { "level": "Elementary (A2)", "duration": "5 months", "price": "$500", "description
