@@ -371,6 +371,7 @@ ul li {
   justify-content: center;
   margin-top: 1.5rem;
 }
+/* Общие кнопки */
 .btn, .video-btn {
   display: inline-block;
   background-color: #0B3D91;
@@ -384,19 +385,19 @@ ul li {
 
 .btn:hover, .video-btn:hover {
   background-color: #2563EB;
-  .project-video {
+}
+
+/* Блок с видео */
+.project-video {
   text-align: center;
   margin-top: 1rem;
 }
 
+/* Кнопки внутри блока с видео */
 .project-video .btn {
-  display: inline-block;
   background-color: #1E40AF;
-  color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
 .project-video .btn:hover {
