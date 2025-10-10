@@ -378,15 +378,15 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-/* 📱 Компактная и единообразная мобильная версия меню */
+/* 📱 Компактное и контрастное мобильное меню */
 @media screen and (max-width: 768px) {
 
-  /* Общий вид шапки */
+  /* Шапка */
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0b3d91; /* тот же синий цвет, что и на компьютере */
+    background-color: #0b3d91;
     color: #fff;
     padding: 0.6rem 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
@@ -394,17 +394,19 @@ header nav ul {
 
   /* Логотип */
   .school-logo {
-    width: 60px;
+    width: 58px;
     height: auto;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   /* Заголовок */
   header h1 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin: 0.2rem 0;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   /* Меню */
@@ -416,19 +418,20 @@ header nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     list-style: none;
-    margin: 0.5rem 0 0;
-    padding: 0.5rem 0;
-    background-color: #0b3d91; /* тот же фон, чтобы меню сливалось с шапкой */
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0.4rem 0 0;
+    padding: 0.6rem 0;
+    background-color: #0b3d91; /* тот же фон */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   nav ul li a {
-    color: #fff;
+    color: #ffffff; /* полностью белый текст для контраста */
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem; /* чуть больше для читабельности */
+    font-weight: 600;
+    letter-spacing: 0.4px;
     padding: 6px 10px;
     border-radius: 6px;
     transition: all 0.2s ease;
@@ -436,13 +439,13 @@ header nav ul {
 
   nav ul li a:hover,
   nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #E0E7FF;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #e0ecff;
   }
 
-  /* Сжатие высоты хедера */
+  /* Сжатие высоты */
   header h1,
   nav ul li a {
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
