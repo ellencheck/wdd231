@@ -447,3 +447,10 @@ ul li {
     text-align: center;
   }
 }
+.school-logo {
+  width: 120px;           /* ширина логотипа */
+  height: auto;           /* сохраняем пропорции */
+  display: inline-block;  
+  vertical-align: middle; /* выравниваем по центру с текстом */
+  margin-right: 15px;     /* отступ между логотипом и заголовком */
+}
