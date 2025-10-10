@@ -378,7 +378,7 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-/* 📱 Исправленное контрастное меню для мобильных устройств */
+/* 📱 Контрастное и компактное меню — только для мобильных устройств */
 @media screen and (max-width: 768px) {
 
   header {
@@ -386,58 +386,54 @@ header nav ul {
     flex-direction: column;
     align-items: center;
     background-color: #0b3d91; /* тот же фон */
-    color: #fff;
-    padding: 0.6rem 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    padding: 0.7rem 1rem;
+    color: white;
   }
 
   .school-logo {
-    width: 55px;
+    width: 58px;
     height: auto;
     margin-bottom: 0.4rem;
   }
 
   header h1 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    color: #ffffff;
-    margin: 0;
+    color: #fff;
+    margin: 0.2rem 0;
   }
 
   nav {
     width: 100%;
-    margin-top: 0.4rem;
+    text-align: center;
+    margin-top: 0.3rem;
   }
 
   nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
     list-style: none;
     margin: 0;
-    padding: 0.4rem 0;
-  }
-
-  nav ul li {
-    list-style: none;
+    padding: 0.5rem 0;
   }
 
   nav ul li a {
     display: inline-block;
-    color: #ffffff; /* чисто белый текст */
-    background-color: rgba(255, 255, 255, 0.15); /* слегка подсвеченные кнопки */
+    padding: 6px 14px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
+    color: #ffffff; /* яркий белый текст — высокая читаемость */
+    background-color: rgba(255, 255, 255, 0.1); /* слегка заметный фон */
+    transition: all 0.25s ease-in-out;
   }
 
   nav ul li a:hover,
   nav ul li a.active {
-    background-color: #ffffff; /* белая подсветка при наведении */
-    color: #0b3d91; /* контрастный текст при hover */
+    background-color: #ffffff; /* активная кнопка становится белой */
+    color: #0b3d91; /* контрастный синий текст */
   }
 }
