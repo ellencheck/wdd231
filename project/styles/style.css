@@ -378,7 +378,7 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-/* 📱 Мобильное меню — компактное, фон белый, текст тёмно-синий */
+/* 📱 Компактное горизонтальное меню на мобильных */
 @media screen and (max-width: 768px) {
 
   header {
@@ -386,14 +386,14 @@ header nav ul {
     flex-direction: column;
     align-items: center;
     background-color: #0b3d91; /* фон хедера */
-    padding: 0.7rem 1rem;
+    padding: 0.6rem 1rem;
     color: white;
   }
 
   .school-logo {
-    width: 58px;
+    width: 50px;
     height: auto;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   header h1 {
@@ -411,12 +411,12 @@ header nav ul {
 
   nav ul {
     display: flex;
-    flex-direction: column;   /* вертикально */
-    gap: 10px;
+    justify-content: center;  /* все пункты в одной строке */
+    gap: 12px;                /* небольшое расстояние между пунктами */
     list-style: none;
     margin: 0;
-    padding: 0.5rem 0;
-    background-color: #ffffff; /* фон меню — белый */
+    padding: 4px 0;
+    background-color: #ffffff; /* фон меню белый */
     border-radius: 12px;
   }
 
@@ -426,21 +426,21 @@ header nav ul {
 
   nav ul li a {
     display: block;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #0b3d91; /* текст тёмно-синий */
-    transition: all 0.25s ease-in-out;
+    color: #0b3d91;           /* тёмно-синий текст */
+    transition: all 0.2s ease-in-out;
   }
 
   nav ul li a:hover,
   nav ul li a.active {
-    background-color: rgba(11, 61, 145, 0.1); /* лёгкий hover-эффект */
+    background-color: rgba(11, 61, 145, 0.1);
   }
 
-  /* Убираем "Contacts" */
+  /* Скрываем последний пункт (Contacts) */
   nav ul li:last-child {
     display: none;
   }
