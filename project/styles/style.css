@@ -482,60 +482,57 @@ header nav ul {
     border-radius: 8px;
   }
 }
-/* 📱 Мобильное меню — до 768px */
+/* 📱 Минималистичное и аккуратное меню для мобильных устройств */
 @media screen and (max-width: 768px) {
+
   header {
-    flex-direction: column;
+    flex-direction: column;       /* ставим логотип и меню друг под другом */
     align-items: center;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;         /* компактные отступы */
   }
 
-  .school-logo {
-    width: 80px;
+  header .school-logo {
+    width: 50px;                  /* логотип небольшой */
     height: auto;
     margin-bottom: 0.3rem;
   }
 
   header h1 {
     font-size: 1.2rem;
-    margin: 0.2rem 0 0.6rem 0;
+    margin: 0.2rem 0;
     text-align: center;
   }
 
   header nav ul {
     display: flex;
-    flex-direction: column;         /* вертикальное меню */
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 6px;
-    background-color: rgba(255, 255, 255, 0.96);
-    padding: 10px 15px;
+    padding: 4px 10px;
+    margin: 0.3rem 0;
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 300px;
-    margin: 0 auto 10px auto;
+    backdrop-filter: blur(6px);
   }
 
   header nav ul li {
-    width: 100%;
+    list-style: none;
   }
 
   header nav ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 15px;
-    color: #0b3d91;
-    font-weight: 600;
-    padding: 8px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 8px;
     border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   header nav ul li a:hover,
   header nav ul li a.active {
-    background-color: #0b3d91;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #E0E7FF;
   }
 }
-
