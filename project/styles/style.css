@@ -403,7 +403,15 @@ ul li {
 .project-video .btn:hover {
   background-color: #163296;
 }
-
+header {
+  display: flex;                 /* включаем flex для горизонтального расположения */
+  align-items: center;           /* выравниваем логотип и заголовок по центру вертикали */
+  justify-content: space-between; /* логотип слева, меню справа */
+  padding: 1rem 2rem;
+  background: #0b3d91;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 /* Логотип */
 .school-logo {
   width: 100px;         /* ширина логотипа */
