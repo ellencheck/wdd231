@@ -404,59 +404,6 @@ ul li {
   background-color: #163296;
 }
 
-/* 🌐 Мобильная адаптация меню — компактное горизонтальное */
-@media screen and (max-width: 768px) {
-  header nav ul {
-    display: flex;
-    justify-content: center;          /* центрируем меню */
-    align-items: center;
-    flex-wrap: wrap;                  /* перенос строк, если не влезает */
-    gap: 10px;                        /* расстояние между пунктами */
-    padding: 6px 10px;                /* компактные отступы */
-    margin: 10px auto;                /* центрируем */
-    width: fit-content;               /* ширина по содержимому */
-    background-color: rgba(255, 255, 255, 0.9); /* лёгкий фон */
-    backdrop-filter: blur(6px);       /* размытие подложки — эффект "стекла" */
-    border-radius: 20px;              /* скруглённые края */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* лёгкая тень */
-  }
-
-  header nav ul li {
-    margin: 0;
-  }
-
-  header nav ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 4px 10px;                /* небольшие отступы — компактно */
-    border-radius: 12px;
-    transition: background-color 0.2s, color 0.2s;
-  }
-
-  header nav ul li a:hover,
-  header nav ul li a.active {
-    background-color: rgba(0, 123, 255, 0.1);
-    color: #007BFF;
-  }
-
-  header h1 {
-    font-size: 1.4rem;                /* немного меньше заголовок, чтобы всё гармонично */
-    text-align: center;
-  }
-}
-header {
-  display: flex;                 /* включаем flex для горизонтального расположения */
-  align-items: center;           /* выравниваем логотип и заголовок по центру вертикали */
-  justify-content: space-between; /* логотип слева, меню справа */
-  padding: 1rem 2rem;
-  background: #0b3d91;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
 /* Логотип */
 .school-logo {
   width: 100px;         /* ширина логотипа */
@@ -480,4 +427,50 @@ header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media screen and (max-width: 768px) {
+  /* Логотип и заголовок на мобильном ставим вертикально */
+  header {
+    flex-direction: column;       /* элементы идут сверху вниз */
+    align-items: center;           /* центрируем всё по горизонтали */
+    padding: 1rem;
+  }
+
+  .logo-and-title {
+    display: flex;
+    flex-direction: column;        /* логотип над заголовком */
+    align-items: center;
+    margin-bottom: 10px;           /* небольшой отступ под ними */
+  }
+
+  .school-logo {
+    width: 100px;                  /* уменьшаем логотип на мобильных */
+    margin: 0 0 8px 0;             /* отступ снизу */
+  }
+
+  header h1 {
+    font-size: 1.4rem;             /* чуть меньше */
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Меню под заголовком */
+  header nav ul {
+    flex-direction: column;        /* вертикальный список */
+    gap: 8px;                      /* отступы между пунктами */
+    width: 200px;                   /* фиксированная компактная ширина */
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: 0 auto 10px auto;      /* центрируем и добавляем отступ снизу */
+  }
+
+  header nav ul li a {
+    width: 100%;                   /* ссылки занимают всю ширину */
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 8px;
+  }
 }
